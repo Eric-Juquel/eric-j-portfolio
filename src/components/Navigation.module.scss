@@ -1,0 +1,52 @@
+.navigation {
+  font-size: 1.2rem;
+}
+
+.list {
+  list-style: none;
+}
+
+.item {
+  position: relative;
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: teal;
+    transform: scaleY(0);
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+      background-color 0.1s;
+  }
+
+  &:hover::before {
+    transform: scaleY(1);
+    width: 100%;
+  }
+
+  &:active::before {
+    background-color: rgba(whitesmoke, 0.5);
+  }
+
+  & a:link,
+  & a:visited {
+    color: #909096;
+    outline:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 1rem 3.8rem;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+  }
+
+  &.active a{
+      color:white;
+      background-color: rgba(black, 0.2);
+  }
+}
