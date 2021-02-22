@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  //   font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+
+  ::selection {
+    background: rgb(146, 218, 184); /* WebKit/Blink Browsers */
+    color: black;
+  }
+  ::-moz-selection {
+    background: rgb(146, 218, 184);
+    color: black;
+  }
+  cursor: default;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  //   background-image: linear-gradient(to right bottom, #1a1919, #1d1d1d);
+  background-image: linear-gradient(
+    to right bottom,
+    rgb(24, 26, 29),
+    rgb(13, 24, 36)
+  );
+  display: block;
+  min-width: 320px;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  overflow-y: auto;
+  overflow-x: hidden;
+  //   scrollbar-width: thin !important;
+  //   scrollbar-color: grey lightgreen;
+}
