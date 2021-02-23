@@ -1,4 +1,6 @@
 import React from "react";
+import { translate } from "../translations/translate";
+import { useSelector } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -17,11 +19,14 @@ const useStyles = makeStyles({
     background: "transparent",
     color: "rgb(249, 247, 246)",
   },
-  cardAction: {},
+  button: {
+    margin: "auto",
+  },
 });
 
 const Logo = () => {
   const classes = useStyles();
+  const lang = useSelector((state) => state.languageReducer.language);
 
   return (
     <Card className={classes.card}>
@@ -38,16 +43,19 @@ const Logo = () => {
             Eric
           </Typography>
           <Typography variant="body1" component="p">
-            Développeur Web
+            {translate(lang, "title")}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary" variant="contained">
+        <Button
+          className={classes.button}
+          size="medium"
+          color="primary"
+          variant="contained"
+          href="https://cvdesignr.com/p/5c5330da9718e"
+        >
           CV
-        </Button>
-        <Button size="small" color="primary" variant="contained">
-          Learn More
         </Button>
       </CardActions>
     </Card>

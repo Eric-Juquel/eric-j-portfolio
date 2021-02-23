@@ -1,0 +1,13 @@
+{
+  "firstname": "prénom",
+  "name": "nom",
+  "title": "Développeur web",
+  "subTitle": "Développeur Frontend / ReactJs",
+
+  "about": "à propos",
+  "skills": "compétences",
+  "achievements": "réalisations",
+  "career":"parcours",
+  "contact": "contact"
+  
+}

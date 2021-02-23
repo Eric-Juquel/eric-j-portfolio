@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Compétences = () => {
+const Skills = () => {
     return (
         <div>
             Compétences
@@ -8,4 +8,4 @@ const Compétences = () => {
     )
 }
 
-export default Compétences
+export default Skills
