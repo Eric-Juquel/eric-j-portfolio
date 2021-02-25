@@ -1,0 +1,65 @@
+import React from "react";
+import "../App.scss";
+import { translate } from "../translations/translate";
+import { useSelector } from "react-redux";
+import { makeStyles } from "@material-ui/core/styles";
+import { Typography } from "@material-ui/core";
+import Button from "./Button";
+import Button2 from "./Button2";
+import About from "./About";
+import Achievements from "./Achievements";
+import Career from "./Career";
+import Contact from "./Contact";
+import Skills from "./Skills";
+
+const useStyles = makeStyles({
+  subtitle: {
+    fontWeight: "100",
+    color:"rgba(255, 255, 255, 0.6)"
+  },
+});
+
+const Home = () => {
+  const classes = useStyles();
+  const lang = useSelector((state) => state.languageReducer.language);
+
+  return (
+    <div>
+      <div className="container">
+        <div className="block">
+          <div className="title">
+            <div className="myName">
+              <div className="myName__main myName__main--first">E</div>
+              <div className="myName__firstName">ric</div>
+              <div className="myName__main myName__main--last">J</div>
+              <div className="myName__lastName">uquel</div>
+            </div>
+            <p>{translate(lang, "title")}</p>
+          </div>
+          <Typography variant="h5" className={classes.subtitle}>
+            {translate(lang, "subtitle")}
+          </Typography>
+          <Button />
+          <Button2 />
+        </div>
+      </div>
+      <div className="container">
+        <About />
+      </div>
+      <div className="container">
+        <Skills />
+      </div>
+      <div className="container">
+        <Achievements />
+      </div>
+      <div className="container">
+        <Career />
+      </div>
+      <div className="container">
+        <Contact />
+      </div>
+    </div>
+  );
+};
+
+export default Home;

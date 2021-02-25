@@ -1,12 +1,15 @@
 @import "./sass/variables";
 @import "./sass/base";
 @import "./sass/typography";
+@import "./sass/mixins";
 
 .App {
   width: 100%;
   display: flex;
   flex-direction: column;
   padding-left: 15rem;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .languageBtn {
@@ -38,7 +41,86 @@
   box-shadow: 1px 0px 5px 0px rgba(255, 255, 255, 0.295);
 }
 
-.content {
-  overflow-y: auto;
-  overflow-x: hidden;
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 1.5rem;
+}
+
+//HOME
+
+.title {
+  width: 100%;
+  display: flex;
+
+  & p{
+    font-size:2rem;
+    height:2rem;
+    align-self:center;
+  }
+}
+
+.myName {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(5, 3rem);
+  grid-template-rows: repeat(5, 3rem);
+  font-family: "Capriola", cursive;
+  font-size: 3rem;
+
+  & > div {
+    height: 100%;
+  }
+
+  &__main {
+    font-size: 7rem;
+
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: inline-block;
+
+    &--first {
+      grid-column: 1 / 3;
+      grid-row: 1 / span 3;
+      margin-left: -0.8rem;
+
+      background: linear-gradient(135deg, #fcf85a, #fe8e5a);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+    }
+
+    &--last {
+      grid-column: 2 / 4;
+      grid-row: 3 / span 3;
+      margin-top: -1.8rem;
+
+      background: linear-gradient(135deg, #fe8e5a, #ff5b5a);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__firstName {
+    grid-column: 2 / 4;
+    grid-row: 2 / span 1;
+    text-align: center;
+    margin-left: -1.5rem;
+  }
+
+  &__lastName {
+    grid-column: 3 / 5;
+    grid-row: 3 / span 1;
+  }
 }

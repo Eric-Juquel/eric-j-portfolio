@@ -1,10 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.scss";
-import Languages from './components/Languages'
+import Languages from "./components/Languages";
 import Logo from "./components/Logo";
 import Navigation from "./components/Navigation";
 import SocialNetworks from "./components/SocialNetworks";
+import Home from "./components/Home";
+import About from "./components/About";
 import Skills from "./components/Skills";
 import Achievements from "./components/Achievements";
 import Career from "./components/Career";
@@ -12,15 +14,19 @@ import Contact from "./components/Contact";
 
 import { Container } from "@material-ui/core";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import { purple, teal } from "@material-ui/core/colors";
+import { orange, cyan, purple} from "@material-ui/core/colors";
 
 const theme = createMuiTheme({
   palette: {
+    type:"dark",
     primary: {
-      main: purple[400],
+      main: orange[300],
     },
     secondary: {
-      main: teal[200],
+      main: cyan[500],
+    },
+    info: {
+      main: purple[400],
     },
   },
 });
@@ -38,8 +44,10 @@ const App = () => {
             <Navigation />
             <SocialNetworks />
           </div>
-          <Container>
+          <Container disableGutters>
             <Switch>
+              <Route exact path='/' component={Home} />
+              <Route exact path='/about' component={About} />
               <Route exact path="/skills" component={Skills} />
               <Route exact path="/achievements" component={Achievements} />
               <Route exact path="/career" component={Career} />

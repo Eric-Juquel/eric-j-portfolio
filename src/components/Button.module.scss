@@ -1,0 +1,97 @@
+@import "../sass/variables";
+@import "../sass/mixins";
+
+.container {
+  width: 200px;
+  height: 10rem;
+  @include flexCenter;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  width: 180px;
+  height: 60px;
+  position: absolute;
+}
+
+.btn {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid $color-secondary;
+  outline: none;
+  color: $color-secondary;
+  font-size: 1.2rem;
+  font-weight: 100;
+  text-transform: capitalize;
+  transition: stroke-dashoffset 1s ease-in-out,
+    box-shadow 1s cubic-bezier(0.97, 0.18, 0.9, 0.57) 0.3s,
+    color 1s cubic-bezier(0.97, 0.18, 0.9, 0.57) 0.3s;
+
+  & svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+  }
+
+  &:hover {
+    transition: stroke-dashoffset 1s ease-in-out,
+      box-shadow 1s cubic-bezier(0.97, 0.18, 0.9, 0.57) 0.3s,
+      color 1s cubic-bezier(0.97, 0.18, 0.9, 0.57) 0.3s;
+
+    color: black;
+    box-shadow: inset 0 0 0 2em $color-secondary;
+  }
+
+  &:hover svg {
+    stroke-dashoffset: -480;
+  }
+}
+
+.btn2 {
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  background: transparent;
+  color: $color-secondary;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  text-decoration: none;
+  display: flex;
+
+  svg {
+    height: 60px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  rect {
+    fill: none;
+    stroke: $color-secondary;
+    stroke-width: 2;
+    stroke-dasharray: 600, 0;
+    transition: all 0.35s linear;
+  }
+
+  &:hover {
+    rect {
+      stroke-width: 2;
+      stroke-dasharray: 100, 300;
+      stroke-dashoffset: 120;
+      transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+
+  & span {
+    margin: 1rem auto;
+  }
+}

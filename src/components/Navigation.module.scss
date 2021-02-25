@@ -1,3 +1,5 @@
+@import "../sass/variables";
+
 .navigation {
   font-size: 1rem;
 }
@@ -16,7 +18,7 @@
     left: 0;
     height: 100%;
     width: 3px;
-    background-color: #80cbc4;
+    background-color: $color-secondary;
     transform: scaleY(0);
     transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
       background-color 0.1s;
@@ -33,7 +35,7 @@
 
   & a:link,
   & a:visited {
-    color: #97979c;
+    color: $color-disabled;
     outline: none;
     text-decoration: none;
     text-transform: capitalize;
@@ -42,15 +44,15 @@
     z-index: 10;
     display: flex;
     align-items: center;
-    transition: color 0.3s;
+    transition: color 0.6s;
   }
 
-  // & a:hover {
-  //   color: black;
-  // }
+  & a:hover {
+    color: $color-medium;
+  }
 
   &.active a {
-    color: white;
+    color: $color-light;
     background-color: rgba(black, 0.2);
   }
 }

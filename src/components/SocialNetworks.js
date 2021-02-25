@@ -1,7 +1,6 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
-import Grid from "@material-ui/core/Grid";
+import { Grid } from "@material-ui/core";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 
@@ -16,8 +15,6 @@ const useStyles = makeStyles({
 });
 
 const SocialNetworks = () => {
-  const history = useHistory();
-
   const classes = useStyles();
 
   return (

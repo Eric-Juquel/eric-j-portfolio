@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import ButtonGroup from "@material-ui/core/ButtonGroup";
-import Button from "@material-ui/core/Button";
+import { ButtonGroup, Button } from "@material-ui/core";
 
 const Languages = () => {
   const dispatch = useDispatch();

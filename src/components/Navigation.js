@@ -15,7 +15,6 @@ const Navigation = () => {
     <nav className={classes.navigation}>
       <ul className={classes.list}>
         {menuItems.map((item, i) => {
-          console.log(item, 'item', lang)
           return (
             <li
               key={`${item.label}_${i}`}
