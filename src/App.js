@@ -14,19 +14,58 @@ import Contact from "./components/Contact";
 
 import { Container } from "@material-ui/core";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import { orange, cyan, purple} from "@material-ui/core/colors";
+import { orange, teal, purple, red, blue} from "@material-ui/core/colors";
+
 
 const theme = createMuiTheme({
   palette: {
-    type:"dark",
+    type: "dark",
     primary: {
       main: orange[300],
     },
     secondary: {
-      main: cyan[500],
+      main: teal[300],
     },
     info: {
+      main:blue[500],
+      dark:"rgb(33, 150, 243,0.4)"
+    },
+    error: {
+      main: red[500],
+      dark: "rgba(211, 47, 47, 0.4)"
+    },
+    warning: {
+      light: purple[100],
       main: purple[400],
+      dark: "rgba(186, 104, 200,0.4)" 
+    },
+    text: {
+      primary: "rgba(255, 255, 255,0.87)",
+      secondary: "rgba(255, 255, 255, 0.6)",
+      disabled: "rgba(255, 255, 255,0.38)",
+    },
+    background: {
+      paper: "#1c2430;",
+    },
+  },
+
+  typography: {
+    h1: {
+      fontFamily: `"Montserrat","Roboto","Helvetica"`,
+      textTransform:"capitalize",
+      fontSize: 50,
+      marginBottom: 50,
+    },
+    h4: {
+      fontFamily: `"Montserrat","Roboto","Helvetica"`,
+      textTransform: "capitalize",
+    },
+    h5: {
+      fontWeight:300
+    },
+    body1: {
+      fontSize: 20,
+      fontWeight: 400,
     },
   },
 });
@@ -44,34 +83,14 @@ const App = () => {
             <Navigation />
             <SocialNetworks />
           </div>
-          <Container disableGutters>
+          <Container maxWidth={false}>
             <Switch>
-              <Route exact path='/' component={Home} />
-              <Route exact path='/about' component={About} />
+              <Route exact path="/" component={Home} />
+              <Route exact path="/about" component={About} />
               <Route exact path="/skills" component={Skills} />
               <Route exact path="/achievements" component={Achievements} />
               <Route exact path="/career" component={Career} />
               <Route exact path="/contact" component={Contact} />
-              {/* <Route
-              path="/github"
-              component={() => {
-                window.open(
-                  "https://github.com/Eric-Juquel?tab=repositories",
-                  "popup"
-                );
-                return null;
-              }}
-            />
-            <Route
-              path="/linkedin"
-              component={() => {
-                window.open(
-                  "https://www.linkedin.com/in/eric-juquel-4397b719a/",
-                  "popup"
-                );
-                return null;
-              }}
-            /> */}
             </Switch>
           </Container>
         </div>

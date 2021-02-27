@@ -79,7 +79,7 @@
     stroke: $color-secondary;
     stroke-width: 2;
     stroke-dasharray: 600, 0;
-    transition: all 0.35s linear;
+    transition: all 0.50s linear;
   }
 
   &:hover {
@@ -93,5 +93,13 @@
 
   & span {
     margin: 1rem auto;
+    transform:translateY(0);
+    transition: transform 0.3s;
+  }
+
+  &:active {
+    & span {
+        transform:translateY(3px)
+      }
   }
 }

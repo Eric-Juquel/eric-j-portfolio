@@ -15,7 +15,7 @@ import Skills from "./Skills";
 const useStyles = makeStyles({
   subtitle: {
     fontWeight: "100",
-    color:"rgba(255, 255, 255, 0.6)"
+    color: "rgba(255, 255, 255, 0.6)",
   },
 });
 
@@ -24,7 +24,7 @@ const Home = () => {
   const lang = useSelector((state) => state.languageReducer.language);
 
   return (
-    <div>
+    <>
       <div className="container">
         <div className="block">
           <div className="title">
@@ -39,26 +39,23 @@ const Home = () => {
           <Typography variant="h5" className={classes.subtitle}>
             {translate(lang, "subtitle")}
           </Typography>
-          <Button />
-          <Button2 />
+          <div style={{ display: "flex", marginTop: "3rem" }}>
+            {/* <Button /> */}
+            <Button2 />
+          </div>
         </div>
       </div>
-      <div className="container">
-        <About />
-      </div>
-      <div className="container">
-        <Skills />
-      </div>
-      <div className="container">
-        <Achievements />
-      </div>
-      <div className="container">
-        <Career />
-      </div>
-      <div className="container">
-        <Contact />
-      </div>
-    </div>
+
+      <Skills />
+
+      <Achievements />
+
+      <Career />
+
+      <About />
+
+      <Contact />
+    </>
   );
 };
 

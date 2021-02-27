@@ -7,9 +7,16 @@
   "about": "à propos",
   "skills": "compétences",
   "achievements": "réalisations",
-  "career":"parcours",
+  "career": "parcours",
   "contact": "contact",
 
-  "contactMe": "contactez moi"
-  
+  "contactMe": "contactez moi",
+
+  "skills-1": "Ma Formation 'Développeur web & web mobile' m'a apporté les bases fondamentales à la création de sites web responsives",
+  "skills-2": "J'ai pris le parti d'une orientation axée sur le JavaScipt en développant mes compétences dans cet environement",
+  "skills-3": "Mon expèrience professionelle en entreprise m'a permis de réaliser les parties Front-End d'applications web en ReactJs et de maitriser les outils essentiels pour le travail en équipe",
+  "skills-4": "Je pratique une veille technologique permanente afin d'optimiser mes compétences actuelles et d'en aquerir de nouvelles",
+   
+  "languageFramework": "Langage - Framework",
+  "library": "librairie"
 }

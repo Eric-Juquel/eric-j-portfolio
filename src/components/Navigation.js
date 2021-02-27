@@ -9,7 +9,13 @@ const Navigation = () => {
   const lang = useSelector((state) => state.languageReducer.language);
   const [active, setActive] = useState("");
 
-  const menuItems = [{value:translate(lang, "about"), label:"about"},{value:translate(lang, "skills"), label:"skills"}, {value:translate(lang, "achievements"), label:"achievements"}, {value:translate(lang, "career"), label:"career"},{value:translate(lang, "contact"), label:"contact"} ];
+  const menuItems = [
+    { value: translate(lang, "skills"), label: "skills" },
+    { value: translate(lang, "achievements"), label: "achievements" },
+    { value: translate(lang, "career"), label: "career" },
+    { value: translate(lang, "about"), label: "about" },
+    { value: translate(lang, "contact"), label: "contact" },
+  ];
 
   return (
     <nav className={classes.navigation}>
@@ -18,7 +24,9 @@ const Navigation = () => {
           return (
             <li
               key={`${item.label}_${i}`}
-              className={`${classes.item} ${active === item.label && classes.active}`}
+              className={`${classes.item} ${
+                active === item.label && classes.active
+              }`}
               onClick={() => {
                 setActive(item.label);
               }}

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Achievements = () => {
     return (
-        <div>
+        <div className="container">
             Réalisations
         </div>
     )

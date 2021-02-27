@@ -12,19 +12,21 @@
   overflow-x: hidden;
 }
 
+// FR/EN toggle button
 .languageBtn {
   width: 10rem;
   height: 5rem;
   background-color: transparent;
   position: fixed;
-  right: 0;
+  right: -4rem;
   top: 0;
   z-index: 3;
 }
 
+// Navigation
 .side-menu {
   width: 15rem;
-  background-color: #232433;
+  background-color: $background-paper;
   height: 100vh;
   position: fixed;
   left: 0;
@@ -41,7 +43,9 @@
   box-shadow: 1px 0px 5px 0px rgba(255, 255, 255, 0.295);
 }
 
+//Global Components boxes
 .container {
+  // border:1px solid white;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -52,15 +56,22 @@
 .block {
   display: flex;
   flex-direction: column;
-  width: 50%;
-  padding: 1.5rem;
+  width: 46%;
+  padding:1.5rem;
+  // flex-grow: 1
+  
+}
+
+//Typography
+.highlight {
+  color:$color-secondary;
 }
 
 //HOME
-
 .title {
   width: 100%;
   display: flex;
+  font-family: "Montserrat", "Roboto";
 
   & p{
     font-size:2rem;
@@ -74,7 +85,7 @@
   display: grid;
   grid-template-columns: repeat(5, 3rem);
   grid-template-rows: repeat(5, 3rem);
-  font-family: "Capriola", cursive;
+  font-family: "Capriola", "Roboto";
   font-size: 3rem;
 
   & > div {
@@ -93,7 +104,7 @@
       grid-row: 1 / span 3;
       margin-left: -0.8rem;
 
-      background: linear-gradient(135deg, #fcf85a, #fe8e5a);
+      background: linear-gradient( #fcf85a, #fe775a);
       background-clip: text;
       -webkit-background-clip: text;
       -moz-background-clip: text;
@@ -104,7 +115,7 @@
       grid-row: 3 / span 3;
       margin-top: -1.8rem;
 
-      background: linear-gradient(135deg, #fe8e5a, #ff5b5a);
+      background: linear-gradient( #feaa5a, #da4344);
       background-clip: text;
       -webkit-background-clip: text;
       -moz-background-clip: text;
@@ -123,4 +134,10 @@
     grid-column: 3 / 5;
     grid-row: 3 / span 1;
   }
+}
+
+//SKILLS
+
+.test {
+  color:rgb(33, 150, 243)
 }

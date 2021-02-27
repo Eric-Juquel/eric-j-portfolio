@@ -45,7 +45,7 @@ const Logo = () => {
             <Typography gutterBottom variant="h4" component="h2">
               Eric
             </Typography>
-            <Typography variant="body1" component="p">
+            <Typography variant="h6" component="h3">
               {translate(lang, "title")}
             </Typography>
           </CardContent>
@@ -60,6 +60,15 @@ const Logo = () => {
           href="https://cvdesignr.com/p/5c5330da9718e"
         >
           CV
+        </Button>
+        <Button
+          className={classes.button}
+          size="medium"
+          color="primary"
+          variant="contained"
+          href="https://cvdesignr.com/p/5c5330da9718e"
+        >
+          LR
         </Button>
       </CardActions>
     </Card>
