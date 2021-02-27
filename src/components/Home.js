@@ -41,7 +41,7 @@ const Home = () => {
           </Typography>
           <div style={{ display: "flex", marginTop: "3rem" }}>
             {/* <Button /> */}
-            <Button2 />
+            <Button2 text={translate(lang, "contactMe")}/>
           </div>
         </div>
       </div>

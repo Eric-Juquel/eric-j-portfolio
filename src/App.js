@@ -14,8 +14,7 @@ import Contact from "./components/Contact";
 
 import { Container } from "@material-ui/core";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import { orange, teal, purple, red, blue} from "@material-ui/core/colors";
-
+import { orange, teal, purple, red, blue } from "@material-ui/core/colors";
 
 const theme = createMuiTheme({
   palette: {
@@ -27,17 +26,17 @@ const theme = createMuiTheme({
       main: teal[300],
     },
     info: {
-      main:blue[500],
-      dark:"rgb(33, 150, 243,0.4)"
+      main: blue[500],
+      dark: "rgb(33, 150, 243,0.4)",
     },
     error: {
       main: red[500],
-      dark: "rgba(211, 47, 47, 0.4)"
+      dark: "rgba(211, 47, 47, 0.4)",
     },
     warning: {
       light: purple[100],
       main: purple[400],
-      dark: "rgba(186, 104, 200,0.4)" 
+      dark: "rgba(186, 104, 200,0.4)",
     },
     text: {
       primary: "rgba(255, 255, 255,0.87)",
@@ -45,14 +44,14 @@ const theme = createMuiTheme({
       disabled: "rgba(255, 255, 255,0.38)",
     },
     background: {
-      paper: "#1c2430;",
+      paper: "#1c2430",
     },
   },
 
   typography: {
     h1: {
       fontFamily: `"Montserrat","Roboto","Helvetica"`,
-      textTransform:"capitalize",
+      textTransform: "capitalize",
       fontSize: 50,
       marginBottom: 50,
     },
@@ -61,7 +60,7 @@ const theme = createMuiTheme({
       textTransform: "capitalize",
     },
     h5: {
-      fontWeight:300
+      fontWeight: 300,
     },
     body1: {
       fontSize: 20,

@@ -1,6 +1,4 @@
 {
-  "firstname": "firstname",
-  "name": "name",
   "title": "Web developpeur",
   "subtitle": "FrontEnd Developpeur / ReactJs",
 
@@ -11,6 +9,9 @@
   "contact": "contact",
 
   "contactMe": "contact me",
+  "name": "Name",
+  "subject": "Subject",
+  "send": "send",
 
   "skills-1": "My 'Web & mobile web developer' training provided me with the fundamental bases for creating responsive websites",
   "skills-2": "I took the side of an orientation focused on JavaScipt by developing my skills in this workflow",

@@ -1,6 +1,5 @@
 {
-  "firstname": "prénom",
-  "name": "nom",
+  
   "title": "Développeur web",
   "subtitle": "Développeur Frontend / ReactJs",
 
@@ -11,6 +10,9 @@
   "contact": "contact",
 
   "contactMe": "contactez moi",
+  "name": "Nom",
+  "subject": "Sujet",
+  "send": "envoyer",
 
   "skills-1": "Ma Formation 'Développeur web & web mobile' m'a apporté les bases fondamentales à la création de sites web responsives",
   "skills-2": "J'ai pris le parti d'une orientation axée sur le JavaScipt en développant mes compétences dans cet environement",
@@ -19,4 +21,6 @@
    
   "languageFramework": "Langage - Framework",
   "library": "librairie"
+
+
 }

@@ -4,7 +4,7 @@ import classes from "./Button.module.scss";
 import { translate } from "../translations/translate";
 import { useSelector } from "react-redux";
 
-const Button2 = () => {
+const Button2 = ({text}) => {
   const lang = useSelector((state) => state.languageReducer.language);
 
   return (
@@ -15,7 +15,7 @@ const Button2 = () => {
             <svg>
               <rect x="0" y="0" fill="none" width="100%" height="99%" />
             </svg>
-            <span>{translate(lang, "contactMe")}</span>
+            <span>{text}</span>
           </Link>
         </div>
       </div>

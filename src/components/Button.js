@@ -3,13 +3,13 @@ import classes from "./Button.module.scss";
 import { translate } from "../translations/translate";
 import { useSelector } from "react-redux";
 
-const Button = () => {
+const Button = ({type, text}) => {
   const lang = useSelector((state) => state.languageReducer.language);
 
   return (
     <div className={classes.container}>
       <div className={classes.center}>
-        <button className={classes.btn}>
+        <button type={type} className={classes.btn}>
           <svg
             width="180px"
             height="60px"
@@ -25,7 +25,7 @@ const Button = () => {
               className="hl-line"
             />
           </svg>
-          {translate(lang, "contactMe")}
+          {text}
         </button>
       </div>
     </div>

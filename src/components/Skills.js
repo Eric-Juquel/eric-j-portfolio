@@ -3,18 +3,15 @@ import "../App.scss";
 import { makeStyles } from "@material-ui/core/styles";
 import { translate } from "../translations/translate";
 import { useSelector } from "react-redux";
-import {
-  Grid,
-  Typography,
-} from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import ProgressBox from "./ProgressBox";
-import ChipBox from './ChipBox'
+import ChipBox from "./ChipBox";
 
 const useStyles = makeStyles(
   (theme) => ({
     item: {
       width: "100%",
-    },  
+    },
   }),
   { index: 1 }
 );
