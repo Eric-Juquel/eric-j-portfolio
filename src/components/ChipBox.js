@@ -13,7 +13,7 @@ const useStyles = makeStyles(
       padding: "1.5rem",
     },
     chip: {
-      fontSize: 18,
+      fontSize: 20,
       fontWeight: 300,
       margin: "0 1rem",
     },
