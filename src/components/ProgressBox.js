@@ -52,7 +52,7 @@ useEffect(() => {
 },[])
 
   return (
-    <Paper className={classes.paper}>
+    <Paper className={classes.paper}  variant="outlined">
       <Typography
         justify="center"
         variant="h4"
@@ -86,11 +86,11 @@ useEffect(() => {
           <LinearProgress
             variant="determinate"
             value={progress3}
-            // classes={{
-            //   colorPrimary: classes.colorInfo,
-            //   barColorPrimary: classes.barColorInfo,
-            // }}
-            color="secondary"
+            classes={{
+              colorPrimary: classes.colorWarning,
+              barColorPrimary: classes.barColorWarning,
+            }}
+            
           />
         </Grid>
         <Grid item>
@@ -104,7 +104,7 @@ useEffect(() => {
             //   colorPrimary: classes.colorWarning,
             //   barColorPrimary: classes.barColorWarning,
             // }}
-            color="primary"
+            color="secondary"
           />
         </Grid>
         <Grid item>
@@ -118,7 +118,7 @@ useEffect(() => {
             //   colorPrimary: classes.colorError,
             //   barColorPrimary: classes.barColorError,
             // }}
-            color="secondary"
+            color="primary"
           />
         </Grid>
       </Grid>

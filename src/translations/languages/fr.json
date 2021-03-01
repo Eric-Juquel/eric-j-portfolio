@@ -1,5 +1,4 @@
 {
-  
   "title": "Développeur web",
   "subtitle": "Développeur Frontend / ReactJs",
 
@@ -12,15 +11,22 @@
   "contactMe": "contactez moi",
   "name": "Nom",
   "subject": "Sujet",
-  "send": "envoyer",
+  "submit": "envoyer",
+  "sending": "envoi...",
+  "sent": "Message envoyé avec succés",
+  "errorSent": "Erreur! Message non envoyé",
 
   "skills-1": "Ma Formation 'Développeur web & web mobile' m'a apporté les bases fondamentales à la création de sites web responsives",
   "skills-2": "J'ai pris le parti d'une orientation axée sur le JavaScipt en développant mes compétences dans cet environement",
   "skills-3": "Mon expèrience professionelle en entreprise m'a permis de réaliser les parties Front-End d'applications web en ReactJs et de maitriser les outils essentiels pour le travail en équipe",
   "skills-4": "Je pratique une veille technologique permanente afin d'optimiser mes compétences actuelles et d'en aquerir de nouvelles",
-   
   "languageFramework": "Langage - Framework",
-  "library": "librairie"
+  "library": "librairie",
 
+  "professionals": "professionelles",
+  "training": "formation & personnelles",
 
+  "coverage":"Pour la couverture des ",
+  "elections":"élections américaines de France 24",
+  "achieve":",j'ai réalisé la partie front end de l'interface utilisateur permettant de consulter les résultats, de les modérer et de les mettre à disposition des outils graphiques."
 }

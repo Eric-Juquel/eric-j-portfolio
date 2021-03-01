@@ -46,7 +46,7 @@ const ChipBox = () => {
   const lang = useSelector((state) => state.languageReducer.language);
 
   return (
-    <Paper className={classes.paper}>
+    <Paper className={classes.paper} variant="outlined">
       <Typography
         justify="center"
         variant="h4"
@@ -72,9 +72,9 @@ const ChipBox = () => {
           </Grid>
           <Grid item>
             <Chip
-              label="redux"
+              label="Redux"
               variant="outlined"
-              className={`${classes.chip} ${classes.chip1}`}
+              className={`${classes.chip} ${classes.chip4}`}
             />
           </Grid>
           <Grid item>

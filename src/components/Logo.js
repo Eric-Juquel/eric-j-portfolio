@@ -15,16 +15,26 @@ import {
 
 import logo from "../images/Logo1.png";
 
-const useStyles = makeStyles({
-  card: {
-    maxWidth: "90%",
-    background: "transparent",
-    color: "rgb(249, 247, 246)",
-  },
-  button: {
-    margin: "auto",
-  },
-});
+const useStyles = makeStyles(
+  (theme) => ({
+    card: {
+      maxWidth: "90%",
+      background: "transparent",
+      color: "rgb(249, 247, 246)",
+    },
+    button: {
+      margin: "auto",
+      containedPrimary: theme.palette.warning.main,
+    },
+    colorWarning: {
+      backgroundColor: theme.palette.warning.main,
+      "&:hover": {
+        backgroundColor: theme.palette.warning.light,
+      },
+    },
+  }),
+  { index: 1 }
+);
 
 const Logo = () => {
   const classes = useStyles();
@@ -54,6 +64,9 @@ const Logo = () => {
       <CardActions>
         <Button
           className={classes.button}
+          classes={{
+            containedPrimary: classes.colorWarning,
+          }}
           size="medium"
           color="primary"
           variant="contained"
@@ -63,6 +76,9 @@ const Logo = () => {
         </Button>
         <Button
           className={classes.button}
+          classes={{
+            containedPrimary: classes.colorWarning,
+          }}
           size="medium"
           color="primary"
           variant="contained"

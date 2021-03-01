@@ -3,7 +3,7 @@ import classes from "./Button.module.scss";
 import { translate } from "../translations/translate";
 import { useSelector } from "react-redux";
 
-const Button = ({type, text}) => {
+const Button1 = ({type, text}) => {
   const lang = useSelector((state) => state.languageReducer.language);
 
   return (
@@ -32,4 +32,4 @@ const Button = ({type, text}) => {
   );
 };
 
-export default Button;
+export default Button1;

@@ -34,9 +34,9 @@ const theme = createMuiTheme({
       dark: "rgba(211, 47, 47, 0.4)",
     },
     warning: {
-      light: purple[100],
-      main: purple[400],
-      dark: "rgba(186, 104, 200,0.4)",
+      main: "rgb(229, 0, 113)",
+      dark: "rgba(229, 0, 113,0.4)",
+      light: "rgb(255, 64, 159);"
     },
     text: {
       primary: "rgba(255, 255, 255,0.87)",
@@ -52,7 +52,7 @@ const theme = createMuiTheme({
     h1: {
       fontFamily: `"Montserrat","Roboto","Helvetica"`,
       textTransform: "capitalize",
-      fontSize: 80,
+      fontSize: 70,
       marginBottom: 50,
     },
     h4: {
