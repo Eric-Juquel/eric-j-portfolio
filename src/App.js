@@ -52,7 +52,7 @@ const theme = createMuiTheme({
     h1: {
       fontFamily: `"Montserrat","Roboto","Helvetica"`,
       textTransform: "capitalize",
-      fontSize: 50,
+      fontSize: 80,
       marginBottom: 50,
     },
     h4: {

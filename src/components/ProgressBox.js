@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { translate } from "../translations/translate";
 import { useSelector } from "react-redux";
@@ -37,13 +37,25 @@ const useStyles = makeStyles(
 const ProgressBox = () => {
   const classes = useStyles();
   const lang = useSelector((state) => state.languageReducer.language);
+  const [progress1, setProgress1] = useState(0);
+  const [progress2, setProgress2] = useState(0);
+  const [progress3, setProgress3] = useState(0);
+  const [progress4, setProgress4] = useState(0);
+  const [progress5, setProgress5] = useState(0);
+
+useEffect(() => {
+  setProgress1(90)
+  setProgress2(70)
+  setProgress3(70)
+  setProgress4(50)
+  setProgress5(60)
+},[])
 
   return (
     <Paper className={classes.paper}>
       <Typography
         justify="center"
         variant="h4"
-        color="primary"
         align="center"
         gutterBottom
       >
@@ -56,16 +68,16 @@ const ProgressBox = () => {
         className={classes.container1}
       >
         <Grid item>
-          <Typography variant="h5" gutterBottom>
+          <Typography variant="h5" gutterBottom >
             HTML - CSS (Sass, Flexbox, Grid)
           </Typography>
-          <LinearProgress variant="determinate" value={90} color="secondary" />
+          <LinearProgress variant="determinate" value={progress1} color="secondary" />
         </Grid>
         <Grid item>
           <Typography variant="h5" gutterBottom>
             JavaScript
           </Typography>
-          <LinearProgress variant="determinate" value={70} />
+          <LinearProgress variant="determinate" value={progress2} color="primary" />
         </Grid>
         <Grid item>
           <Typography variant="h5" gutterBottom>
@@ -73,11 +85,12 @@ const ProgressBox = () => {
           </Typography>
           <LinearProgress
             variant="determinate"
-            value={70}
-            classes={{
-              colorPrimary: classes.colorInfo,
-              barColorPrimary: classes.barColorInfo,
-            }}
+            value={progress3}
+            // classes={{
+            //   colorPrimary: classes.colorInfo,
+            //   barColorPrimary: classes.barColorInfo,
+            // }}
+            color="secondary"
           />
         </Grid>
         <Grid item>
@@ -86,11 +99,12 @@ const ProgressBox = () => {
           </Typography>
           <LinearProgress
             variant="determinate"
-            value={50}
-            classes={{
-              colorPrimary: classes.colorWarning,
-              barColorPrimary: classes.barColorWarning,
-            }}
+            value={progress4}
+            // classes={{
+            //   colorPrimary: classes.colorWarning,
+            //   barColorPrimary: classes.barColorWarning,
+            // }}
+            color="primary"
           />
         </Grid>
         <Grid item>
@@ -99,11 +113,12 @@ const ProgressBox = () => {
           </Typography>
           <LinearProgress
             variant="determinate"
-            value={60}
-            classes={{
-              colorPrimary: classes.colorError,
-              barColorPrimary: classes.barColorError,
-            }}
+            value={progress5}
+            // classes={{
+            //   colorPrimary: classes.colorError,
+            //   barColorPrimary: classes.barColorError,
+            // }}
+            color="secondary"
           />
         </Grid>
       </Grid>

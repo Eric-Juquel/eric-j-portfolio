@@ -74,14 +74,14 @@ const ChipBox = () => {
             <Chip
               label="redux"
               variant="outlined"
-              className={`${classes.chip} ${classes.chip2}`}
+              className={`${classes.chip} ${classes.chip1}`}
             />
           </Grid>
           <Grid item>
             <Chip
               label="React-Select"
               variant="outlined"
-              className={`${classes.chip} ${classes.chip3}`}
+              className={`${classes.chip} ${classes.chip1}`}
             />
           </Grid>
         </Grid>
@@ -90,14 +90,14 @@ const ChipBox = () => {
             <Chip
               label="React-Hook-Form"
               variant="outlined"
-              className={`${classes.chip} ${classes.chip4}`}
+              className={`${classes.chip} ${classes.chip2}`}
             />
           </Grid>
           <Grid item>
             <Chip
               label="Cypress"
               variant="outlined"
-              className={`${classes.chip} ${classes.chip5}`}
+              className={`${classes.chip} ${classes.chip2}`}
             />
           </Grid>
         </Grid>
