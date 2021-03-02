@@ -34,5 +34,14 @@
 
   "licence":"J'ai eu pour mission la refonte complete de l'interface d'administration du ",
   "serveur": "serveur de licences ",
-  "licenceSuite":"de l'entreprise vers ReactJs, permettant de visualiser et d'editer des modèles de licences clients, incluants une gamme des produits proposés et de leur caractéristiques."
+  "licenceSuite":"de l'entreprise vers ReactJs, permettant de visualiser et d'editer des modèles de licences clients, incluants une gamme des produits proposés et de leur caractéristiques.",
+
+  "presidentialTitle":"Presidentielles",
+  "presidentialSub": "",
+  "senatTitle": "Chambre / Senat",
+  "senatSub": "",
+  "tickerTitle":"Ticker",
+  "tickerSub":""
+
+  
 }

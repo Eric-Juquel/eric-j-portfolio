@@ -61,38 +61,79 @@ const useStyles = makeStyles(
 );
 
 const ProfessionalWork = () => {
-  const [openModal, setOpenModal] = useState(false);
-  const [images, setImages] = useState([{
-    id: 1,
-    url: "",
-    title: "Title",
-    subtitle: "subtitle",
-    alt:""
-  }]);
-  const matches = useMediaQuery("(max-width:600px)");
   const classes = useStyles();
   const lang = useSelector((state) => state.languageReducer.language);
 
-  const images1 = [
+  // CAROUSEL SETTINGS
+  const [openModal, setOpenModal] = useState(false);
+  const [images, setImages] = useState([
+    {
+      id: 1,
+      url: "",
+      title: "Title",
+      subtitle: "subtitle",
+      alt: "",
+    },
+  ]);
+  const matches = useMediaQuery("(max-width:600px)");
+
+  // CAROUSEL DATAS
+  const licenseServeur = [
+    {
+      id: 1,
+      url: "/images/licencesrv/licences.png",
+      title: "Licenses",
+      subtitle: "",
+      alt:"icenses"
+    },
+    {
+      id: 2,
+      url: "/images/licencesrv/templates.png",
+      title: "Templates",
+      subtitle: "",
+      alt:"Templates"
+    },
+    {
+      id: 3,
+      url: "/images/licencesrv/createlicence.png",
+      title: "Create / Edit License",
+      subtitle: "",
+      alt:"reate / Edit License"
+    },
+    {
+      id: 4,
+      url: "/images/licencesrv/search.png",
+      title: "Adavnced Search",
+      subtitle: "",
+      alt:"Adavnced Search"
+    },
+  ];
+
+  const electionsUs = [
     {
       id: 1,
       url: "/images/ElectionsUS/Presidentielle.png",
-      title: "Title",
-      subtitle: "subtitle",
+      title: translate(lang, "presidentialTitle"),
+      subtitle: translate(lang, "presidentialSub"),
+      alt: translate(lang, "presidentialTitle")
     },
     {
       id: 2,
       url: "/images/ElectionsUS/Sénat.png",
-      title: "Title",
-      subtitle: "subtitle",
+      title: translate(lang, "senatTitle"),
+      subtitle: translate(lang, "senatSub"),
+      alt: translate(lang, "senatTitle")
     },
     {
       id: 3,
       url: "/images/ElectionsUS/Ticker.png",
-      title: "Title",
-      subtitle: "subtitle",
+      title: translate(lang, "tickerTitle"),
+      subtitle: translate(lang, "tickerSub"),
+      alt: translate(lang, "tickerTitle")
     },
   ];
+
+  
 
   return (
     <>
@@ -143,7 +184,7 @@ const ProfessionalWork = () => {
                     image="/images/ElectionsUS/Presidentielle.png"
                     title="UI Elections Us France 24"
                     onClick={() => {
-                      setImages(images1);
+                      setImages(electionsUs);
                       setOpenModal(true);
                     }}
                   />
@@ -164,6 +205,10 @@ const ProfessionalWork = () => {
                 className={classes.mediaLicence}
                 image="/images/licencesrv/licences.png"
                 title="Serveur de licences"
+                onClick={() => {
+                  setImages(licenseServeur);
+                  setOpenModal(true);
+                }}
               />
             </CardActionArea>
             <CardContent>

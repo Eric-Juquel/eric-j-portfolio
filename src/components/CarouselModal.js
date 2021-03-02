@@ -9,16 +9,17 @@ const CarouselModal = ({ images, open, setOpen, isMobile }) => {
         open={open}
         onClose={() => setOpen(false)}
         onStart={() => setOpen(false)}
-        autoplay={false}
+        autoplay={isMobile}
         mobile={isMobile}
-
+        
+        
       >
         {Array.isArray(images) & (images.length > 0)
           ? images.map((image) => {
               return (
                 <Slide
                   key={image.id}
-                  media={<img src={image.url} alt={image.alt} width="90%" />}
+                  media={<img src={image.url} alt={image.alt} width="95%" maxHeight="95%"/>}
                   mediaBackgroundStyle={{
                     backgroundColor: "rgb(42, 53, 71)",
                     height: "70%",
@@ -26,6 +27,7 @@ const CarouselModal = ({ images, open, setOpen, isMobile }) => {
                   style={{ backgroundColor: "rgb(42, 53, 71)" }}
                   title={image.title}
                   subtitle={image.subtitle}
+                  
                 />
               );
             })
