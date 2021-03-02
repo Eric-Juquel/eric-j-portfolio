@@ -23,10 +23,16 @@
   "languageFramework": "Language - Framework",
   "library": "library",
 
-  "professionals":"professionals",
-  "training":"training & personnal",
+  "professionals": "professionals",
+  "training": "training & personnal",
 
-  "coverage":"For the coverage of the",
-  "elections":"American elections of France 24",
-  "achieve":", I achieved the front part of the user interface allowing to consult the results, to moderate them and to make them available to the graphical tools."
+  "coverage": "For the coverage of the",
+  "elections": "American elections of France 24",
+  "achieve": ", I achieved the front part of the user interface allowing to consult the results, to moderate them and to make them available to the graphical tools.",
+  "interface": "The interface",
+  "include": " also included the edition of information banners as well as the publication of antenna infographics to the social networks of the France Médias Monde group.",
+
+  "licence": "My mission was to completely redesign the administration interface of the company's ",
+  "serveur": "license server ",
+  "licenceSuite": "to ReactJs, allowing you to view and edit customers license models including a range of products offered and how their features."
 }

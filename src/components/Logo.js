@@ -68,21 +68,24 @@ const Logo = () => {
             containedPrimary: classes.colorWarning,
           }}
           size="medium"
-          color="primary"
+          color="secondary"
           variant="contained"
-          href="https://cvdesignr.com/p/5c5330da9718e"
+          href="/files/CV_2021-02-23_Eric_JUQUEL.pdf"
+          download
         >
           CV
         </Button>
+        
         <Button
           className={classes.button}
           classes={{
             containedPrimary: classes.colorWarning,
           }}
           size="medium"
-          color="primary"
+          color="secondary"
           variant="contained"
-          href="https://cvdesignr.com/p/5c5330da9718e"
+          href="/files/Lettre de recommandation Woody Technologies pour Eric Juquel.pdf"
+          download
         >
           LR
         </Button>

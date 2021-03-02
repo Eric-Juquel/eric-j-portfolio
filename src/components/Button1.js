@@ -1,11 +1,7 @@
 import React from "react";
 import classes from "./Button.module.scss";
-import { translate } from "../translations/translate";
-import { useSelector } from "react-redux";
 
-const Button1 = ({type, text}) => {
-  const lang = useSelector((state) => state.languageReducer.language);
-
+const Button1 = ({ type, text }) => {
   return (
     <div className={classes.container}>
       <div className={classes.center}>

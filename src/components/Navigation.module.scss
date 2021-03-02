@@ -29,9 +29,9 @@
     width: 100%;
   }
 
-  &:active::before {
-    background-color: rgba(whitesmoke, 0.5);
-  }
+  // &:active::before {
+  //   background-color: rgba($color-warning, 0.8);
+  // }
 
   & a:link,
   & a:visited {

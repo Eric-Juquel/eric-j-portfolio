@@ -14,7 +14,7 @@ import Contact from "./components/Contact";
 
 import { Container } from "@material-ui/core";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import { orange, teal, purple, red, blue } from "@material-ui/core/colors";
+import { orange, teal, red, blue } from "@material-ui/core/colors";
 
 const theme = createMuiTheme({
   palette: {
@@ -36,12 +36,13 @@ const theme = createMuiTheme({
     warning: {
       main: "rgb(229, 0, 113)",
       dark: "rgba(229, 0, 113,0.4)",
-      light: "rgb(255, 64, 159);"
+      light: "rgb(255, 64, 159);",
     },
     text: {
       primary: "rgba(255, 255, 255,0.87)",
       secondary: "rgba(255, 255, 255, 0.6)",
       disabled: "rgba(255, 255, 255,0.38)",
+      hint: "#1c2430",
     },
     background: {
       paper: "#1c2430",

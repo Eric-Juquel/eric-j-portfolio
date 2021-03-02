@@ -1,11 +1,11 @@
 import React from "react";
 import "../App.scss";
-import ReactPlayer from "react-player";
 import { makeStyles } from "@material-ui/core/styles";
 import { translate } from "../translations/translate";
 import { useSelector } from "react-redux";
-import { Grid, Typography, Paper, Divider } from "@material-ui/core";
-import SvgWoodyTechnologyPinkLogo from "./WoodyTechnologyPinkLogo";
+import { Grid, Typography, Paper } from "@material-ui/core";
+import ProfessionalWork from "./ProfessionalWork";
+import PersonnalWork from "./PersonnalWork";
 
 const useStyles = makeStyles(
   (theme) => ({
@@ -26,17 +26,6 @@ const useStyles = makeStyles(
     train: {
       marginLeft: "5rem",
     },
-    box: {
-        width:"50%",
-        padding:"1.5rem"
-    },
-    woody: {
-      width: "15rem",
-      padding: "1.5rem",
-    },
-    textPrimary:{
-      color:theme.palette.primary.main
-    }
   }),
   { index: 1 }
 );
@@ -67,33 +56,9 @@ const Achievements = () => {
               {translate(lang, "professionals")}
             </Typography>
           </Grid>
-          <Grid container justify="center">
-            <SvgWoodyTechnologyPinkLogo className={classes.woody} />
-          </Grid>
-          <Grid container direction="column" wrap="nowrap">
-            <Grid container md={12} justify="space-around" alignItems="center">
-              <Grid item className={classes.box}>
-                <ReactPlayer
-                  url="https://vimeo.com/481159581"
-                  controls
-                  light
-                  width="25rem"
-                  height="15rem"
-                />
-              </Grid>
-
-              <Grid item className={classes.box}>
-                <Typography variant="body1"> {translate(lang, "coverage")} <span className={classes.textPrimary}>{translate(lang, "elections")}</span>  {translate(lang, "achieve")}</Typography>
-              </Grid>
-            </Grid>
-            <Divider orientation="vertical" flexItem />
-
-            <Grid container md={12} justify="space-evenly" alignItems="center">
-              <Grid item>Description</Grid>
-              <Grid item> Screenshot</Grid>
-            </Grid>
-          </Grid>
+          <ProfessionalWork />
         </Paper>
+
         <Paper variant="outlined">
           <Grid container justify="flex-start">
             <Typography
@@ -104,6 +69,7 @@ const Achievements = () => {
             >
               {translate(lang, "training")}
             </Typography>
+            <PersonnalWork />
           </Grid>
         </Paper>
       </Grid>

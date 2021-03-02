@@ -28,5 +28,11 @@
 
   "coverage":"Pour la couverture des ",
   "elections":"élections américaines de France 24",
-  "achieve":",j'ai réalisé la partie front end de l'interface utilisateur permettant de consulter les résultats, de les modérer et de les mettre à disposition des outils graphiques."
+  "achieve":", j'ai réalisé la partie front end de l'interface utilisateur permettant de consulter les résultats, de les modérer et de les mettre à disposition des outils graphiques.",
+  "interface":"L'interface",
+  "include":" incluait également l'edition de bandeaux d'informations ainsi la publication des infographies antenne vers les réseaux sociaux du groupe France Médias Monde.",
+
+  "licence":"J'ai eu pour mission la refonte complete de l'interface d'administration du ",
+  "serveur": "serveur de licences ",
+  "licenceSuite":"de l'entreprise vers ReactJs, permettant de visualiser et d'editer des modèles de licences clients, incluants une gamme des produits proposés et de leur caractéristiques."
 }

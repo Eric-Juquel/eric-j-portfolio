@@ -206,7 +206,6 @@ const Contact = () => {
                 }}
               ></CallIcon>
               <Typography
-                color="textSecondary"
                 variant="subtitle1"
                 color="primary"
                 classes={{
@@ -220,7 +219,6 @@ const Contact = () => {
               {" "}
               <AlternateEmailIcon color="secondary" className={classes.icon} />
               <Typography
-                color="textSecondary"
                 variant="subtitle1"
                 color="secondary"
               >
