@@ -41,7 +41,20 @@
   "senatTitle": "Chambre / Senat",
   "senatSub": "",
   "tickerTitle":"Ticker",
-  "tickerSub":""
+  "tickerSub":"",
+
+  "lineshopDesc":"Site e-commerce de démonstration entièrement réalisé, combinant MongoDB Express React et NodeJs",
+  "visit":"Vister le site",
+
+  "smTitle": "Île Sainte Marie",
+  "smSub": "Projet site touristique autour de L'île Sainte Marie de Madagascar, entièrement responsive",
+
+  "ltdTitle": "LTD - Car Service",
+  "ltdSub": "Proposition de refonte du site web d'un prestataire de vehicules de luxe avec chauffeur sur Paris",
+
+  "lbeTitle": "Le Bon Endroit",
+  "lbeSub":"Démo de site hôtelier réalisé avec Wordpress - Elémentor - Woocommerce"
+
 
   
 }

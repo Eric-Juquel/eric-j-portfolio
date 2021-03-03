@@ -65,6 +65,7 @@ const ProfessionalWork = () => {
   const lang = useSelector((state) => state.languageReducer.language);
 
   // CAROUSEL SETTINGS
+  const matches = useMediaQuery("(max-width:600px)");
   const [openModal, setOpenModal] = useState(false);
   const [images, setImages] = useState([
     {
@@ -75,7 +76,6 @@ const ProfessionalWork = () => {
       alt: "",
     },
   ]);
-  const matches = useMediaQuery("(max-width:600px)");
 
   // CAROUSEL DATAS
   const licenseServeur = [

@@ -41,5 +41,17 @@
   "senatTitle": "House / Senate",
   "senatSub": "",
   "tickerTitle":"Ticker",
-  "tickerSub":""
+  "tickerSub":"",
+
+  "lineshopDesc":"Full stack demo e-commerce site realized from scratch, combining MongoDB Express React and NodeJs",
+  "visit":"Visit web site",
+
+  "smTitle": "Île Sainte Marie",
+  "smSub": "Tourist web site project around Sainte Marie Island in Madagascar, fully responsive",
+
+  "ltdTitle": "LTD - Car Service",
+  "ltdSub": "Proposal to redesign the website of a provider of luxury vehicles with driver in Paris",
+
+  "lbeTitle": "Le Bon Endroit",
+  "lbeSub":"Hotel website demo made with Wordpress - Elementor - Woocommerce"
 }

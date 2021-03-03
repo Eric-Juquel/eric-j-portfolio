@@ -19,7 +19,7 @@ const CarouselModal = ({ images, open, setOpen, isMobile }) => {
               return (
                 <Slide
                   key={image.id}
-                  media={<img src={image.url} alt={image.alt} width="95%" maxHeight="95%"/>}
+                  media={<img src={image.url} alt={image.alt} width="95%" height="auto"/>}
                   mediaBackgroundStyle={{
                     backgroundColor: "rgb(42, 53, 71)",
                     height: "70%",

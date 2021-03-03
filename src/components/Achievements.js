@@ -11,6 +11,7 @@ const useStyles = makeStyles(
   (theme) => ({
     paper: {
       marginBottom: "4rem",
+      
     },
     title: {
       position: "relative",
@@ -59,7 +60,7 @@ const Achievements = () => {
           <ProfessionalWork />
         </Paper>
 
-        <Paper variant="outlined">
+        <Paper variant="outlined" className={classes.paper}>
           <Grid container justify="flex-start">
             <Typography
               variant="h4"
