@@ -77,12 +77,12 @@ const App = () => {
           <div className="languageBtn">
             <Languages />
           </div>
-          <div className="side-menu">
+          <header className="side-menu">
             <Logo />
             <Navigation />
             <SocialNetworks />
-          </div>
-          <Container maxWidth={false}>
+          </header>
+          <Container maxWidth={false} component="main">
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/skills" component={Skills} />

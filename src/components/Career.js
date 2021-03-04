@@ -2,9 +2,9 @@ import React from 'react'
 
 const Career = () => {
     return (
-        <div className="container">
+        <section className="container">
             Parcours Professionel
-        </div>
+        </section>
     )
 }
 

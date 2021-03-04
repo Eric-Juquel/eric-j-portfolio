@@ -29,14 +29,12 @@ const Achievements = () => {
   const lang = useSelector((state) => state.languageReducer.language);
 
   return (
-    <div className="container">
+    <section className="container">
       <Grid container direction="column" justify="space-evenly">
         <Grid item>
-          <div className="block">
-            <Typography variant="h1" component="h1">
-              {translate(lang, "achievements")}
-            </Typography>
-          </div>
+          <Typography variant="h1" component="h1">
+            {translate(lang, "achievements")}
+          </Typography>
         </Grid>
 
         <Paper variant="outlined" className={classes.paper}>
@@ -67,7 +65,7 @@ const Achievements = () => {
           </Grid>
         </Paper>
       </Grid>
-    </div>
+    </section>
   );
 };
 

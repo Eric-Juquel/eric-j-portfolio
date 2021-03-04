@@ -85,150 +85,155 @@ const Contact = () => {
   };
 
   return (
-    <div className="container">
-      <div className="block">
-        <Typography variant="h1" component="h1">
-          {translate(lang, "contactMe")}
-        </Typography>
-
-        <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
-          <Grid container spacing={2}>
-            <Grid item xs={12} sm={6}>
-              <Controller
-                as={TextField}
-                id="name"
-                name="name"
-                control={control}
-                variant="outlined"
-                color="secondary"
-                label={translate(lang, "name")}
-                fullWidth
-                required
-              />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <Controller
-                as={TextField}
-                type="email"
-                id="email"
-                name="email"
-                control={control}
-                variant="outlined"
-                color="secondary"
-                label="Email"
-                fullWidth
-                required
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <Controller
-                as={TextField}
-                id="subect"
-                name="subject"
-                control={control}
-                variant="outlined"
-                color="secondary"
-                label={translate(lang, "subject")}
-                fullWidth
-                required
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <Controller
-                as={TextField}
-                id="message"
-                name="message"
-                control={control}
-                variant="outlined"
-                color="secondary"
-                label="Message"
-                fullWidth
-                multiline
-                rows={5}
-                required
-              />
-            </Grid>
+    <section className="container">
+      <Grid container direction="column">
+        <Grid item md={12}>
+          <Typography variant="h1" component="h1">
+            {translate(lang, "contactMe")}
+          </Typography>
+        </Grid>
+        <Grid container spacing={5}>
+          <Grid item md={6}>
+            <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
+              <Grid container spacing={2}>
+                <Grid item xs={12} sm={6}>
+                  <Controller
+                    as={TextField}
+                    id="name"
+                    name="name"
+                    control={control}
+                    variant="outlined"
+                    color="secondary"
+                    label={translate(lang, "name")}
+                    fullWidth
+                    required
+                  />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <Controller
+                    as={TextField}
+                    type="email"
+                    id="email"
+                    name="email"
+                    control={control}
+                    variant="outlined"
+                    color="secondary"
+                    label="Email"
+                    fullWidth
+                    required
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <Controller
+                    as={TextField}
+                    id="subect"
+                    name="subject"
+                    control={control}
+                    variant="outlined"
+                    color="secondary"
+                    label={translate(lang, "subject")}
+                    fullWidth
+                    required
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <Controller
+                    as={TextField}
+                    id="message"
+                    name="message"
+                    control={control}
+                    variant="outlined"
+                    color="secondary"
+                    label="Message"
+                    fullWidth
+                    multiline
+                    rows={5}
+                    required
+                  />
+                </Grid>
+              </Grid>
+              <Grid container justify="flex-end">
+                <Button1 type="submit" text={translate(lang, buttonStatus)} />
+              </Grid>
+            </form>
           </Grid>
-          <Grid container justify="flex-end">
-            <Button1 type="submit" text={translate(lang, buttonStatus)} />
-          </Grid>
-        </form>
-        <Snackbar
-          anchorOrigin={{
-            vertical: "bottom",
-            horizontal: "center",
-          }}
-          open={messageStatus === "error" || messageStatus === "success"}
-          autoHideDuration={6000}
-          onClose={handleClose}
-          message={
-            messageStatus === "error"
-              ? translate(lang, "errorSent")
-              : translate(lang, "sent")
-          }
-          action={
-            <React.Fragment>
-              <Button color="secondary" size="small" onClick={handleClose}>
-                UNDO
-              </Button>
-              <IconButton
-                size="small"
-                aria-label="close"
-                color="inherit"
-                onClick={handleClose}
-              >
-                <CloseIcon fontSize="small" />
-              </IconButton>
-            </React.Fragment>
-          }
-        />
-      </div>
+          <Snackbar
+            anchorOrigin={{
+              vertical: "bottom",
+              horizontal: "center",
+            }}
+            open={messageStatus === "error" || messageStatus === "success"}
+            autoHideDuration={6000}
+            onClose={handleClose}
+            message={
+              messageStatus === "error"
+                ? translate(lang, "errorSent")
+                : translate(lang, "sent")
+            }
+            action={
+              <React.Fragment>
+                <Button color="secondary" size="small" onClick={handleClose}>
+                  UNDO
+                </Button>
+                <IconButton
+                  size="small"
+                  aria-label="close"
+                  color="inherit"
+                  onClick={handleClose}
+                >
+                  <CloseIcon fontSize="small" />
+                </IconButton>
+              </React.Fragment>
+            }
+          />
 
-      <div className="block">
-        <Card className={classes.card} variant="outlined">
-          <CardContent>
-            <Typography variant="h4" component="h2" gutterBottom>
-              Eric Juquel
-            </Typography>
-            <Typography color="textSecondary" gutterBottom>
-              {translate(lang, "subtitle")}
-            </Typography>
-            <Typography>55 rue Gabriel Peri</Typography>
-            <Typography>94200 Ivry sur Seine</Typography>
-            <Typography gutterBottom>France</Typography>
-            <Grid container>
-              {" "}
-              <CallIcon
-                color="primary"
-                className={classes.icon}
-                classes={{
-                  colorPrimary: classes.colorWarning,
-                }}
-              ></CallIcon>
-              <Typography
-                variant="subtitle1"
-                color="primary"
-                classes={{
-                  colorPrimary: classes.colorWarning,
-                }}
-              >
-                +33 6 28 90 58 89
-              </Typography>
-            </Grid>
-            <Grid container>
-              {" "}
-              <AlternateEmailIcon color="secondary" className={classes.icon} />
-              <Typography
-                variant="subtitle1"
-                color="secondary"
-              >
-                ericjuquel94@gmail.com
-              </Typography>
-            </Grid>
-          </CardContent>
-        </Card>
-      </div>
-    </div>
+          <Grid item md={6}>
+            <Card className={classes.card} variant="outlined">
+              <CardContent>
+                <Typography variant="h4" component="h2" gutterBottom>
+                  Eric Juquel
+                </Typography>
+                <Typography color="textSecondary" gutterBottom>
+                  {translate(lang, "subtitle")}
+                </Typography>
+                <Typography>55 rue Gabriel Peri</Typography>
+                <Typography>94200 Ivry sur Seine</Typography>
+                <Typography gutterBottom>France</Typography>
+                <Grid container>
+                  {" "}
+                  <CallIcon
+                    color="primary"
+                    className={classes.icon}
+                    classes={{
+                      colorPrimary: classes.colorWarning,
+                    }}
+                  ></CallIcon>
+                  <Typography
+                    variant="subtitle1"
+                    color="primary"
+                    classes={{
+                      colorPrimary: classes.colorWarning,
+                    }}
+                  >
+                    +33 6 28 90 58 89
+                  </Typography>
+                </Grid>
+                <Grid container>
+                  {" "}
+                  <AlternateEmailIcon
+                    color="secondary"
+                    className={classes.icon}
+                  />
+                  <Typography variant="subtitle1" color="secondary">
+                    ericjuquel94@gmail.com
+                  </Typography>
+                </Grid>
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
+      </Grid>
+    </section>
   );
 };
 

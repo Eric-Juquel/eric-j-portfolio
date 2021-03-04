@@ -23,7 +23,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="container">
+      <section className="container">
         <div className="block">
           <div className="title">
             <div className="myName">
@@ -42,7 +42,7 @@ const Home = () => {
             <Button2 text={translate(lang, "contactMe")}/>
           </div>
         </div>
-      </div>
+      </section>
 
       <Skills />
 
