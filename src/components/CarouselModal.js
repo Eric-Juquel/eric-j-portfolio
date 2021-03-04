@@ -1,7 +1,8 @@
 import React from "react";
 import { AutoRotatingCarousel, Slide } from "material-auto-rotating-carousel";
 
-const CarouselModal = ({ images, open, setOpen, isMobile }) => {
+const CarouselModal = ({ images, open, setOpen, isMobile, mediaHeight, mediaWidth }) => {
+
   return (
     <div>
       <AutoRotatingCarousel
@@ -19,10 +20,10 @@ const CarouselModal = ({ images, open, setOpen, isMobile }) => {
               return (
                 <Slide
                   key={image.id}
-                  media={<img src={image.url} alt={image.alt} width="95%" height="auto"/>}
+                  media={<img src={image.url} alt={image.alt} width={mediaWidth} height="auto"/>}
                   mediaBackgroundStyle={{
                     backgroundColor: "rgb(42, 53, 71)",
-                    height: "70%",
+                    height: mediaHeight,
                   }}
                   style={{ backgroundColor: "rgb(42, 53, 71)" }}
                   title={image.title}

@@ -11,21 +11,14 @@ const useStyles = makeStyles(
   (theme) => ({
     paper: {
       marginBottom: "4rem",
-      
     },
     title: {
       position: "relative",
       top: -25,
-
+      marginRight: "5rem",
       backgroundImage:
         "linear-gradient(to bottom,rgba(28, 36, 48, 0) 0%,rgba(28, 36, 48, 0) 49%, rgb(28, 36, 48) 58%)",
       padding: "0 0.5rem",
-    },
-    pro: {
-      marginRight: "5rem",
-    },
-    train: {
-      marginLeft: "5rem",
     },
   }),
   { index: 1 }
@@ -52,7 +45,7 @@ const Achievements = () => {
               variant="h4"
               component="h2"
               color="secondary"
-              className={`${classes.title} ${classes.pro}`}
+              className={`${classes.title} `}
             >
               {translate(lang, "professionals")}
             </Typography>
@@ -61,12 +54,12 @@ const Achievements = () => {
         </Paper>
 
         <Paper variant="outlined" className={classes.paper}>
-          <Grid container justify="flex-start">
+          <Grid container justify="flex-end">
             <Typography
               variant="h4"
               component="h2"
               color="secondary"
-              className={`${classes.title} ${classes.train}`}
+              className={`${classes.title} `}
             >
               {translate(lang, "training")}
             </Typography>

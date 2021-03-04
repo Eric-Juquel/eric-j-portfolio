@@ -6,7 +6,6 @@ import Logo from "./components/Logo";
 import Navigation from "./components/Navigation";
 import SocialNetworks from "./components/SocialNetworks";
 import Home from "./components/Home";
-import About from "./components/About";
 import Skills from "./components/Skills";
 import Achievements from "./components/Achievements";
 import Career from "./components/Career";
@@ -86,7 +85,6 @@ const App = () => {
           <Container maxWidth={false}>
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route exact path="/about" component={About} />
               <Route exact path="/skills" component={Skills} />
               <Route exact path="/achievements" component={Achievements} />
               <Route exact path="/career" component={Career} />

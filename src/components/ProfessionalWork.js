@@ -67,6 +67,7 @@ const ProfessionalWork = () => {
   // CAROUSEL SETTINGS
   const matches = useMediaQuery("(max-width:600px)");
   const [openModal, setOpenModal] = useState(false);
+  const [mediaWidth, setMediaWidth] = useState("")
   const [images, setImages] = useState([
     {
       id: 1,
@@ -184,6 +185,7 @@ const ProfessionalWork = () => {
                     image="/images/ElectionsUS/Presidentielle.png"
                     title="UI Elections Us France 24"
                     onClick={() => {
+                      setMediaWidth("85%")
                       setImages(electionsUs);
                       setOpenModal(true);
                     }}
@@ -206,6 +208,7 @@ const ProfessionalWork = () => {
                 image="/images/licencesrv/licences.png"
                 title="Serveur de licences"
                 onClick={() => {
+                  setMediaWidth("97%")
                   setImages(licenseServeur);
                   setOpenModal(true);
                 }}
@@ -231,6 +234,8 @@ const ProfessionalWork = () => {
           open={openModal}
           setOpen={setOpenModal}
           images={images}
+          mediaHeight={"70%"}
+          mediaWidth={mediaWidth}
         />
       </Grid>
     </>

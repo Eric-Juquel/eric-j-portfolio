@@ -13,7 +13,6 @@ const Navigation = () => {
     { value: translate(lang, "skills"), label: "skills" },
     { value: translate(lang, "achievements"), label: "achievements" },
     { value: translate(lang, "career"), label: "career" },
-    { value: translate(lang, "about"), label: "about" },
     { value: translate(lang, "contact"), label: "contact" },
   ];
 

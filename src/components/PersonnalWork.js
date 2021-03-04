@@ -73,23 +73,23 @@ const PersonnalWork = () => {
         {
           id: 1,
           url: "/images/ileSainteMarie/desktop.png",
-          title: "Desktop",
+          title: "",
           subtitle: "",
           alt: "",
         },
         {
           id: 2,
           url: "/images/ileSainteMarie/sm_tablet.png",
-          title: "Tablet",
+          title: "",
           subtitle: "",
           alt: "",
         },
         {
           id: 3,
           url: "/images/ileSainteMarie/sm_mobile.png",
-          title: "Mobile",
+          title: "",
           subtitle: "",
-          alt: "",
+          alt: "Mobile",
         },
       ],
     },
@@ -102,60 +102,76 @@ const PersonnalWork = () => {
         {
           id: 1,
           url: "/images/ltd/desktop.png",
-          title: "Desktop",
+          title: "",
           subtitle: "",
-          alt: "",
+          alt: "Desktop",
         },
         {
           id: 2,
           url: "/images/ltd/desktop2.png",
-          title: "Desktop",
+          title: "",
           subtitle: "",
-          alt: "",
+          alt: "Desktop",
         },
         {
           id: 3,
           url: "/images/ltd/ltd_tablet.png",
-          title: "Tablet",
+          title: "",
           subtitle: "",
-          alt: "",
+          alt: "Tablet",
         },
         {
           id: 4,
           url: "/images/ltd/ltd_mobile.png",
-          title: "Mobile",
+          title: "",
           subtitle: "",
-          alt: "",
+          alt: "Mobile",
         },
       ],
     },
     {
       id: 3,
       title: translate(lang, "lbeTitle"),
-      image: "/images/leBonEndroit/lebonendroitdemo.jpg",
+      image: "/images/leBonEndroit/accueuil.png",
       subtitle: translate(lang, "lbeSub"),
       carousel: [
         {
           id: 1,
-          url: "/images/ileSainteMarie/desktop.png",
-          title: "Desktop",
+          url: "/images/leBonEndroit/accueuil.png",
+          title: "",
           subtitle: "",
-          alt: "",
+          alt: "Home",
         },
         {
           id: 2,
-          url: "/images/ileSainteMarie/tablet.png",
-          title: "Tablet",
+          url: "/images/leBonEndroit/restaurant.png",
+          title: "",
           subtitle: "",
-          alt: "",
+          alt: "Restaurant",
         },
         {
           id: 3,
-          url: "/images/ileSainteMarie/mobile.png",
-          title: "Mobile",
+          url: "/images/leBonEndroit/bungalow.png",
+          title: "",
           subtitle: "",
-          alt: "",
+          alt: "Restaurant",
         },
+        {
+          id: 4,
+          url: "/images/leBonEndroit/Loisir.png",
+          title: "",
+          subtitle: "",
+          alt: "Leisure Activity",
+        },
+        {
+          id: 5,
+          url: "/images/leBonEndroit/boutique.png",
+          title: "",
+          subtitle: "",
+          alt: "Shop",
+        },
+        
+        
       ],
     },
   ];
@@ -199,17 +215,18 @@ const PersonnalWork = () => {
             return (
               <Grid item md={3} key={site.id}>
                 <Card>
-                  <CardActionArea>
+                  <CardActionArea
+                    onClick={() => {
+                      setImages(site.carousel);
+                      setOpenModal(true);
+                    }}
+                  >
                     <CardMedia
                       className={classes.media2}
                       component="img"
                       image={site.image}
                       title={site.title}
                       alt={site.title}
-                      onClick={() => {
-                        setImages(site.carousel);
-                        setOpenModal(true);
-                      }}
                     />
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="h2">
@@ -234,6 +251,8 @@ const PersonnalWork = () => {
         open={openModal}
         setOpen={setOpenModal}
         images={images}
+        mediaHeight="80%"
+        mediaWidth="95%"
       />
     </>
   );

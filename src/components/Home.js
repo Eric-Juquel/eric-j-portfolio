@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography } from "@material-ui/core";
 import Button2 from "./Button2";
-import About from "./About";
 import Achievements from "./Achievements";
 import Career from "./Career";
 import Contact from "./Contact";
@@ -50,8 +49,6 @@ const Home = () => {
       <Achievements />
 
       <Career />
-
-      <About />
 
       <Contact />
     </>

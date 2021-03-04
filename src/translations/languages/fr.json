@@ -16,15 +16,15 @@
   "sent": "Message envoyé avec succés",
   "errorSent": "Erreur! Message non envoyé",
 
-  "skills-1": "Ma Formation 'Développeur web & web mobile' m'a apporté les bases fondamentales à la création de sites web responsives",
-  "skills-2": "J'ai pris le parti d'une orientation axée sur le JavaScipt en développant mes compétences dans cet environement",
+  "skills-1": "Ma Formation 'Développeur web & web mobile' m'a permis d'aquerir les bases fondamentales à la création de sites web responsives",
+  "skills-2": "J'ai choisi de me concentrer sur le JavaScipt en développant mes compétences dans cet environement",
   "skills-3": "Mon expèrience professionelle en entreprise m'a permis de réaliser les parties Front-End d'applications web en ReactJs et de maitriser les outils essentiels pour le travail en équipe",
-  "skills-4": "Je pratique une veille technologique permanente afin d'optimiser mes compétences actuelles et d'en aquerir de nouvelles",
+  "skills-4": "Je pratique régulierement une veille technologique afin d'optimiser mes compétences actuelles et d'en aquerir de nouvelles",
   "languageFramework": "Langage - Framework",
   "library": "librairie",
 
   "professionals": "professionelles",
-  "training": "formation & personnelles",
+  "training": "Personnelles",
 
   "coverage":"Pour la couverture des ",
   "elections":"élections américaines de France 24",
