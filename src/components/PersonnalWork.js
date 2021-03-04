@@ -79,14 +79,14 @@ const PersonnalWork = () => {
         },
         {
           id: 2,
-          url: "/images/ileSainteMarie/tablet.png",
+          url: "/images/ileSainteMarie/sm_tablet.png",
           title: "Tablet",
           subtitle: "",
           alt: "",
         },
         {
           id: 3,
-          url: "/images/ileSainteMarie/mobile.png",
+          url: "/images/ileSainteMarie/sm_mobile.png",
           title: "Mobile",
           subtitle: "",
           alt: "",
@@ -115,14 +115,14 @@ const PersonnalWork = () => {
         },
         {
           id: 3,
-          url: "/images/ltd/tablette.png",
+          url: "/images/ltd/ltd_tablet.png",
           title: "Tablet",
           subtitle: "",
           alt: "",
         },
         {
           id: 4,
-          url: "/images/ltd/mobile.png",
+          url: "/images/ltd/ltd_mobile.png",
           title: "Mobile",
           subtitle: "",
           alt: "",
