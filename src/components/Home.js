@@ -3,7 +3,7 @@ import "../App.scss";
 import { translate } from "../translations/translate";
 import { useSelector } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
-import { Typography } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import Button2 from "./Button2";
 import Achievements from "./Achievements";
 import Career from "./Career";
@@ -24,24 +24,29 @@ const Home = () => {
   return (
     <>
       <section className="container">
-        <div className="block">
-          <div className="title">
-            <div className="myName">
-              <div className="myName__main myName__main--first">E</div>
-              <div className="myName__firstName">ric</div>
-              <div className="myName__main myName__main--last">J</div>
-              <div className="myName__lastName">uquel</div>
-            </div>
-            <p>{translate(lang, "title")}</p>
-          </div>
-          <Typography variant="h5" className={classes.subtitle}>
+        <Grid container direction="column">
+          <Grid container alignItems="center" justify="flex-start" spacing={3}>
+            <Grid item>
+              <div className="myName">
+                <div className="myName__main myName__main--first">E</div>
+                <div className="myName__firstName">ric</div>
+                <div className="myName__main myName__main--last">J</div>
+                <div className="myName__lastName">uquel</div>
+              </div>
+            </Grid>
+            <Grid item>
+              <Typography variant="h5">
+              {translate(lang, "title")}
+              </Typography>
+            </Grid>
+          </Grid>
+          <Typography variant="h6" className={classes.subtitle}>
             {translate(lang, "subtitle")}
           </Typography>
           <div style={{ display: "flex", marginTop: "3rem" }}>
-            {/* <Button /> */}
-            <Button2 text={translate(lang, "contactMe")}/>
+            <Button2 text={translate(lang, "contactMe")} />
           </div>
-        </div>
+        </Grid>
       </section>
 
       <Skills />

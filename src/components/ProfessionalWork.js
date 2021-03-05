@@ -104,9 +104,9 @@ const ProfessionalWork = () => {
     {
       id: 4,
       url: "/images/licencesrv/search.png",
-      title: "Adavnced Search",
+      title: "Advanced Search",
       subtitle: "",
-      alt:"Adavnced Search"
+      alt:"Advanced Search"
     },
   ];
 

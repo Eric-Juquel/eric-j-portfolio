@@ -5,7 +5,7 @@ import { Link as RouterLink } from "react-router-dom";
 import { Link } from "@material-ui/core";
 import classes from "./Navigation.module.scss";
 
-const Navigation = () => {
+const Navigation = ({setIsChecked}) => {
   const lang = useSelector((state) => state.languageReducer.language);
   const [active, setActive] = useState("");
 
@@ -27,6 +27,7 @@ const Navigation = () => {
                 active === item.label && classes.active
               }`}
               onClick={() => {
+                setIsChecked(false);
                 setActive(item.label);
               }}
             >

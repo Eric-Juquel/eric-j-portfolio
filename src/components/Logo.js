@@ -4,6 +4,7 @@ import { translate } from "../translations/translate";
 import { useSelector } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
 import {
+  Grid,
   Card,
   CardActionArea,
   CardActions,
@@ -11,9 +12,11 @@ import {
   CardMedia,
   Button,
   Typography,
+  useMediaQuery
 } from "@material-ui/core";
 
 import logo from "../images/Logo1.png";
+
 
 const useStyles = makeStyles(
   (theme) => ({
@@ -32,24 +35,34 @@ const useStyles = makeStyles(
         backgroundColor: theme.palette.warning.light,
       },
     },
+    actionAria: {
+      display:"flex",
+      padding:"1rem",
+      marginBottom:"1rem"
+    },
+    image :{
+      width:"10rem"
+    }
   }),
   { index: 1 }
 );
 
-const Logo = () => {
+const Logo = ({setIsChecked}) => {
+  const matches = useMediaQuery('(max-width:960px)');
   const classes = useStyles();
   const lang = useSelector((state) => state.languageReducer.language);
 
   return (
     <Card className={classes.card}>
-      <Link to="/">
-        <CardActionArea>
+      <Link to="/" >
+        <CardActionArea className={matches && classes.actionAria} onClick={() => setIsChecked(false)}>
           <CardMedia
             component="img"
             alt="Eric Juquel"
-            height="170"
+            height={!matches ? "170" : "auto"}
             image={logo}
             title="Eric Juquel"
+            className={matches && classes.image}
           />
           <CardContent>
             <Typography gutterBottom variant="h4" component="h2">

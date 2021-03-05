@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.scss";
+import Burger from "./components/Burger";
+import BurgerNavigation from "./components/BurgerNavigation";
 import Languages from "./components/Languages";
 import Logo from "./components/Logo";
 import Navigation from "./components/Navigation";
@@ -11,7 +13,7 @@ import Achievements from "./components/Achievements";
 import Career from "./components/Career";
 import Contact from "./components/Contact";
 
-import { Container } from "@material-ui/core";
+import { Container, useMediaQuery } from "@material-ui/core";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { orange, teal, red, blue } from "@material-ui/core/colors";
 
@@ -60,8 +62,16 @@ const theme = createMuiTheme({
       textTransform: "capitalize",
     },
     h5: {
-      fontWeight: 300,
+      fontSize: 26,
+      fontWeight: 400,
+      letterSpacing: 1.5
     },
+    h6:{ 
+      fontSize:23,
+      fontWeight: "100",
+    color: "rgba(255, 255, 255, 0.6)",
+    },
+
     body1: {
       fontSize: 20,
       fontWeight: 400,
@@ -70,6 +80,8 @@ const theme = createMuiTheme({
 });
 
 const App = () => {
+  const matches = useMediaQuery("(max-width:960px)");
+
   return (
     <Router>
       <ThemeProvider theme={theme}>
@@ -82,8 +94,10 @@ const App = () => {
             <Navigation />
             <SocialNetworks />
           </header>
+          {matches && <Burger />}
           <Container maxWidth={false} component="main">
             <Switch>
+              <Route exact path="/navigation" component={BurgerNavigation} />
               <Route exact path="/" component={Home} />
               <Route exact path="/skills" component={Skills} />
               <Route exact path="/achievements" component={Achievements} />

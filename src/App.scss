@@ -10,6 +10,10 @@
   padding-left: 15rem;
   overflow-y: auto;
   overflow-x: hidden;
+
+  @media screen and (max-width: 960px) {
+    padding-left: 0;
+  }
 }
 
 // FR/EN toggle button
@@ -41,11 +45,14 @@
   margin: 0;
   padding: 2rem 0;
   box-shadow: 1px 0px 5px 0px rgba(255, 255, 255, 0.295);
+
+  @media screen and (max-width: 960px) {
+    display:none
+  }
 }
 
 //Global Components boxes
 .container {
-  // border:1px solid white;
   width: 90%;
   min-height: 100vh;
   display: flex;
@@ -55,15 +62,6 @@
   padding:0.8rem
 }
 
-
-.block {
-  display: flex;
-  flex-direction: column;
-  width: 47%;
-  padding:1rem;
-  // flex-grow: 1
-  
-}
 
 //Typography
 .highlight {

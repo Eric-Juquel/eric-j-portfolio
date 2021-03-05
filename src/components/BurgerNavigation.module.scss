@@ -1,0 +1,109 @@
+@import "../sass/variables";
+
+.container {
+  max-height: 100vh;
+}
+
+.btn {
+  background-color: $color-light;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 5%;
+  left: 4%;
+  z-index: 2000;
+  box-shadow: 0 1px 8px rgba($color-medium, 0.8);
+  text-align: center;
+  cursor: pointer;
+}
+
+.background {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 5.5%;
+  left: 4.5%;
+  background-image: radial-gradient(rgba(13, 24, 36), $background-paper);
+  z-index: 1000;
+  transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+// FUNCTIONALITY
+.checkbox {
+  display: none;
+
+  &:checked ~ .background {
+    transform: scale(80);
+  }
+
+  &:checked ~ .burgerNavigation  {
+    margin-left: 0;
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+// ICON
+.icon {
+  position: relative;
+  margin-top: 2rem;
+
+  //   @media screen and (max-width: $bp-mobile-vert) {
+  //     margin-top: 2.9rem;
+  //   }
+
+  &,
+  &::before,
+  &::after {
+    width: 2.4rem;
+    height: 0.25rem;
+    background-color: black;
+    display: inline-block;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all 0.2s;
+  }
+
+  &::before {
+    top: -0.7rem;
+  }
+
+  &::after {
+    top: 0.7rem;
+  }
+}
+
+.checkbox:checked + .btn .icon {
+  background-color: transparent;
+}
+
+.checkbox:checked + .btn .icon::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+
+.checkbox:checked + .btn .icon::after {
+  top: 0;
+  transform: rotate(-135deg);
+}
+
+.burgerNavigation {
+  position: fixed;
+  z-index: 1500;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin-left:-20rem;
+  // height:100%;
+  padding: 3rem;
+  opacity: 0;
+  width: 0;
+  transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
