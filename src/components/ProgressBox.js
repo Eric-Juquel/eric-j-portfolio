@@ -69,7 +69,7 @@ useEffect(() => {
       >
         <Grid item>
           <Typography variant="h5" gutterBottom >
-            HTML - CSS (Sass, Flexbox, Grid)
+            CSS (Sass, Flexbox, Grid)
           </Typography>
           <LinearProgress variant="determinate" value={progress1} color="secondary" />
         </Grid>
@@ -100,10 +100,6 @@ useEffect(() => {
           <LinearProgress
             variant="determinate"
             value={progress4}
-            // classes={{
-            //   colorPrimary: classes.colorWarning,
-            //   barColorPrimary: classes.barColorWarning,
-            // }}
             color="secondary"
           />
         </Grid>
@@ -114,10 +110,6 @@ useEffect(() => {
           <LinearProgress
             variant="determinate"
             value={progress5}
-            // classes={{
-            //   colorPrimary: classes.colorError,
-            //   barColorPrimary: classes.barColorError,
-            // }}
             color="primary"
           />
         </Grid>

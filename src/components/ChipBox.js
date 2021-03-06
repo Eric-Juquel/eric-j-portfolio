@@ -13,9 +13,12 @@ const useStyles = makeStyles(
       padding: "1.5rem",
     },
     chip: {
-      fontSize: 20,
+      fontSize: 18,
       fontWeight: 300,
-      margin: "0 1rem",
+      // margin: "0 1rem",
+      "@media (max-width:1453px)": {
+        fontSize: 18,
+      },
     },
     chip1: {
       color: theme.palette.text.primary,

@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.scss";
 import Burger from "./components/Burger";
-import BurgerNavigation from "./components/BurgerNavigation";
 import Languages from "./components/Languages";
 import Logo from "./components/Logo";
 import Navigation from "./components/Navigation";
@@ -62,14 +61,18 @@ const theme = createMuiTheme({
       textTransform: "capitalize",
     },
     h5: {
-      fontSize: 26,
+      fontSize: 25,
       fontWeight: 400,
-      letterSpacing: 1.5
+      letterSpacing: 1.5,
     },
-    h6:{ 
-      fontSize:23,
+    h6: {
+      fontSize: 23,
+      '@media (max-width:600px)': {
+        fontSize: 20,
+      },
       fontWeight: "100",
-    color: "rgba(255, 255, 255, 0.6)",
+      color: "rgba(255, 255, 255, 0.6)",
+
     },
 
     body1: {
@@ -97,7 +100,6 @@ const App = () => {
           {matches && <Burger />}
           <Container maxWidth={false} component="main">
             <Switch>
-              <Route exact path="/navigation" component={BurgerNavigation} />
               <Route exact path="/" component={Home} />
               <Route exact path="/skills" component={Skills} />
               <Route exact path="/achievements" component={Achievements} />

@@ -55,11 +55,11 @@ const Logo = ({setIsChecked}) => {
   return (
     <Card className={classes.card}>
       <Link to="/" >
-        <CardActionArea className={matches && classes.actionAria} onClick={() => setIsChecked(false)}>
+        <CardActionArea className={matches && classes.actionAria} onClick={() => setIsChecked && setIsChecked(false)}>
           <CardMedia
             component="img"
             alt="Eric Juquel"
-            height={!matches ? "170" : "auto"}
+            height="auto"
             image={logo}
             title="Eric Juquel"
             className={matches && classes.image}
