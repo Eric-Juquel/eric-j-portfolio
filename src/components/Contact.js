@@ -27,6 +27,10 @@ const useStyles = makeStyles(
     card: {
       width: "30rem",
       margin: "auto",
+
+      "@media screen and (max-width: 600px)" : {
+        width:"120%"
+      }
     },
     icon: {
       marginRight: "1rem",
@@ -187,7 +191,7 @@ const Contact = () => {
             }
           />
 
-          <Grid item md={6}>
+          <Grid item md={6} xs={10}>
             <Card className={classes.card} variant="outlined">
               <CardContent>
                 <Typography variant="h4" component="h2" gutterBottom>

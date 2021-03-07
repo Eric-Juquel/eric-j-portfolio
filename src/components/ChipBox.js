@@ -15,9 +15,11 @@ const useStyles = makeStyles(
     chip: {
       fontSize: 18,
       fontWeight: 300,
-      // margin: "0 1rem",
       "@media (max-width:1453px)": {
         fontSize: 18,
+      },
+      "@media (max-width:440px)": {
+        fontSize: 15,
       },
     },
     chip1: {

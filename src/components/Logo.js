@@ -4,7 +4,6 @@ import { translate } from "../translations/translate";
 import { useSelector } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
 import {
-  Grid,
   Card,
   CardActionArea,
   CardActions,
@@ -55,14 +54,14 @@ const Logo = ({setIsChecked}) => {
   return (
     <Card className={classes.card}>
       <Link to="/" >
-        <CardActionArea className={matches && classes.actionAria} onClick={() => setIsChecked && setIsChecked(false)}>
+        <CardActionArea className={matches ? classes.actionAria : ""} onClick={() => setIsChecked && setIsChecked(false)}>
           <CardMedia
             component="img"
             alt="Eric Juquel"
             height="auto"
             image={logo}
             title="Eric Juquel"
-            className={matches && classes.image}
+            className={matches ? classes.image : ""}
           />
           <CardContent>
             <Typography gutterBottom variant="h4" component="h2">

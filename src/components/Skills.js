@@ -19,33 +19,42 @@ const useStyles = makeStyles(
       gridColumn: "1 / 2",
       gridRow: "1 / 2",
       "@media screen and (max-width:1280px)": {
-        gridColumn: "1 / 2",
         gridRow: "4 / 5",
-      },
+        alignSelf: "flex-end",
+       },
+      '@media (max-width:440px)':{
+        display:"none"
+      }
     },
     paragraph2: {
       gridColumn: "1 / 2",
       gridRow: "2 / 3",
       "@media screen and (max-width:1280px)": {
-        gridColumn: "1 / 2",
         gridRow: "5 / 6",
       },
+      '@media (max-width:440px)':{
+        gridRow:"4 / 6"
+      }
     },
     paragraph3: {
       gridColumn: "1 / 2",
       gridRow: "3/ 4",
       "@media screen and (max-width:1280px)": {
-        gridColumn: "1 / 2",
         gridRow: "8 / 9",
       },
+      '@media (max-width:440px)':{
+        display:"none"
+      }
     },
     paragraph4: {
       gridColumn: "1 / 2",
       gridRow: "4 / 5",
       "@media screen and (max-width:1280px)": {
-        gridColumn: "1 / 2",
         gridRow: "9 / 10",
       },
+      '@media (max-width:440px)':{
+        gridRow:"8 / 10"
+      }
     },
     progress: {
       gridColumn: "2 / 3",
@@ -54,7 +63,8 @@ const useStyles = makeStyles(
       "@media screen and (max-width:1280px)": {
         gridColumn: "1 / 2",
         gridRow: "1 / 4",
-        alignSelf: "center"
+        alignSelf: "center",
+        marginBottom:"1rem"
       },
     },
     chip: {
@@ -64,7 +74,7 @@ const useStyles = makeStyles(
       "@media screen and (max-width:1280px)": {
         gridColumn: "1 / 2",
         gridRow: "6 / 8",
-        alignSelf: "center"
+        alignSelf: "flex-start"
       },
     },
   }),
@@ -90,13 +100,13 @@ const Skills = () => {
     <section className="container">
       <Grid container direction="column">
         <Grid item md={12}>
-          <Typography variant="h1" component="h1">
+          <Typography variant="h1" component="h1" >
             {translate(lang, "skills")}
           </Typography>
         </Grid>
         <div className="skillsGrid">
           <div className={classes.paragraph1}>
-            <Typography variant="body1">
+            <Typography variant="body1" align="justify">
               {translate(lang, "skills-1")}:
               {list_1.map((e, i) => {
                 return (
@@ -116,7 +126,7 @@ const Skills = () => {
           </div>
 
           <div className={classes.paragraph2}>
-            <Typography variant="body1">
+            <Typography variant="body1" align="justify">
               {translate(lang, "skills-2")}:
               {list_2.map((e, i) => {
                 return (
@@ -136,7 +146,7 @@ const Skills = () => {
           </div>
 
           <div className={classes.paragraph3}>
-            <Typography variant="body1" paragraph>
+            <Typography variant="body1" align="justify">
               {translate(lang, "skills-3")}:{" "}
               {list_3.map((e, i) => {
                 return (
@@ -154,7 +164,7 @@ const Skills = () => {
           </div>
 
           <div className={classes.paragraph4}>
-            <Typography variant="body1">
+            <Typography variant="body1" align="justify">
               {translate(lang, "skills-4")}:
               {list_4.map((e, i) => {
                 return (

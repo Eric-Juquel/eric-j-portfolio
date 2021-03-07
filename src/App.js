@@ -55,6 +55,12 @@ const theme = createMuiTheme({
       textTransform: "capitalize",
       fontSize: 70,
       marginBottom: 50,
+      '@media (max-width:600px)': {
+        fontSize: 50,
+      },
+      '@media (max-width:440px)': {
+        fontSize: 40,
+      },
     },
     h4: {
       fontFamily: `"Montserrat","Roboto","Helvetica"`,
@@ -64,6 +70,12 @@ const theme = createMuiTheme({
       fontSize: 25,
       fontWeight: 400,
       letterSpacing: 1.5,
+      '@media (max-width:600px)': {
+        fontSize: 23,
+      },
+      '@media (max-width:440px)': {
+        fontSize: 20,
+      },
     },
     h6: {
       fontSize: 23,
@@ -78,6 +90,9 @@ const theme = createMuiTheme({
     body1: {
       fontSize: 20,
       fontWeight: 400,
+      '@media (max-width:600px)': {
+        fontSize: 18,
+      },
     },
   },
 });

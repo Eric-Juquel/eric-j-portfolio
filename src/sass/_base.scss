@@ -5,7 +5,7 @@
   padding: 0;
   box-sizing: inherit;
   scrollbar-width: thin !important;
-    scrollbar-color: rgba(255, 255, 255,0.30) rgb(13, 24, 36);
+  scrollbar-color: rgba(255, 255, 255, 0.3) rgb(13, 24, 36);
 }
 
 html {
@@ -33,14 +33,13 @@ body {
     rgba(13, 24, 36)
   );
   display: block;
-  min-width: 320px;
+  // min-width: 320px;
   font-family: "Roboto", sans-serif;
-  color: rgba(255, 255, 255,0.85);
-    
+  color: rgba(255, 255, 255, 0.85);
 }
 
 a {
   text-decoration: none;
-  outline:none;
-  color:rgba(255, 255, 255,0.85);
+  outline: none;
+  color: rgba(255, 255, 255, 0.85);
 }

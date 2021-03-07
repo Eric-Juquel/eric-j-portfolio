@@ -60,6 +60,10 @@
   justify-content: space-between;
   margin: 3rem auto;
   padding: 0.8rem;
+
+  @media screen and (max-width: 960px) {
+   margin:5rem auto
+  }
 }
 
 //Typography
