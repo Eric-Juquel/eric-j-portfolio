@@ -50,6 +50,11 @@
       justify-content:center;
       font-size:1.5rem
     }
+
+    @media screen and (max-width: 600px) {
+      justify-content:center;
+      font-size:1.4rem
+    }
   }
 
   & a:hover {

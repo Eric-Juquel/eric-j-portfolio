@@ -11,6 +11,7 @@ const useStyles = makeStyles(
   (theme) => ({
     paper: {
       marginBottom: "4rem",
+      maxWidth: "100%"
     },
     title: {
       position: "relative",

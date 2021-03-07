@@ -16,6 +16,7 @@ import {
   useMediaQuery,
 } from "@material-ui/core";
 import CarouselModal from "./CarouselModal";
+import { Autorenew } from "@material-ui/icons";
 
 const useStyles = makeStyles(
   (theme) => ({
@@ -26,10 +27,16 @@ const useStyles = makeStyles(
       width: "80%",
     },
     media1: {
-      width: "100%",
+      maxWidth: "100%",
       height: "33rem",
       margin: "auto",
       border: "none",
+      "@media screen and (max-width:1400px)": {
+        height: "20rem",
+      },
+      "@media (max-width:600px)": {
+        height: "10rem",
+      },
     },
     box: {
       width: "50%",
@@ -46,6 +53,7 @@ const useStyles = makeStyles(
 );
 
 const PersonnalWork = () => {
+  const lineShopScreen = useMediaQuery("(max-width:1400px");
   const classes = useStyles();
   const lang = useSelector((state) => state.languageReducer.language);
 
@@ -170,8 +178,6 @@ const PersonnalWork = () => {
           subtitle: "",
           alt: "Shop",
         },
-        
-        
       ],
     },
   ];
@@ -182,8 +188,12 @@ const PersonnalWork = () => {
         <Card className={classes.card1}>
           <CardMedia
             className={classes.media1}
-            component="iframe"
-            image="https://lineshopgaming.herokuapp.com"
+            component={!lineShopScreen ? "iframe" : "image"}
+            image={
+              !lineShopScreen
+                ? "https://lineshopgaming.herokuapp.com"
+                : "/images/lineShop/home.png"
+            }
             title="LineShop Gaming"
           />
           <CardContent>
@@ -208,12 +218,17 @@ const PersonnalWork = () => {
       <Grid item className={classes.box}>
         <Divider variant="middle" />
       </Grid>
-      <Grid container justify="space-evenly" className={classes.grid}>
+      <Grid
+        container
+        justify="space-evenly"
+        className={classes.grid}
+        spacing={5}
+      >
         {Array.isArray(sites) &&
           sites.length > 0 &&
           sites.map((site) => {
             return (
-              <Grid item md={3} key={site.id}>
+              <Grid item lg={3} xs={8} key={site.id}>
                 <Card>
                   <CardActionArea
                     onClick={() => {

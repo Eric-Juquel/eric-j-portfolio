@@ -27,7 +27,7 @@ const Navigation = ({setIsChecked}) => {
                 active === item.label && classes.active
               }`}
               onClick={() => {
-                setIsChecked(false);
+                setIsChecked && setIsChecked(false);
                 setActive(item.label);
               }}
             >

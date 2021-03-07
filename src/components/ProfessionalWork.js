@@ -20,7 +20,7 @@ import CarouselModal from "./CarouselModal";
 const useStyles = makeStyles(
   (theme) => ({
     box: {
-      width: "50%",
+      // width: "50%",
       minHeight: "5rem",
       padding: "3rem",
     },
@@ -43,15 +43,18 @@ const useStyles = makeStyles(
     },
     cardLicence: {
       width: "80%",
-      height: "27.5rem",
+      height: "80%",
       padding: "1.5rem",
       marginBottom: "3.5rem",
       backgroundColor: theme.palette.text.secondary,
     },
     mediaLicence: {
+      maxWidth: "35rem",
       height: "17rem",
-      width: "35rem",
       margin: "auto",
+      '@media (max-width:600px)': {
+        height:"10rem",
+      },
     },
     textDark: {
       color: "#1c2430",
@@ -61,6 +64,7 @@ const useStyles = makeStyles(
 );
 
 const ProfessionalWork = () => {
+  const mediumScreen = useMediaQuery("(max-width:1400px")
   const classes = useStyles();
   const lang = useSelector((state) => state.languageReducer.language);
 
@@ -143,7 +147,7 @@ const ProfessionalWork = () => {
       </Grid>
       <Grid container direction="column" wrap="nowrap" alignItems="center">
         <Grid container justify="space-around" alignItems="center">
-          <Grid item className={classes.box}>
+          <Grid item className={classes.box} xs={12} lg={6}>
             <Grid container justify="center">
               <ReactPlayer
                 url="https://vimeo.com/481159581"
@@ -156,7 +160,7 @@ const ProfessionalWork = () => {
             </Grid>
           </Grid>
 
-          <Grid item className={classes.box}>
+          <Grid item className={classes.box} xs={12} lg={6}>
             <Typography variant="body1">
               {" "}
               {translate(lang, "coverage")}{" "}
@@ -168,7 +172,7 @@ const ProfessionalWork = () => {
           </Grid>
         </Grid>
         <Grid container justify="space-around" alignItems="center">
-          <Grid item className={classes.box}>
+          <Grid item className={classes.box} xs={12} lg={6}>
             <Typography variant="body1">
               <span className={classes.textPrimary}>
                 {translate(lang, "interface")}
@@ -176,7 +180,7 @@ const ProfessionalWork = () => {
               {translate(lang, "include")}
             </Typography>
           </Grid>
-          <Grid item className={classes.box}>
+          <Grid item className={classes.box} xs={12} lg={6}>
             <Grid container justify="center">
               <Card className={classes.card}>
                 <CardActionArea>
@@ -217,7 +221,7 @@ const ProfessionalWork = () => {
             <CardContent>
               <Typography
                 variant="body1"
-                align="center"
+                align={ !matches ? "center" : "justify"}
                 className={classes.textDark}
               >
                 {translate(lang, "licence")}

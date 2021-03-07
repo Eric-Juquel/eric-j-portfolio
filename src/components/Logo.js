@@ -11,11 +11,10 @@ import {
   CardMedia,
   Button,
   Typography,
-  useMediaQuery
+  useMediaQuery,
 } from "@material-ui/core";
 
 import logo from "../images/Logo1.png";
-
 
 const useStyles = makeStyles(
   (theme) => ({
@@ -23,6 +22,9 @@ const useStyles = makeStyles(
       maxWidth: "90%",
       background: "transparent",
       color: "rgb(249, 247, 246)",
+      "@media screen and (max-width:600px)": {
+        marginTop: "2rem",
+      },
     },
     button: {
       margin: "auto",
@@ -35,26 +37,29 @@ const useStyles = makeStyles(
       },
     },
     actionAria: {
-      display:"flex",
-      padding:"1rem",
-      marginBottom:"1rem"
+      display: "flex",
+      padding: "1rem",
+      marginBottom: "1rem",
     },
-    image :{
-      width:"10rem"
-    }
+    image: {
+      width: "10rem",
+    },
   }),
   { index: 1 }
 );
 
-const Logo = ({setIsChecked}) => {
-  const matches = useMediaQuery('(max-width:960px)');
+const Logo = ({ setIsChecked }) => {
+  const matches = useMediaQuery("(max-width:960px)");
   const classes = useStyles();
   const lang = useSelector((state) => state.languageReducer.language);
 
   return (
     <Card className={classes.card}>
-      <Link to="/" >
-        <CardActionArea className={matches ? classes.actionAria : ""} onClick={() => setIsChecked && setIsChecked(false)}>
+      <Link to="/">
+        <CardActionArea
+          className={matches ? classes.actionAria : ""}
+          onClick={() => setIsChecked && setIsChecked(false)}
+        >
           <CardMedia
             component="img"
             alt="Eric Juquel"
@@ -87,7 +92,7 @@ const Logo = ({setIsChecked}) => {
         >
           CV
         </Button>
-        
+
         <Button
           className={classes.button}
           classes={{

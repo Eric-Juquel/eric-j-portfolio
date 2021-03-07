@@ -1,10 +1,10 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import classes from "./BurgerNavigation.module.scss";
 import Logo from "./Logo";
 import Navigation from "./Navigation";
 import SocialNetworks from "./SocialNetworks";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid } from "@material-ui/core";
+import { Grid, useMediaQuery } from "@material-ui/core";
 
 const useStyles = makeStyles(
   (theme) => ({
@@ -16,6 +16,7 @@ const useStyles = makeStyles(
 );
 
 const Burger = () => {
+  const matches = useMediaQuery("(max-width:600px)");
   const styles = useStyles();
 
   const [isChecked, setIsChecked] = useState(false);
@@ -41,13 +42,20 @@ const Burger = () => {
         <Grid
           container
           direction="column"
-          justify="space-between"
+          justify={!matches ? "space-between" : "center"}
           alignItems="center"
           className={styles.container}
+          spacing={2}
         >
-          <Logo setIsChecked={setIsChecked} />
-          <Navigation setIsChecked={setIsChecked} />
-          <SocialNetworks />
+          <Grid item >
+            <Logo setIsChecked={setIsChecked} />
+          </Grid>
+          <Grid item >
+            <Navigation setIsChecked={setIsChecked} />
+          </Grid>
+          <Grid item >
+            <SocialNetworks />
+          </Grid>
         </Grid>
       </div>
     </div>
