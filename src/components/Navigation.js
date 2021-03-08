@@ -5,7 +5,7 @@ import { Link as RouterLink } from "react-router-dom";
 import { Link } from "@material-ui/core";
 import classes from "./Navigation.module.scss";
 
-const Navigation = ({setIsChecked}) => {
+const Navigation = ({ setIsChecked }) => {
   const lang = useSelector((state) => state.languageReducer.language);
   const [active, setActive] = useState("");
 
@@ -16,6 +16,12 @@ const Navigation = ({setIsChecked}) => {
     { value: translate(lang, "contact"), label: "contact" },
   ];
 
+  const scrollToTopHandler = () => {
+    window.scrollTo({
+      top: 0,  
+    });
+  };
+  
   return (
     <nav className={classes.navigation}>
       <ul className={classes.list}>
@@ -31,7 +37,11 @@ const Navigation = ({setIsChecked}) => {
                 setActive(item.label);
               }}
             >
-              <Link component={RouterLink} to={`/${item.label}`}>
+              <Link
+                component={RouterLink}
+                to={`/${item.label}`}
+                onClick={scrollToTopHandler}
+              >
                 <span>{item.value}</span>
               </Link>
             </li>
