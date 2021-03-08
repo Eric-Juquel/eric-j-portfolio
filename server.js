@@ -24,6 +24,7 @@ app.listen(PORT, () => console.log(`Server Running on port :${PORT}`));
 const contactEmail = nodemailer.createTransport({
     host: "smtp.gmail.com", //replace with  email provider
     port: 587,
+    secure: false,
     auth: {
       user: process.env.EMAIL,
       pass: process.env.PASSWORD
@@ -54,6 +55,7 @@ router.post("/contact", (req, res) => {
     };
     contactEmail.sendMail(mail, (error) => {
       if (error) {
+        console.log('error',error)
         res.json({ status: "error" });
       } else {
         res.json({ status: "success" });
