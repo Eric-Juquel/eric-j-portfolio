@@ -1,3 +1,4 @@
+const path = require("path")
 const express = require("express");
 const router = express.Router();
 const cors = require("cors");
@@ -8,7 +9,18 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/", router);
-app.listen(5000, () => console.log("Server Running"));
+
+const PORT = process.env.PORT || 5001
+
+// const __dirname = path.resolve()
+
+if(process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '/build')))
+
+  app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, 'build', 'index.html')))
+}
+
+app.listen(PORT, () => console.log("Server Running"));
 
 const contactEmail = nodemailer.createTransport({
     host: "smtp.gmail.com", //replace with your email provider
