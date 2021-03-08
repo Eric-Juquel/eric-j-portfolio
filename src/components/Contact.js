@@ -65,7 +65,6 @@ const Contact = () => {
 
   const onSubmit = async (data) => {
     setButtonStatus("sending");
-    console.log(data);
     let details = {
       name: data.name,
       email: data.email,
