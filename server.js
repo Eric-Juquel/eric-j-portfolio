@@ -23,12 +23,16 @@ app.listen(PORT, () => console.log(`Server Running on port :${PORT}`));
 
 const contactEmail = nodemailer.createTransport({
     host: "smtp.gmail.com", //replace with  email provider
-    port: 587,
-    secure: false,
+    port: 465,
+    secure: true,
     auth: {
       user: process.env.EMAIL,
       pass: process.env.PASSWORD
   },
+  tls: {
+    // do not fail on invalid certs
+    rejectUnauthorized: false
+}
 });
 
 contactEmail.verify((error) => {
