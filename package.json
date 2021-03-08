@@ -32,7 +32,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:svg": "svgr src/svg -d src/components"
+    "build:svg": "svgr src/svg -d src/components",
+    "heroku-postbuild":  "NPM_CONFIG_PRODUCTION=false yarn install && yarn build"
   },
   "eslintConfig": {
     "extends": [
