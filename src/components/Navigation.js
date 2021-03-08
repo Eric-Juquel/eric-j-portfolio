@@ -12,7 +12,7 @@ const Navigation = ({setIsChecked}) => {
   const menuItems = [
     { value: translate(lang, "skills"), label: "skills" },
     { value: translate(lang, "achievements"), label: "achievements" },
-    { value: translate(lang, "career"), label: "career" },
+    // { value: translate(lang, "career"), label: "career" },
     { value: translate(lang, "contact"), label: "contact" },
   ];
 

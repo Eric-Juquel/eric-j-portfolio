@@ -4,15 +4,18 @@ import { Grid } from "@material-ui/core";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 
-const useStyles = makeStyles({
-  icon: {
-    cursor: "pointer",
+const useStyles = makeStyles(
+  {
+    icon: {
+      cursor: "pointer",
+    },
+    anchor: {
+      outline: "none",
+      textDecoration: "none",
+    },
   },
-  anchor: {
-    outline: "none",
-    textDecoration: "none",
-  },
-});
+  { index: 1 }
+);
 
 const SocialNetworks = () => {
   const classes = useStyles();

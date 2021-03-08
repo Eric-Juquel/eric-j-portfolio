@@ -19,7 +19,7 @@ import logo from "../images/Logo1.png";
 const useStyles = makeStyles(
   (theme) => ({
     card: {
-      maxWidth: "90%",
+      maxWidth: "100%",
       background: "transparent",
       color: "rgb(249, 247, 246)",
       "@media screen and (max-width:600px)": {

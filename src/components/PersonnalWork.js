@@ -25,6 +25,20 @@ const useStyles = makeStyles(
     card1: {
       width: "80%",
     },
+    media: {
+      maxWidth: "100%",
+      height: "33rem",
+      margin: "auto",
+      border: "none",
+      "@media screen and (max-width:1400px)": {
+        height: "20rem",
+      },
+      "@media (max-width:600px)": {
+        height: "10rem",
+      },
+      backgroundImage: "url('/images/ajax-loader.gif')",
+      backgroundSize: "5%",
+    },
     media1: {
       maxWidth: "100%",
       height: "33rem",
@@ -52,6 +66,7 @@ const useStyles = makeStyles(
 );
 
 const PersonnalWork = () => {
+  const [loading, setLoading] = useState(true);
   const lineShopScreen = useMediaQuery("(max-width:1400px");
   const classes = useStyles();
   const lang = useSelector((state) => state.languageReducer.language);
@@ -186,7 +201,7 @@ const PersonnalWork = () => {
       <Grid container justify="space-evenly">
         <Card className={classes.card1}>
           <CardMedia
-            className={classes.media1}
+            className={loading ? classes.media : classes.media1}
             component={!lineShopScreen ? "iframe" : "image"}
             image={
               !lineShopScreen
@@ -196,6 +211,7 @@ const PersonnalWork = () => {
             loading="lazy"
             title="LineShop Gaming"
             sandbox="allow-scripts allow-same-origin allow-forms"
+            onLoad={() => setLoading(true)}
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">

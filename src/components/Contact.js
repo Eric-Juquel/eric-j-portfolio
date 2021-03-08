@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../App.scss";
 import { useForm, Controller } from "react-hook-form";
 import { translate } from "../translations/translate";
@@ -26,7 +26,7 @@ const useStyles = makeStyles(
     },
     card: {
       width: "30rem",
-      margin: "auto",
+      margin: "2rem auto",
       "@media screen and (max-width: 600px)": {
         width: "120%",
       },
@@ -55,6 +55,14 @@ const Contact = () => {
   };
   const { handleSubmit, control, reset } = useForm({ defaultValues });
 
+  useEffect(() => {
+    
+    if (messageStatus === "success") {
+      reset(defaultValues);
+    }
+    // eslint-disable-next-line
+  }, [messageStatus]);
+
   const onSubmit = async (data) => {
     setButtonStatus("sending");
     console.log(data);
@@ -74,16 +82,12 @@ const Contact = () => {
     setButtonStatus("submit");
     let result = await response.json();
     setMessageStatus(result.status);
-    if (messageStatus === "success") {
-      reset(defaultValues);
-    }
   };
 
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {
       return;
     }
-
     setMessageStatus("");
   };
 
@@ -91,9 +95,11 @@ const Contact = () => {
     <section className="container">
       <Grid container direction="column">
         <Grid item md={12}>
-          <Typography variant="h1" component="h1">
-            {translate(lang, "contactMe")}
-          </Typography>
+          <Grid container>
+            <Typography variant="h1" component="h1">
+              {translate(lang, "contactMe")}
+            </Typography>
+          </Grid>
         </Grid>
         <Grid container spacing={5}>
           <Grid item md={6}>

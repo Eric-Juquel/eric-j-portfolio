@@ -21,10 +21,10 @@ const useStyles = makeStyles(
       "@media screen and (max-width:1280px)": {
         gridRow: "4 / 5",
         alignSelf: "flex-end",
-       },
-      '@media (max-width:440px)':{
-        display:"none"
-      }
+      },
+      "@media (max-width:440px)": {
+        display: "none",
+      },
     },
     paragraph2: {
       gridColumn: "1 / 2",
@@ -32,9 +32,9 @@ const useStyles = makeStyles(
       "@media screen and (max-width:1280px)": {
         gridRow: "5 / 6",
       },
-      '@media (max-width:440px)':{
-        gridRow:"4 / 6"
-      }
+      "@media (max-width:440px)": {
+        gridRow: "4 / 6",
+      },
     },
     paragraph3: {
       gridColumn: "1 / 2",
@@ -42,9 +42,9 @@ const useStyles = makeStyles(
       "@media screen and (max-width:1280px)": {
         gridRow: "8 / 9",
       },
-      '@media (max-width:440px)':{
-        display:"none"
-      }
+      "@media (max-width:440px)": {
+        display: "none",
+      },
     },
     paragraph4: {
       gridColumn: "1 / 2",
@@ -52,9 +52,9 @@ const useStyles = makeStyles(
       "@media screen and (max-width:1280px)": {
         gridRow: "9 / 10",
       },
-      '@media (max-width:440px)':{
-        gridRow:"8 / 10"
-      }
+      "@media (max-width:440px)": {
+        gridRow: "8 / 10",
+      },
     },
     progress: {
       gridColumn: "2 / 3",
@@ -64,7 +64,7 @@ const useStyles = makeStyles(
         gridColumn: "1 / 2",
         gridRow: "1 / 4",
         alignSelf: "center",
-        marginBottom:"1rem"
+        marginBottom: "1rem",
       },
     },
     chip: {
@@ -74,7 +74,7 @@ const useStyles = makeStyles(
       "@media screen and (max-width:1280px)": {
         gridColumn: "1 / 2",
         gridRow: "6 / 8",
-        alignSelf: "flex-start"
+        alignSelf: "flex-start",
       },
     },
   }),
@@ -100,9 +100,11 @@ const Skills = () => {
     <section className="container">
       <Grid container direction="column">
         <Grid item md={12}>
-          <Typography variant="h1" component="h1" >
-            {translate(lang, "skills")}
-          </Typography>
+          <Grid container>
+            <Typography variant="h1" component="h1">
+              {translate(lang, "skills")}
+            </Typography>
+          </Grid>
         </Grid>
         <div className="skillsGrid">
           <div className={classes.paragraph1}>

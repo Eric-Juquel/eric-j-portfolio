@@ -11,7 +11,7 @@ const useStyles = makeStyles(
   (theme) => ({
     paper: {
       marginBottom: "4rem",
-      maxWidth: "100%"
+      maxWidth: "100%",
     },
     title: {
       position: "relative",
@@ -33,9 +33,11 @@ const Achievements = () => {
     <section className="container">
       <Grid container direction="column" justify="space-evenly">
         <Grid item>
-          <Typography variant="h1" component="h1">
-            {translate(lang, "achievements")}
-          </Typography>
+          <Grid container>
+            <Typography variant="h1" component="h1">
+              {translate(lang, "achievements")}
+            </Typography>
+          </Grid>
         </Grid>
 
         <Paper variant="outlined" className={classes.paper}>

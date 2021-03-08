@@ -4,7 +4,7 @@ import Logo from "./Logo";
 import Navigation from "./Navigation";
 import SocialNetworks from "./SocialNetworks";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, useMediaQuery } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 
 const useStyles = makeStyles(
   (theme) => ({
@@ -16,7 +16,6 @@ const useStyles = makeStyles(
 );
 
 const Burger = () => {
-  const matches = useMediaQuery("(max-width:600px)");
   const styles = useStyles();
 
   const [isChecked, setIsChecked] = useState(false);
@@ -42,18 +41,18 @@ const Burger = () => {
         <Grid
           container
           direction="column"
-          justify={!matches ? "space-between" : "center"}
+          justify="space-around"
           alignItems="center"
           className={styles.container}
           spacing={2}
         >
-          <Grid item >
+          <Grid item>
             <Logo setIsChecked={setIsChecked} />
           </Grid>
-          <Grid item >
+          <Grid item>
             <Navigation setIsChecked={setIsChecked} />
           </Grid>
-          <Grid item >
+          <Grid item>
             <SocialNetworks />
           </Grid>
         </Grid>

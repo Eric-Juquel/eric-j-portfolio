@@ -10,12 +10,15 @@ import Career from "./Career";
 import Contact from "./Contact";
 import Skills from "./Skills";
 
-const useStyles = makeStyles({
-  subtitle: {
-    fontWeight: "100",
-    color: "rgba(255, 255, 255, 0.6)",
+const useStyles = makeStyles(
+  {
+    subtitle: {
+      fontWeight: "100",
+      color: "rgba(255, 255, 255, 0.6)",
+    },
   },
-});
+  { index: 1 }
+);
 
 const Home = () => {
   const classes = useStyles();
@@ -35,9 +38,7 @@ const Home = () => {
               </div>
             </Grid>
             <Grid item>
-              <Typography variant="h5">
-              {translate(lang, "title")}
-              </Typography>
+              <Typography variant="h4">{translate(lang, "title")}</Typography>
             </Grid>
           </Grid>
           <Typography variant="h6" className={classes.subtitle}>
@@ -53,7 +54,7 @@ const Home = () => {
 
       <Achievements />
 
-      <Career />
+      {/* <Career /> */}
 
       <Contact />
     </>
