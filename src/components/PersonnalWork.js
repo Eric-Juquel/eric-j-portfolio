@@ -16,7 +16,6 @@ import {
   useMediaQuery,
 } from "@material-ui/core";
 import CarouselModal from "./CarouselModal";
-import { Autorenew } from "@material-ui/icons";
 
 const useStyles = makeStyles(
   (theme) => ({
@@ -194,7 +193,9 @@ const PersonnalWork = () => {
                 ? "https://lineshopgaming.herokuapp.com"
                 : "/images/lineShop/home.png"
             }
+            loading="lazy"
             title="LineShop Gaming"
+            sandbox="allow-scripts allow-same-origin allow-forms"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">

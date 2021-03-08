@@ -27,10 +27,9 @@ const useStyles = makeStyles(
     card: {
       width: "30rem",
       margin: "auto",
-
-      "@media screen and (max-width: 600px)" : {
-        width:"120%"
-      }
+      "@media screen and (max-width: 600px)": {
+        width: "120%",
+      },
     },
     icon: {
       marginRight: "1rem",

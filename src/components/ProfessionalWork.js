@@ -64,7 +64,6 @@ const useStyles = makeStyles(
 );
 
 const ProfessionalWork = () => {
-  const mediumScreen = useMediaQuery("(max-width:1400px")
   const classes = useStyles();
   const lang = useSelector((state) => state.languageReducer.language);
 

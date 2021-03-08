@@ -41,7 +41,10 @@ const useStyles = makeStyles(
       padding: "1rem",
       marginBottom: "1rem",
     },
-    image: {
+    image :{
+      maxHeight:"12rem"
+    },
+    imageSmall: {
       width: "10rem",
     },
   }),
@@ -66,7 +69,7 @@ const Logo = ({ setIsChecked }) => {
             height="auto"
             image={logo}
             title="Eric Juquel"
-            className={matches ? classes.image : ""}
+            className={matches ? classes.imageSmall : classes.image}
           />
           <CardContent>
             <Typography gutterBottom variant="h4" component="h2">
