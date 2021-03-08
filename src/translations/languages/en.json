@@ -1,6 +1,8 @@
 {
   "title": "Web developpeur",
   "subtitle": "FrontEnd Developpeur / ReactJs",
+  "cv":"Download CV",
+  "lr":"Download letter of recommendation",
 
   "about": "about",
   "skills": "skills",
@@ -34,7 +36,7 @@
 
   "licence": "My mission was to completely redesign the administration interface of the company's ",
   "serveur": "license server ",
-  "licenceSuite": "to ReactJs, allowing you to view and edit customers license models including a range of products offered and how their features.",
+  "licenceSuite": "to ReactJs, providing to view and edit customers license models including a range of products offered and how their features.",
 
   "presidentialTitle":"Presidentials",
   "presidentialSub": "",

@@ -1,6 +1,8 @@
 {
   "title": "Développeur web",
   "subtitle": "Développeur Frontend / ReactJs",
+  "cv":"télécharger le CV",
+  "lr":"télécharger la lettre de recommandation",
 
   "about": "à propos",
   "skills": "compétences",
@@ -30,7 +32,7 @@
   "elections":"élections américaines de France 24",
   "achieve":", j'ai réalisé la partie front end de l'interface utilisateur permettant de consulter les résultats, de les modérer et de les mettre à disposition des outils graphiques.",
   "interface":"L'interface",
-  "include":" incluait également l'edition de bandeaux d'informations ainsi la publication des infographies antenne vers les réseaux sociaux du groupe France Médias Monde.",
+  "include":" incluait également l'édition de bandeaux d'informations ainsi que la publication des infographies antenne vers les réseaux sociaux du groupe France Médias Monde.",
 
   "licence":"J'ai eu pour mission la refonte complete de l'interface d'administration du ",
   "serveur": "serveur de licences ",

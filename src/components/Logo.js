@@ -19,7 +19,7 @@ import logo from "../images/Logo1.png";
 const useStyles = makeStyles(
   (theme) => ({
     card: {
-      maxWidth: "100%",
+      maxWidth: "90%",
       background: "transparent",
       color: "rgb(249, 247, 246)",
       "@media screen and (max-width:600px)": {
@@ -42,6 +42,7 @@ const useStyles = makeStyles(
       marginBottom: "1rem",
     },
     image :{
+      padding:"1rem",
       maxHeight:"12rem"
     },
     imageSmall: {
@@ -91,6 +92,7 @@ const Logo = ({ setIsChecked }) => {
           color="secondary"
           variant="contained"
           href="files\CV_2021-03-08_Eric_JUQUEL.pdf"
+          title={translate(lang, "cv")}
           download
         >
           CV
@@ -105,6 +107,7 @@ const Logo = ({ setIsChecked }) => {
           color="secondary"
           variant="contained"
           href="/files/Lettre de recommandation Woody Technologies pour Eric Juquel.pdf"
+          title={translate(lang, "lr")}
           download
         >
           LR
