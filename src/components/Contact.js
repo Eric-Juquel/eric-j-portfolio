@@ -233,7 +233,7 @@ const Contact = () => {
                     className={classes.icon}
                   />
                   <Typography variant="subtitle1" color="secondary">
-                    ericjuquel94@gmail.com
+                    ejuquel@yahoo.fr
                   </Typography>
                 </Grid>
               </CardContent>

@@ -42,7 +42,7 @@ const useStyles = makeStyles(
       marginBottom: "1rem",
     },
     image :{
-      padding:"1rem",
+      padding:"2rem",
       maxHeight:"12rem"
     },
     imageSmall: {
