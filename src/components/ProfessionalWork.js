@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import {
   Grid,
   Typography,
+  Link,
   Card,
   CardActionArea,
   CardMedia,
@@ -52,8 +53,8 @@ const useStyles = makeStyles(
       maxWidth: "35rem",
       height: "17rem",
       margin: "auto",
-      '@media (max-width:600px)': {
-        height:"10rem",
+      "@media (max-width:600px)": {
+        height: "10rem",
       },
     },
     textDark: {
@@ -70,7 +71,7 @@ const ProfessionalWork = () => {
   // CAROUSEL SETTINGS
   const matches = useMediaQuery("(max-width:600px)");
   const [openModal, setOpenModal] = useState(false);
-  const [mediaWidth, setMediaWidth] = useState("")
+  const [mediaWidth, setMediaWidth] = useState("");
   const [images, setImages] = useState([
     {
       id: 1,
@@ -88,28 +89,28 @@ const ProfessionalWork = () => {
       url: "/images/licencesrv/licences.png",
       title: "Licenses",
       subtitle: "",
-      alt:"icenses"
+      alt: "icenses",
     },
     {
       id: 2,
       url: "/images/licencesrv/templates.png",
       title: "Templates",
       subtitle: "",
-      alt:"Templates"
+      alt: "Templates",
     },
     {
       id: 3,
       url: "/images/licencesrv/createlicence.png",
       title: "Create / Edit License",
       subtitle: "",
-      alt:"reate / Edit License"
+      alt: "reate / Edit License",
     },
     {
       id: 4,
       url: "/images/licencesrv/search.png",
       title: "Advanced Search",
       subtitle: "",
-      alt:"Advanced Search"
+      alt: "Advanced Search",
     },
   ];
 
@@ -119,30 +120,30 @@ const ProfessionalWork = () => {
       url: "/images/ElectionsUS/Presidentielle.png",
       title: translate(lang, "presidentialTitle"),
       subtitle: translate(lang, "presidentialSub"),
-      alt: translate(lang, "presidentialTitle")
+      alt: translate(lang, "presidentialTitle"),
     },
     {
       id: 2,
       url: "/images/ElectionsUS/Sénat.png",
       title: translate(lang, "senatTitle"),
       subtitle: translate(lang, "senatSub"),
-      alt: translate(lang, "senatTitle")
+      alt: translate(lang, "senatTitle"),
     },
     {
       id: 3,
       url: "/images/ElectionsUS/Ticker.png",
       title: translate(lang, "tickerTitle"),
       subtitle: translate(lang, "tickerSub"),
-      alt: translate(lang, "tickerTitle")
+      alt: translate(lang, "tickerTitle"),
     },
   ];
-
-  
 
   return (
     <>
       <Grid container justify="center">
-        <SvgWoodyTechnologyPinkLogo className={classes.woody} />
+        <Link href="https://woody-technologies.com/">
+          <SvgWoodyTechnologyPinkLogo className={classes.woody} />
+        </Link>
       </Grid>
       <Grid container direction="column" wrap="nowrap" alignItems="center">
         <Grid container justify="space-around" alignItems="center">
@@ -160,11 +161,13 @@ const ProfessionalWork = () => {
           </Grid>
 
           <Grid item className={classes.box} xs={12} lg={6}>
-            <Typography variant="body1">
+            <Typography variant="body1" align="justify">
               {" "}
               {translate(lang, "coverage")}{" "}
               <span className={classes.textPrimary}>
-                {translate(lang, "elections")}
+                <Link href="https://lnkd.in/dqvUutT">
+                  {translate(lang, "elections")}
+                </Link>
               </span>{" "}
               {translate(lang, "achieve")}
             </Typography>
@@ -172,7 +175,7 @@ const ProfessionalWork = () => {
         </Grid>
         <Grid container justify="space-around" alignItems="center">
           <Grid item className={classes.box} xs={12} lg={6}>
-            <Typography variant="body1">
+            <Typography variant="body1" align="justify">
               <span className={classes.textPrimary}>
                 {translate(lang, "interface")}
               </span>
@@ -188,7 +191,7 @@ const ProfessionalWork = () => {
                     image="/images/ElectionsUS/Presidentielle.png"
                     title="UI Elections Us France 24"
                     onClick={() => {
-                      setMediaWidth("85%")
+                      setMediaWidth("85%");
                       setImages(electionsUs);
                       setOpenModal(true);
                     }}
@@ -211,7 +214,7 @@ const ProfessionalWork = () => {
                 image="/images/licencesrv/licences.png"
                 title="Serveur de licences"
                 onClick={() => {
-                  setMediaWidth("97%")
+                  setMediaWidth("97%");
                   setImages(licenseServeur);
                   setOpenModal(true);
                 }}
@@ -220,7 +223,7 @@ const ProfessionalWork = () => {
             <CardContent>
               <Typography
                 variant="body1"
-                align={ !matches ? "center" : "justify"}
+                align={!matches ? "center" : "justify"}
                 className={classes.textDark}
               >
                 {translate(lang, "licence")}

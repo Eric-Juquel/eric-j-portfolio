@@ -22,7 +22,7 @@ if(process.env.NODE_ENV === 'production') {
 app.listen(PORT, () => console.log(`Server Running on port :${PORT}`));
 
 const contactEmail = nodemailer.createTransport({
-    host: "smtp.gmail.com", //replace with your email provider
+    host: "smtp.gmail.com", //replace with  email provider
     port: 587,
     auth: {
       user: process.env.EMAIL,

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../App.scss";
 import { makeStyles } from "@material-ui/core/styles";
 import { translate } from "../translations/translate";
@@ -70,6 +70,12 @@ const PersonnalWork = () => {
   const lineShopScreen = useMediaQuery("(max-width:1400px");
   const classes = useStyles();
   const lang = useSelector((state) => state.languageReducer.language);
+
+  useEffect(() => {
+    if (lineShopScreen) {
+      setLoading(false)
+    }
+  },[lineShopScreen])
 
   // CAROUSEL SETTINGS
   const matches = useMediaQuery("(max-width:600px)");
