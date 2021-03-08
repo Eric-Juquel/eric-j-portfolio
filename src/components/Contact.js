@@ -72,7 +72,7 @@ const Contact = () => {
       subject: data.subject,
       message: data.message,
     };
-    let response = await fetch("http://localhost:5001/contact", {
+    let response = await fetch("/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
