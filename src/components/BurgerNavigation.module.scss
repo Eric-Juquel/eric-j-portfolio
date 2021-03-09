@@ -19,12 +19,12 @@
 }
 
 .background {
-  height: 3rem;
-  width: 3rem;
+  height: 0.1rem;
+  width: 0.1rem;
   border-radius: 50%;
   position: fixed;
-  top: 1.5rem;
-  left: 1.5rem;
+  top: 3rem;
+  left: 3rem;
   background-image: radial-gradient(rgba(13, 24, 36), $background-paper);
   z-index: 100;
   transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
@@ -35,7 +35,7 @@
   display: none;
 
   &:checked ~ .background {
-    transform: scale(80);
+    transform: scale(2000);
   }
 
   &:checked ~ .burgerNavigation  {
