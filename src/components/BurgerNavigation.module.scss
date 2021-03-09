@@ -11,7 +11,7 @@
   border-radius: 50%;
   position: fixed;
   top: 1rem;
-  left: 3rem;
+  left: 1rem;
   z-index: 200;
   box-shadow: 0 1px 8px rgba($color-medium, 0.8);
   text-align: center;
@@ -24,7 +24,7 @@
   border-radius: 50%;
   position: fixed;
   top: 1.5rem;
-  left: 3.5rem;
+  left: 1.5rem;
   background-image: radial-gradient(rgba(13, 24, 36), $background-paper);
   z-index: 100;
   transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
