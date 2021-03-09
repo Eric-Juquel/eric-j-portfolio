@@ -17,6 +17,7 @@
   "sending": "envoi...",
   "sent": "Message envoyé avec succés",
   "errorSent": "Erreur! Message non envoyé",
+  "close":"Fermer",
 
   "skills-1": "Ma Formation 'Développeur web & web mobile' m'a permis d'aquerir les bases fondamentales à la création de sites web responsives",
   "skills-2": "J'ai choisi de me concentrer sur le JavaScipt en développant mes compétences dans cet environement",

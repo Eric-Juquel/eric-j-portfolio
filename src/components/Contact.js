@@ -181,7 +181,7 @@ const Contact = () => {
             action={
               <React.Fragment>
                 <Button color="secondary" size="small" onClick={handleClose}>
-                  UNDO
+                {translate(lang, "close")}
                 </Button>
                 <IconButton
                   size="small"
