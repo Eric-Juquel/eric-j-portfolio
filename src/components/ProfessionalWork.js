@@ -86,7 +86,7 @@ const ProfessionalWork = () => {
   const licenseServeur = [
     {
       id: 1,
-      url: "/images/licencesrv/licences.png",
+      url: "/images/licencesrv/licences-blur.png",
       title: "Licenses",
       subtitle: "",
       alt: "icenses",
@@ -107,7 +107,7 @@ const ProfessionalWork = () => {
     },
     {
       id: 4,
-      url: "/images/licencesrv/search.png",
+      url: "/images/licencesrv/search-blur.png",
       title: "Advanced Search",
       subtitle: "",
       alt: "Advanced Search",
@@ -211,7 +211,7 @@ const ProfessionalWork = () => {
             <CardActionArea>
               <CardMedia
                 className={classes.mediaLicence}
-                image="/images/licencesrv/licences.png"
+                image="/images/licencesrv/licences-blur.png"
                 title="Serveur de licences"
                 onClick={() => {
                   setMediaWidth("97%");

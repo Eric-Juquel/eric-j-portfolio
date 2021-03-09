@@ -41,9 +41,9 @@ const useStyles = makeStyles(
       padding: "1rem",
       marginBottom: "1rem",
     },
-    image :{
-      padding:"2rem",
-      maxHeight:"12rem"
+    image: {
+      padding: "2rem",
+      maxHeight: "12rem",
     },
     imageSmall: {
       width: "10rem",
@@ -62,7 +62,13 @@ const Logo = ({ setIsChecked }) => {
       <Link to="/">
         <CardActionArea
           className={matches ? classes.actionAria : ""}
-          onClick={() => setIsChecked && setIsChecked(false)}
+          onClick={() => {
+            setIsChecked && setIsChecked(false);
+            window.scrollTo({
+              top: 0,
+              behavior:!matches ? "smooth" : "auto"
+            });
+          }}
         >
           <CardMedia
             component="img"
