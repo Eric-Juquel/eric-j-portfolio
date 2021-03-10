@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../App.scss";
 import { useForm, Controller } from "react-hook-form";
+import ReCAPTCHA from "react-google-recaptcha";
 import { translate } from "../translations/translate";
 import { useSelector } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
@@ -26,9 +27,9 @@ const useStyles = makeStyles(
     },
     card: {
       width: "30rem",
-      margin: "2rem auto",
+      margin: "1rem auto",
       "@media screen and (max-width: 600px)": {
-        width: "120%",
+        width: "100%",
       },
     },
     icon: {
@@ -36,6 +37,9 @@ const useStyles = makeStyles(
     },
     colorWarning: {
       color: theme.palette.warning.main,
+    },
+    captcha: {
+      height: "4rem",
     },
   }),
   { index: 1 }
@@ -46,6 +50,7 @@ const Contact = () => {
   const [messageStatus, setMessageStatus] = useState("");
   const classes = useStyles();
   const lang = useSelector((state) => state.languageReducer.language);
+  const ref = useRef();
 
   const defaultValues = {
     name: "",
@@ -56,7 +61,6 @@ const Contact = () => {
   const { handleSubmit, control, reset } = useForm({ defaultValues });
 
   useEffect(() => {
-    
     if (messageStatus === "success") {
       reset(defaultValues);
     }
@@ -65,13 +69,21 @@ const Contact = () => {
 
   const onSubmit = async (data) => {
     setButtonStatus("sending");
+
+    const token = await ref.current.executeAsync();
+    ref.current.reset();
+
+    console.log("token", token);
+
     let details = {
       name: data.name,
       email: data.email,
       subject: data.subject,
       message: data.message,
+      token,
     };
-    let response = await fetch("/contact", {
+
+    const response = await fetch("/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
@@ -100,10 +112,10 @@ const Contact = () => {
             </Typography>
           </Grid>
         </Grid>
-        <Grid container spacing={5}>
-          <Grid item md={6}>
+        <Grid container spacing={5} justify="center">
+          <Grid item lg={6}>
             <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
-              <Grid container spacing={2}>
+              <Grid container spacing={2} >
                 <Grid item xs={12} sm={6}>
                   <Controller
                     as={TextField}
@@ -160,7 +172,7 @@ const Contact = () => {
                   />
                 </Grid>
               </Grid>
-              <Grid container justify="flex-end">
+              <Grid container justify="flex-start" alignItems="center">
                 <Button1 type="submit" text={translate(lang, buttonStatus)} />
               </Grid>
             </form>
@@ -176,12 +188,14 @@ const Contact = () => {
             message={
               messageStatus === "error"
                 ? translate(lang, "errorSent")
+                : messageStatus === "bot"
+                ? translate(lang, "bot")
                 : translate(lang, "sent")
             }
             action={
               <React.Fragment>
                 <Button color="secondary" size="small" onClick={handleClose}>
-                {translate(lang, "close")}
+                  {translate(lang, "close")}
                 </Button>
                 <IconButton
                   size="small"
@@ -195,7 +209,7 @@ const Contact = () => {
             }
           />
 
-          <Grid item md={6} xs={10}>
+          <Grid item lg={6} xs={12}>
             <Card className={classes.card} variant="outlined">
               <CardContent>
                 <Typography variant="h4" component="h2" gutterBottom>
@@ -240,6 +254,17 @@ const Contact = () => {
             </Card>
           </Grid>
         </Grid>
+      </Grid>
+      <Grid container justify="center">
+        {" "}
+        <ReCAPTCHA
+          className={classes.captcha}
+          sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+          size="invisible"
+          ref={ref}
+          theme="dark"
+          badge="inline"
+        />
       </Grid>
     </section>
   );

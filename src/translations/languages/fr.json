@@ -17,6 +17,7 @@
   "sending": "envoi...",
   "sent": "Message envoyé avec succés",
   "errorSent": "Erreur! Message non envoyé",
+  "bot": "Robot repéré !",
   "close":"Fermer",
 
   "skills-1": "Ma Formation 'Développeur web & web mobile' m'a permis d'acquerir les bases fondamentales à la création de sites web responsives",

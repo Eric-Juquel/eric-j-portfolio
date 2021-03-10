@@ -1,4 +1,5 @@
 const path = require("path");
+const fetch = require("node-fetch");
 const express = require("express");
 const router = express.Router();
 const cors = require("cors");
@@ -25,6 +26,8 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.listen(PORT, () => console.log(`Server Running on port :${PORT}`));
+
+// Send Email via googleapis
 
 const createTransporter = async () => {
   const oauth2Client = new OAuth2(
@@ -65,13 +68,26 @@ const createTransporter = async () => {
   return transporter;
 };
 
+// goggle reCAPTCHA
+const validateHuman = async (token) => {
+  const secret = process.env.RECAPTCHA_SECRET_KEY;
+  const response = await fetch(
+    `https://www.google.com/recaptcha/api/siteverify?secret=${secret}&response=${token}`,
+    {
+      method: "POST",
+    }
+  );
+  const data = await response.json();
 
+  return data.success;
+};
 
 router.post("/contact", (req, res) => {
   const name = req.body.name;
   const email = req.body.email;
   const subject = req.body.subject;
   const message = req.body.message;
+  const token = req.body.token;
   const mail = {
     from: name,
     to: process.env.EMAIL,
@@ -81,15 +97,22 @@ router.post("/contact", (req, res) => {
              <p>Message: ${message}</p>`,
   };
   const sendEmail = async (emailOptions) => {
+    const human = await validateHuman(token);
+    if (!human) {
+      res.status(400);
+      res.json({ status: "bot" });
+
+      return;
+    }
+
     try {
       let emailTransporter = await createTransporter();
       await emailTransporter.sendMail(emailOptions);
-      res.json({ status: "success" })
+      res.json({ status: "success" });
     } catch (error) {
-      res.json({ status: "error" })
+      res.json({ status: "error" });
     }
-   
   };
-  sendEmail(mail)
-});
 
+  sendEmail(mail);
+});
