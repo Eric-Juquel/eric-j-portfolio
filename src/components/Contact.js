@@ -115,7 +115,7 @@ const Contact = () => {
         <Grid container spacing={5} justify="center">
           <Grid item lg={6}>
             <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
-              <Grid container spacing={2} >
+              <Grid container spacing={2}>
                 <Grid item xs={12} sm={6}>
                   <Controller
                     as={TextField}
@@ -182,7 +182,11 @@ const Contact = () => {
               vertical: "bottom",
               horizontal: "center",
             }}
-            open={messageStatus === "error" || messageStatus === "success"}
+            open={
+              messageStatus === "error" ||
+              messageStatus === "success" ||
+              messageStatus === "bot"
+            }
             autoHideDuration={6000}
             onClose={handleClose}
             message={
@@ -218,8 +222,7 @@ const Contact = () => {
                 <Typography color="textSecondary" gutterBottom>
                   {translate(lang, "subtitle")}
                 </Typography>
-                <Typography>55 rue Gabriel Peri</Typography>
-                <Typography>94200 Ivry sur Seine</Typography>
+                <Typography>Paris</Typography>
                 <Typography gutterBottom>France</Typography>
                 <Grid container>
                   {" "}
@@ -256,15 +259,16 @@ const Contact = () => {
         </Grid>
       </Grid>
       <Grid container justify="center">
-        {" "}
-        <ReCAPTCHA
-          className={classes.captcha}
-          sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
-          size="invisible"
-          ref={ref}
-          theme="dark"
-          badge="inline"
-        />
+        {buttonStatus === "sending" ? (
+          <ReCAPTCHA
+            className={classes.captcha}
+            sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+            size="invisible"
+            ref={ref}
+            theme="dark"
+            // badge="inline"
+          />
+        ) : null}
       </Grid>
     </section>
   );
