@@ -161,7 +161,7 @@ const Skills = () => {
                   </span>
                 );
               })}
-              <span className="highlight">Tests automatisés</span>.
+              <span className="highlight">{translate(lang, "test")}</span>.
             </Typography>
           </div>
 

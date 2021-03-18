@@ -103,7 +103,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="container">
+    <section className="container" >
       <Grid container direction="column">
         <Grid item md={12}>
           <Grid container>
@@ -153,7 +153,7 @@ const Contact = () => {
                     color="secondary"
                     label={translate(lang, "subject")}
                     fullWidth
-                    required
+                    
                   />
                 </Grid>
                 <Grid item xs={12}>

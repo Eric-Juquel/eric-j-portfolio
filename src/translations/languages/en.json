@@ -6,7 +6,7 @@
 
   "about": "about",
   "skills": "skills",
-  "achievements": "achievements",
+  "achievements": " my work",
   "career": "career",
   "contact": "contact",
 
@@ -17,7 +17,7 @@
   "sending": "sending...",
   "sent": "Message sent with success",
   "errorSent": "Error! Message not sent",
-  "bot": " You're not fooling us, bot!",
+  "bot": " You're not fooling us, bot",
   "close":"Close",
 
   "skills-1": "My 'Web & mobile web developer' training provided me with the fundamental bases for creating responsive websites",
@@ -26,6 +26,7 @@
   "skills-4": "I regularly practice a technological watch in order to optimize my current skills and acquire new ones",
   "languageFramework": "Full-stack",
   "library": "librarys",
+  "test":"Automated tests",
 
   "professionals": "professionals",
   "training": "personnals",
@@ -38,7 +39,7 @@
 
   "licence": "My mission was to completely redesign the administration interface of the company's ",
   "serveur": "license server ",
-  "licenceSuite": "to ReactJs, providing to view and edit customers license models including a range of products offered and how their features.",
+  "licenceSuite": "to ReactJs, providing to view and edit customers license models including a range of products offered and features.",
 
   "presidentialTitle":"Presidentials",
   "presidentialSub": "",
@@ -53,7 +54,7 @@
   "smTitle": "Île Sainte Marie",
   "smSub": "Web site project around Sainte Marie Island in Madagascar, fully responsive",
 
-  "ltdTitle": "LTD - Car Service",
+  "ltdTitle": "LTD Car Service",
   "ltdSub": "Redesign of the website of a luxury vehicle provider with driver in Paris",
 
   "lbeTitle": "Le Bon Endroit",
