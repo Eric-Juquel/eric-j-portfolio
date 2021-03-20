@@ -20,6 +20,14 @@ const useStyles = makeStyles(
       backgroundImage:
         "linear-gradient(to bottom,rgba(28, 36, 48, 0) 0%,rgba(28, 36, 48, 0) 49%, rgb(28, 36, 48) 58%)",
       padding: "0 0.5rem",
+      '@media (max-width:600px)': {
+        fontSize:25,
+        top: -20
+      },
+      '@media (max-width:400px)': {
+        fontSize:20,
+        top: -15
+      }
     },
   }),
   { index: 1 }
