@@ -1,22 +1,19 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Grid } from '@material-ui/core';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import GitHubIcon from '@material-ui/icons/GitHub';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { Grid } from "@material-ui/core";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import GitHubIcon from "@material-ui/icons/GitHub";
 
 const useStyles = makeStyles(
-  (theme) => ({
+  {
     icon: {
-      cursor: 'pointer',
-      '&:hover': {
-        fill: theme.palette.secondary.main,
-      },
+      cursor: "pointer",
     },
     anchor: {
-      outline: 'none',
-      textDecoration: 'none',
+      outline: "none",
+      textDecoration: "none",
     },
-  }),
+  },
   { index: 1 }
 );
 
@@ -30,7 +27,13 @@ const SocialNetworks = () => {
           // target="popup"
           href="https://www.linkedin.com/in/eric-juquel-4397b719a/"
         >
-          <LinkedInIcon fontSize="large" className={classes.icon} />
+          <LinkedInIcon
+            fontSize="large"
+            className={classes.icon}
+            // onClick={() => {
+            //   history.push("/linkedin");
+            // }}
+          />
         </a>
       </Grid>
       <Grid item>
@@ -38,7 +41,13 @@ const SocialNetworks = () => {
           // target="popup"
           href="https://github.com/Eric-Juquel?tab=repositories"
         >
-          <GitHubIcon fontSize="large" className={classes.icon} />
+          <GitHubIcon
+            fontSize="large"
+            className={classes.icon}
+            // onClick={() => {
+            //   history.push("/github");
+            // }}
+          />
         </a>
       </Grid>
     </Grid>
