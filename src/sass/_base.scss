@@ -1,3 +1,5 @@
+
+
 *,
 *::before,
 *::after {
@@ -10,7 +12,6 @@
 
 html {
   box-sizing: border-box;
-  //   font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
 
   ::selection {
     background: rgb(146, 218, 184); /* WebKit/Blink Browsers */
@@ -33,8 +34,7 @@ body {
     rgba(13, 24, 36)
   );
   display: block;
-  // min-width: 320px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: rgba(255, 255, 255, 0.85);
 }
 

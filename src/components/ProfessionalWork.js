@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import "../App.scss";
-import ReactPlayer from "react-player";
-import { makeStyles } from "@material-ui/core/styles";
-import { translate } from "../translations/translate";
-import { useSelector } from "react-redux";
+import React, { useState } from 'react';
+import '../App.scss';
+import ReactPlayer from 'react-player';
+import { makeStyles } from '@material-ui/core/styles';
+import { translate } from '../translations/translate';
+import { useSelector } from 'react-redux';
 import {
   Grid,
   Typography,
@@ -14,20 +14,20 @@ import {
   CardContent,
   Divider,
   useMediaQuery,
-} from "@material-ui/core";
-import SvgWoodyTechnologyPinkLogo from "./WoodyTechnologyPinkLogo";
-import CarouselModal from "./CarouselModal";
+} from '@material-ui/core';
+import SvgWoodyTechnologyPinkLogo from './WoodyTechnologyPinkLogo';
+import CarouselModal from './CarouselModal';
 
 const useStyles = makeStyles(
   (theme) => ({
     box: {
       // width: "50%",
-      minHeight: "5rem",
-      padding: "3rem",
+      minHeight: '5rem',
+      padding: '3rem',
     },
     woody: {
-      width: "15rem",
-      padding: "1.5rem",
+      width: '15rem',
+      padding: '1.5rem',
     },
     textPrimary: {
       color: theme.palette.primary.main,
@@ -36,29 +36,29 @@ const useStyles = makeStyles(
       color: theme.palette.warning.main,
     },
     card: {
-      width: "25rem",
-      height: "15rem",
+      width: '25rem',
+      height: '15rem',
     },
     media: {
-      height: "16rem",
+      height: '16rem',
     },
     cardLicence: {
-      width: "80%",
-      height: "80%",
-      padding: "1.5rem",
-      marginBottom: "3.5rem",
+      width: '80%',
+      height: '80%',
+      padding: '1.5rem',
+      marginBottom: '3.5rem',
       backgroundColor: theme.palette.text.secondary,
     },
     mediaLicence: {
-      maxWidth: "35rem",
-      height: "17rem",
-      margin: "auto",
-      "@media (max-width:600px)": {
-        height: "10rem",
+      maxWidth: '35rem',
+      height: '17rem',
+      margin: 'auto',
+      '@media (max-width:600px)': {
+        height: '10rem',
       },
     },
     textDark: {
-      color: "#1c2430",
+      color: '#1c2430',
     },
   }),
   { index: 1 }
@@ -69,16 +69,16 @@ const ProfessionalWork = () => {
   const lang = useSelector((state) => state.languageReducer.language);
 
   // CAROUSEL SETTINGS
-  const matches = useMediaQuery("(max-width:600px)");
+  const matches = useMediaQuery('(max-width:600px)');
   const [openModal, setOpenModal] = useState(false);
-  const [mediaWidth, setMediaWidth] = useState("");
+  const [mediaWidth, setMediaWidth] = useState('');
   const [images, setImages] = useState([
     {
       id: 1,
-      url: "",
-      title: "Title",
-      subtitle: "subtitle",
-      alt: "",
+      url: '',
+      title: 'Title',
+      subtitle: 'subtitle',
+      alt: '',
     },
   ]);
 
@@ -86,55 +86,55 @@ const ProfessionalWork = () => {
   const licenseServeur = [
     {
       id: 1,
-      url: "/images/licencesrv/licences-blur.png",
-      title: "Licenses",
-      subtitle: "",
-      alt: "icenses",
+      url: '/images/licencesrv/licences-blur.png',
+      title: 'Licenses',
+      subtitle: '',
+      alt: 'icenses',
     },
     {
       id: 2,
-      url: "/images/licencesrv/templates.png",
-      title: "Templates",
-      subtitle: "",
-      alt: "Templates",
+      url: '/images/licencesrv/templates.png',
+      title: 'Templates',
+      subtitle: '',
+      alt: 'Templates',
     },
     {
       id: 3,
-      url: "/images/licencesrv/createlicence.png",
-      title: "Create / Edit License",
-      subtitle: "",
-      alt: "reate / Edit License",
+      url: '/images/licencesrv/createlicence.png',
+      title: 'Create / Edit License',
+      subtitle: '',
+      alt: 'reate / Edit License',
     },
     {
       id: 4,
-      url: "/images/licencesrv/search-blur.png",
-      title: "Advanced Search",
-      subtitle: "",
-      alt: "Advanced Search",
+      url: '/images/licencesrv/search-blur.png',
+      title: 'Advanced Search',
+      subtitle: '',
+      alt: 'Advanced Search',
     },
   ];
 
   const electionsUs = [
     {
       id: 1,
-      url: "/images/ElectionsUS/Presidentielle.png",
-      title: translate(lang, "presidentialTitle"),
-      subtitle: translate(lang, "presidentialSub"),
-      alt: translate(lang, "presidentialTitle"),
+      url: '/images/ElectionsUS/Presidentielle.png',
+      title: translate(lang, 'presidentialTitle'),
+      subtitle: translate(lang, 'presidentialSub'),
+      alt: translate(lang, 'presidentialTitle'),
     },
     {
       id: 2,
-      url: "/images/ElectionsUS/Sénat.png",
-      title: translate(lang, "senatTitle"),
-      subtitle: translate(lang, "senatSub"),
-      alt: translate(lang, "senatTitle"),
+      url: '/images/ElectionsUS/Sénat.png',
+      title: translate(lang, 'senatTitle'),
+      subtitle: translate(lang, 'senatSub'),
+      alt: translate(lang, 'senatTitle'),
     },
     {
       id: 3,
-      url: "/images/ElectionsUS/Ticker.png",
-      title: translate(lang, "tickerTitle"),
-      subtitle: translate(lang, "tickerSub"),
-      alt: translate(lang, "tickerTitle"),
+      url: '/images/ElectionsUS/Ticker.png',
+      title: translate(lang, 'tickerTitle'),
+      subtitle: translate(lang, 'tickerSub'),
+      alt: translate(lang, 'tickerTitle'),
     },
   ];
 
@@ -162,14 +162,14 @@ const ProfessionalWork = () => {
 
           <Grid item className={classes.box} xs={12} lg={6}>
             <Typography variant="body1" align="justify">
-              {" "}
-              {translate(lang, "coverage")}{" "}
+              {' '}
+              {translate(lang, 'coverage')}{' '}
               <span className={classes.textPrimary}>
                 <Link href="https://lnkd.in/dqvUutT">
-                  {translate(lang, "elections")}
+                  {translate(lang, 'elections')}
                 </Link>
-              </span>{" "}
-              {translate(lang, "achieve")}
+              </span>{' '}
+              {translate(lang, 'achieve')}
             </Typography>
           </Grid>
         </Grid>
@@ -177,9 +177,9 @@ const ProfessionalWork = () => {
           <Grid item className={classes.box} xs={12} lg={6}>
             <Typography variant="body1" align="justify">
               <span className={classes.textPrimary}>
-                {translate(lang, "interface")}
+                {translate(lang, 'interface')}
               </span>
-              {translate(lang, "include")}
+              {translate(lang, 'include')}
             </Typography>
           </Grid>
           <Grid item className={classes.box} xs={12} lg={6}>
@@ -187,11 +187,12 @@ const ProfessionalWork = () => {
               <Card className={classes.card}>
                 <CardActionArea>
                   <CardMedia
+                    component="img"
                     className={classes.media}
                     image="/images/ElectionsUS/Presidentielle.png"
                     title="UI Elections Us France 24"
                     onClick={() => {
-                      setMediaWidth("85%");
+                      setMediaWidth('85%');
                       setImages(electionsUs);
                       setOpenModal(true);
                     }}
@@ -210,11 +211,12 @@ const ProfessionalWork = () => {
           <Card className={classes.cardLicence}>
             <CardActionArea>
               <CardMedia
+                component="img"
                 className={classes.mediaLicence}
                 image="/images/licencesrv/licences-blur.png"
                 title="Serveur de licences"
                 onClick={() => {
-                  setMediaWidth("97%");
+                  setMediaWidth('97%');
                   setImages(licenseServeur);
                   setOpenModal(true);
                 }}
@@ -223,14 +225,14 @@ const ProfessionalWork = () => {
             <CardContent>
               <Typography
                 variant="body1"
-                align={!matches ? "center" : "justify"}
+                align={!matches ? 'center' : 'justify'}
                 className={classes.textDark}
               >
-                {translate(lang, "licence")}
+                {translate(lang, 'licence')}
                 <span className={classes.textWarning}>
-                  {translate(lang, "serveur")}
+                  {translate(lang, 'serveur')}
                 </span>
-                {translate(lang, "licenceSuite")}
+                {translate(lang, 'licenceSuite')}
               </Typography>
             </CardContent>
           </Card>
@@ -240,7 +242,7 @@ const ProfessionalWork = () => {
           open={openModal}
           setOpen={setOpenModal}
           images={images}
-          mediaHeight={"70%"}
+          mediaHeight={'70%'}
           mediaWidth={mediaWidth}
         />
       </Grid>

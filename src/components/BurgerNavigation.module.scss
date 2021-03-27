@@ -13,7 +13,6 @@
   top: 1rem;
   left: 1rem;
   z-index: 200;
-  // box-shadow: 0 1px 8px rgba($color-medium, 0.8);
   text-align: center;
   cursor: pointer;
 }
@@ -41,7 +40,6 @@
   &:checked ~ .burgerNavigation  {
     margin-left: 0;
     width: 100%;
-    opacity: 1;
   }
 }
 
@@ -49,10 +47,6 @@
 .icon {
   position: relative;
   margin-top: 2rem;
-
-  //   @media screen and (max-width: $bp-mobile-vert) {
-  //     margin-top: 2.9rem;
-  //   }
 
   &,
   &::before,
@@ -97,13 +91,10 @@
 .burgerNavigation {
   position: fixed;
   z-index: 150;
-  width: 100%;
   top: 0;
   left: 0;
-  margin-left:-20rem;
-  // height:100%;
-  padding: 3rem;
-  opacity: 0;
+  margin-left:-30rem;
+  padding: 1.5rem;
   width: 0;
   transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }

@@ -5,7 +5,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 
 const useStyles = makeStyles(
-  {
+  (theme) => ({
     icon: {
       cursor: 'pointer',
       '&:hover': {
@@ -16,7 +16,7 @@ const useStyles = makeStyles(
       outline: 'none',
       textDecoration: 'none',
     },
-  },
+  }),
   { index: 1 }
 );
 

@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { translate } from "../translations/translate";
-import { useSelector } from "react-redux";
-import { makeStyles } from "@material-ui/core/styles";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { translate } from '../translations/translate';
+import { useSelector } from 'react-redux';
+import { makeStyles } from '@material-ui/core/styles';
 import {
   Card,
   CardActionArea,
@@ -12,48 +12,47 @@ import {
   Button,
   Typography,
   useMediaQuery,
-} from "@material-ui/core";
+} from '@material-ui/core';
 
-import logo from "../images/Logo1.png";
+import logo from '../images/Logo1.png';
 
 const useStyles = makeStyles(
   (theme) => ({
     card: {
-      maxWidth: "90%",
-      background: "transparent",
-      color: "rgb(249, 247, 246)",
-      "@media screen and (max-width:600px)": {
-        marginTop: "2rem",
+      maxWidth: '90%',
+      background: 'transparent',
+      color: 'rgb(249, 247, 246)',
+      '@media screen and (max-width:600px)': {
+        marginTop: '1rem',
       },
     },
     button: {
-      margin: "auto",
+      margin: 'auto',
       containedPrimary: theme.palette.warning.main,
     },
     colorWarning: {
       backgroundColor: theme.palette.warning.main,
-      "&:hover": {
+      '&:hover': {
         backgroundColor: theme.palette.warning.light,
       },
     },
     actionAria: {
-      display: "flex",
-      padding: "1rem",
-      marginBottom: "1rem",
+      display: 'flex',
+      padding: '1rem',
+      marginBottom: '1rem',
     },
     image: {
-      padding: "2rem",
-      maxHeight: "12rem",
+      padding: '2rem',
     },
     imageSmall: {
-      width: "10rem",
+      width: '10rem',
     },
   }),
   { index: 1 }
 );
 
 const Logo = ({ setIsChecked }) => {
-  const matches = useMediaQuery("(max-width:960px)");
+  const matches = useMediaQuery('(max-width:960px)');
   const classes = useStyles();
   const lang = useSelector((state) => state.languageReducer.language);
 
@@ -61,12 +60,12 @@ const Logo = ({ setIsChecked }) => {
     <Card className={classes.card}>
       <Link to="/">
         <CardActionArea
-          className={matches ? classes.actionAria : ""}
+          className={matches ? classes.actionAria : ''}
           onClick={() => {
             setIsChecked && setIsChecked(false);
             window.scrollTo({
               top: 0,
-              behavior:!matches ? "smooth" : "auto"
+              behavior: !matches ? 'smooth' : 'auto',
             });
           }}
         >
@@ -83,7 +82,7 @@ const Logo = ({ setIsChecked }) => {
               Eric
             </Typography>
             <Typography variant="h6" component="h3">
-              {translate(lang, "title")}
+              {translate(lang, 'title')}
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -98,7 +97,7 @@ const Logo = ({ setIsChecked }) => {
           color="secondary"
           variant="contained"
           href="files\CV_2021-03-08_Eric_JUQUEL.pdf"
-          title={translate(lang, "cv")}
+          title={translate(lang, 'cv')}
           download
         >
           CV
@@ -113,7 +112,7 @@ const Logo = ({ setIsChecked }) => {
           color="secondary"
           variant="contained"
           href="/files/Lettre de recommandation Woody Technologies pour Eric Juquel.pdf"
-          title={translate(lang, "lr")}
+          title={translate(lang, 'lr')}
           download
         >
           LR

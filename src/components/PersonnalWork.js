@@ -208,7 +208,7 @@ const PersonnalWork = () => {
         <Card className={classes.card1}>
           <CardMedia
             className={loading ? classes.media : classes.media1}
-            component={!lineShopScreen ? "iframe" : "image"}
+            component={!lineShopScreen ? "iframe" : "img"}
             image={
               !lineShopScreen
                 ? "https://lineshopgaming.herokuapp.com"

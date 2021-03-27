@@ -29,6 +29,8 @@ app.listen(PORT, () => console.log(`Server Running on port :${PORT}`));
 
 // Send Email via googleapis
 
+
+// Create transporter
 const createTransporter = async () => {
   const oauth2Client = new OAuth2(
     process.env.CLIENT_ID,
@@ -59,10 +61,6 @@ const createTransporter = async () => {
       clientSecret: process.env.CLIENT_SECRET,
       refreshToken: process.env.REFRESH_TOKEN,
     },
-    // tls: {
-    //   // do not fail on invalid certs
-    //   rejectUnauthorized: false,
-    // },
   });
 
   return transporter;
@@ -82,6 +80,8 @@ const validateHuman = async (token) => {
   return data.success;
 };
 
+
+// Post email
 router.post("/contact", (req, res) => {
   const name = req.body.name;
   const email = req.body.email;
