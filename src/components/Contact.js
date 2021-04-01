@@ -71,7 +71,7 @@ const Contact = () => {
     setButtonStatus("sending");
 
     // const token = await ref.current.executeAsync();
-    ref.current.reset();
+    // ref.current.reset();
 
     let details = {
       name: data.name,
