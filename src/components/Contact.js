@@ -50,7 +50,7 @@ const Contact = () => {
   const [messageStatus, setMessageStatus] = useState("");
   const classes = useStyles();
   const lang = useSelector((state) => state.languageReducer.language);
-  const ref = useRef();
+  const reRef = useRef();
 
   const defaultValues = {
     name: "",
@@ -70,15 +70,15 @@ const Contact = () => {
   const onSubmit = async (data) => {
     setButtonStatus("sending");
 
-    // const token = await ref.current.executeAsync();
-    // ref.current.reset();
+    const token = await reRef.current.executeAsync();
+    reRef.current.reset();
 
     let details = {
       name: data.name,
       email: data.email,
       subject: data.subject,
       message: data.message,
-      // token,
+      token,
     };
 
     const response = await fetch("/contact", {
@@ -256,18 +256,18 @@ const Contact = () => {
           </Grid>
         </Grid>
       </Grid>
-      {/* <Grid container justify="center">
+      <Grid container justify="center">
         {buttonStatus === "sending" ? (
           <ReCAPTCHA
             className={classes.captcha}
             sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
             size="invisible"
-            ref={ref}
+            ref={reRef}
             theme="dark"
             // badge="inline"
           />
         ) : null}
-      </Grid> */}
+      </Grid>
     </section>
   );
 };

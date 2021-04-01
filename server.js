@@ -1,11 +1,11 @@
-const path = require("path");
-const fetch = require("node-fetch");
-const express = require("express");
+const path = require('path');
+const fetch = require('node-fetch');
+const express = require('express');
 const router = express.Router();
-const cors = require("cors");
-const nodemailer = require("nodemailer");
-const { google } = require("googleapis");
-require("dotenv").config();
+const cors = require('cors');
+const nodemailer = require('nodemailer');
+const { google } = require('googleapis');
+require('dotenv').config();
 
 const OAuth2 = google.auth.OAuth2;
 
@@ -13,15 +13,15 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use("/", router);
+app.use('/', router);
 
 const PORT = process.env.PORT || 5000;
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "/build")));
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '/build')));
 
-  app.get("*", (req, res) =>
-    res.sendFile(path.resolve(__dirname, "build", "index.html"))
+  app.get('*', (req, res) =>
+    res.sendFile(path.resolve(__dirname, 'build', 'index.html'))
   );
 }
 
@@ -29,13 +29,12 @@ app.listen(PORT, () => console.log(`Server Running on port :${PORT}`));
 
 // Send Email via googleapis
 
-
 // Create transporter
 const createTransporter = async () => {
   const oauth2Client = new OAuth2(
     process.env.CLIENT_ID,
     process.env.CLIENT_SECRET,
-    "https://developers.google.com/oauthplayground"
+    'https://developers.google.com/oauthplayground'
   );
 
   oauth2Client.setCredentials({
@@ -45,6 +44,7 @@ const createTransporter = async () => {
   const accessToken = await new Promise((resolve, reject) => {
     oauth2Client.getAccessToken((err, token) => {
       if (err) {
+        // console.log(err);
         reject();
       }
       resolve(token);
@@ -52,9 +52,9 @@ const createTransporter = async () => {
   });
 
   const transporter = nodemailer.createTransport({
-    service: "gmail",
+    service: 'gmail',
     auth: {
-      type: "OAuth2",
+      type: 'OAuth2',
       user: process.env.EMAIL,
       accessToken,
       clientId: process.env.CLIENT_ID,
@@ -72,7 +72,7 @@ const validateHuman = async (token) => {
   const response = await fetch(
     `https://www.google.com/recaptcha/api/siteverify?secret=${secret}&response=${token}`,
     {
-      method: "POST",
+      method: 'POST',
     }
   );
   const data = await response.json();
@@ -80,14 +80,13 @@ const validateHuman = async (token) => {
   return data.success;
 };
 
-
 // Post email
-router.post("/contact", (req, res) => {
+router.post('/contact', (req, res) => {
   const name = req.body.name;
   const email = req.body.email;
   const subject = req.body.subject;
   const message = req.body.message;
-  // const token = req.body.token;
+  const token = req.body.token;
   const mail = {
     from: name,
     to: process.env.EMAIL,
@@ -97,20 +96,20 @@ router.post("/contact", (req, res) => {
              <p>Message: ${message}</p>`,
   };
   const sendEmail = async (emailOptions) => {
-    // const human = await validateHuman(token);
-    // if (!human) {
-    //   res.status(400);
-    //   res.json({ status: "bot" });
+    const human = await validateHuman(token);
+    if (!human) {
+      res.status(400);
+      res.json({ status: 'bot' });
 
-    //   return;
-    // }
+      return;
+    }
 
     try {
       let emailTransporter = await createTransporter();
       await emailTransporter.sendMail(emailOptions);
-      res.json({ status: "success" });
+      res.json({ status: 'success' });
     } catch (error) {
-      res.json({ status: "error" });
+      res.json({ status: 'error' });
     }
   };
 
