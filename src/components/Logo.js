@@ -96,7 +96,7 @@ const Logo = ({ setIsChecked }) => {
           size="medium"
           color="secondary"
           variant="contained"
-          href="files\CV_2021-03-08_Eric_JUQUEL.pdf"
+          href="/files/CV_2021-04-01_Eric_JUQUEL.pdf"
           title={translate(lang, 'cv')}
           download
         >
