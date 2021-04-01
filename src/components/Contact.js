@@ -258,8 +258,8 @@ const Contact = () => {
           </Grid>
         </Grid>
       </Grid>
-      <Grid container justify="center">
-        {/* {buttonStatus === "sending" ? ( */}
+      {/* <Grid container justify="center">
+        {buttonStatus === "sending" ? (
           <ReCAPTCHA
             className={classes.captcha}
             sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
@@ -268,8 +268,8 @@ const Contact = () => {
             theme="dark"
             // badge="inline"
           />
-        {/* ) : null} */}
-      </Grid>
+        ) : null}
+      </Grid> */}
     </section>
   );
 };

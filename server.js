@@ -97,13 +97,13 @@ router.post("/contact", (req, res) => {
              <p>Message: ${message}</p>`,
   };
   const sendEmail = async (emailOptions) => {
-    const human = await validateHuman(token);
-    if (!human) {
-      res.status(400);
-      res.json({ status: "bot" });
+    // const human = await validateHuman(token);
+    // if (!human) {
+    //   res.status(400);
+    //   res.json({ status: "bot" });
 
-      return;
-    }
+    //   return;
+    // }
 
     try {
       let emailTransporter = await createTransporter();
