@@ -87,7 +87,7 @@ router.post("/contact", (req, res) => {
   const email = req.body.email;
   const subject = req.body.subject;
   const message = req.body.message;
-  const token = req.body.token;
+  // const token = req.body.token;
   const mail = {
     from: name,
     to: process.env.EMAIL,
