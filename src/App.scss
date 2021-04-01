@@ -62,6 +62,13 @@
   }
 }
 
+.container.contact {
+  @media screen and (min-width: 1280px) {
+    min-height:80vh;
+    max-height:100vh;
+  }
+}
+
 //Typography
 .highlight {
   color: $color-secondary;
