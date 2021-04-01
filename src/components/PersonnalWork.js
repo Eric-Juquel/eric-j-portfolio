@@ -36,7 +36,7 @@ const useStyles = makeStyles(
       "@media (max-width:600px)": {
         height: "10rem",
       },
-      backgroundImage: "url('/images/ajax-loader.gif')",
+      backgroundImage: "/images/lineShop/home.png",
       backgroundSize: "5%",
     },
     media1: {
