@@ -259,7 +259,7 @@ const Contact = () => {
         </Grid>
       </Grid>
       <Grid container justify="center">
-        {buttonStatus === "sending" ? (
+        {/* {buttonStatus === "sending" ? ( */}
           <ReCAPTCHA
             className={classes.captcha}
             sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
@@ -268,7 +268,7 @@ const Contact = () => {
             theme="dark"
             // badge="inline"
           />
-        ) : null}
+        {/* ) : null} */}
       </Grid>
     </section>
   );
