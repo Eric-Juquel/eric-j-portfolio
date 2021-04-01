@@ -70,17 +70,15 @@ const Contact = () => {
   const onSubmit = async (data) => {
     setButtonStatus("sending");
 
-    const token = await ref.current.executeAsync();
+    // const token = await ref.current.executeAsync();
     ref.current.reset();
-
-    console.log("token", token);
 
     let details = {
       name: data.name,
       email: data.email,
       subject: data.subject,
       message: data.message,
-      token,
+      // token,
     };
 
     const response = await fetch("/contact", {
