@@ -10,6 +10,7 @@ const Navigation = ({ setIsChecked }) => {
   const [active, setActive] = useState("");
 
   const menuItems = [
+    {value:  translate(lang, "home"), label: ""},
     { value: translate(lang, "skills"), label: "skills" },
     { value: translate(lang, "achievements"), label: "achievements" },
     // { value: translate(lang, "career"), label: "career" },
