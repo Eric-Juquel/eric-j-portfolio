@@ -1,4 +1,4 @@
-https://ericjuquel-portfolio.herokuapp.com/
+https://ericjportfolio.herokuapp.com/
 
 # Getting Started with Create React App
 
