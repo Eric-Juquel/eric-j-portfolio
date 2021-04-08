@@ -24,6 +24,9 @@ const useStyles = makeStyles(
       // width: "50%",
       minHeight: '5rem',
       padding: '3rem',
+      '@media (max-width:600px)': {
+        padding: '1rem 0.3rem',
+      },
     },
     woody: {
       width: '15rem',
@@ -48,6 +51,11 @@ const useStyles = makeStyles(
       padding: '1.5rem',
       marginBottom: '3.5rem',
       backgroundColor: theme.palette.text.secondary,
+      '@media (max-width:600px)': {
+        width:'97%',
+        padding: '1rem 0.3rem',
+
+      },
     },
     mediaLicence: {
       maxWidth: '35rem',
@@ -161,7 +169,7 @@ const ProfessionalWork = () => {
           </Grid>
 
           <Grid item className={classes.box} xs={12} lg={6}>
-            <Typography variant="body1" align="justify">
+            <Typography variant="body1" align={matches ? 'center':'left'}>
               {' '}
               {translate(lang, 'coverage')}{' '}
               <span className={classes.textPrimary}>
@@ -175,7 +183,7 @@ const ProfessionalWork = () => {
         </Grid>
         <Grid container justify="space-around" alignItems="center">
           <Grid item className={classes.box} xs={12} lg={6}>
-            <Typography variant="body1" align="justify">
+            <Typography variant="body1" align={matches ? 'center':'left'}>
               <span className={classes.textPrimary}>
                 {translate(lang, 'interface')}
               </span>
@@ -225,7 +233,7 @@ const ProfessionalWork = () => {
             <CardContent>
               <Typography
                 variant="body1"
-                align={!matches ? 'center' : 'justify'}
+                align="center"
                 className={classes.textDark}
               >
                 {translate(lang, 'licence')}

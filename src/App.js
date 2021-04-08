@@ -115,7 +115,7 @@ const App = () => {
           ) : (
             <Burger />
           )}
-          <Container maxWidth={false} component="main">
+          <Container  component="main" disableGutters>
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/skills" component={Skills} />

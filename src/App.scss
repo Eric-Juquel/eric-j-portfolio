@@ -57,9 +57,16 @@
   margin: 3rem auto;
   padding: 0.8rem;
   flex-wrap: wrap;
+
   @media screen and (max-width: 960px) {
     margin: 5rem auto;
   }
+
+  @media screen and (max-width: 600px) {
+    width:100%;
+    margin: 3rem 0;
+  }
+
 }
 
 .container.contact {

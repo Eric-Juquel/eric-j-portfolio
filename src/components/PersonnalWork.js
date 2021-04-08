@@ -24,6 +24,10 @@ const useStyles = makeStyles(
     },
     card1: {
       width: "80%",
+      "@media (max-width:600px)": {
+        width:'100%',
+        padding:'0 0.2rem',
+      },
     },
     media: {
       maxWidth: "100%",
@@ -60,6 +64,9 @@ const useStyles = makeStyles(
     media2: {
       height: "auto",
       width: "100%",
+      "@media (max-width:600px)": {
+        padding:'0 0.2rem',
+      },
     },
   }),
   { index: 1 }
@@ -204,7 +211,7 @@ const PersonnalWork = () => {
 
   return (
     <>
-      <Grid container justify="space-evenly">
+      <Grid container justify="space-evenly" >
         <Card className={classes.card1}>
           <CardMedia
             className={loading ? classes.media : classes.media1}
@@ -251,7 +258,7 @@ const PersonnalWork = () => {
           sites.length > 0 &&
           sites.map((site) => {
             return (
-              <Grid item lg={3} xs={8} key={site.id}>
+              <Grid item lg={3} xs={12} key={site.id}>
                 <Card>
                   <CardActionArea
                     onClick={() => {
