@@ -38,7 +38,7 @@ const Achievements = () => {
   const lang = useSelector((state) => state.languageReducer.language);
 
   return (
-    <section className="container">
+    <section className="container" id="achievements">
       <Grid container direction="column" justify="space-evenly">
         <Grid item>
           <Grid container>

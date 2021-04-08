@@ -98,7 +98,7 @@ const Skills = () => {
   ];
 
   return (
-    <section className="container">
+    <section className="container" id="skills">
       <Grid container direction="column">
         <Grid item md={12}>
           <Grid container>

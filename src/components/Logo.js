@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { translate } from '../translations/translate';
 import { useSelector } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import {
+  Grid,
   Card,
   CardActionArea,
   CardActions,
@@ -11,6 +12,9 @@ import {
   CardMedia,
   Button,
   Typography,
+  Backdrop,
+  Fade,
+  Modal,
   useMediaQuery,
 } from '@material-ui/core';
 
@@ -47,6 +51,16 @@ const useStyles = makeStyles(
     imageSmall: {
       width: '10rem',
     },
+    modal: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    paper: {
+      backgroundColor: theme.palette.background.paper,
+      boxShadow: theme.shadows[5],
+      padding: theme.spacing(2, 4, 3),
+    },
   }),
   { index: 1 }
 );
@@ -55,6 +69,85 @@ const Logo = ({ setIsChecked }) => {
   const matches = useMediaQuery('(max-width:960px)');
   const classes = useStyles();
   const lang = useSelector((state) => state.languageReducer.language);
+  const [open, setOpen] = useState(false);
+  const [modalTitle, setModalTitle] = useState('');
+  const [modalDescription, setModalDescription] = useState('');
+  const [documentRef, setDocumentRef] = useState('');
+
+  // Modal //
+  const openCVModalHandler = () => {
+    setModalTitle('CV');
+    setModalDescription(
+      translate(lang, 'cv') + ' ' + translate(lang, 'pdf') + '?'
+    );
+    setDocumentRef('/files/CV_2021-04-08_Eric_JUQUEL.pdf');
+    setOpen(true);
+  };
+  const openLRModalHandler = () => {
+    setModalTitle('LR');
+    setModalDescription(
+      translate(lang, 'lr') + ' ' + translate(lang, 'pdf') + '?'
+    );
+    setDocumentRef('/files/CV_2021-04-08_Eric_JUQUEL.pdf');
+    setOpen(true);
+  };
+
+  const closeModalHandler = () => {
+    setOpen(false);
+  };
+
+  const body = (
+    <>
+      <Fade in={open}>
+        <div className={classes.paper}>
+          <Typography
+            id="transition-modal-title"
+            variant="h4"
+            component="h2"
+            align="center"
+          >
+            {modalTitle}
+          </Typography>
+          <Typography
+            id="transition-modal-description"
+            variant="h6"
+            component="h3"
+            align="center"
+            gutterBottom
+          >
+            {modalDescription}
+          </Typography>
+          <Grid container>
+            <Button
+              className={classes.button}
+              classes={{
+                containedPrimary: classes.colorWarning,
+              }}
+              size="small"
+              color="secondary"
+              variant="contained"
+              href={documentRef}
+              download
+            >
+              {translate(lang, 'download')}
+            </Button>
+            <Button
+              className={classes.button}
+              classes={{
+                containedPrimary: classes.colorWarning,
+              }}
+              size="small"
+              color="secondary"
+              variant="contained"
+              onClick={closeModalHandler}
+            >
+              {translate(lang, 'exit')}
+            </Button>
+          </Grid>
+        </div>
+      </Fade>
+    </>
+  );
 
   return (
     <Card className={classes.card}>
@@ -96,9 +189,8 @@ const Logo = ({ setIsChecked }) => {
           size="medium"
           color="secondary"
           variant="contained"
-          href="/files/CV_2021-04-08_Eric_JUQUEL.pdf"
           title={translate(lang, 'cv')}
-          download
+          onClick={openCVModalHandler}
         >
           CV
         </Button>
@@ -111,13 +203,26 @@ const Logo = ({ setIsChecked }) => {
           size="medium"
           color="secondary"
           variant="contained"
-          href="/files/Lettre de recommandation Woody Technologies pour Eric Juquel.pdf"
           title={translate(lang, 'lr')}
-          download
+          onClick={openLRModalHandler}
         >
           LR
         </Button>
       </CardActions>
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        className={classes.modal}
+        open={open}
+        onClose={closeModalHandler}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        {body}
+      </Modal>
     </Card>
   );
 };

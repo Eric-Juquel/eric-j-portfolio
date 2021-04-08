@@ -101,7 +101,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="container contact" >
+    <section className="container contact" id="contact" >
       <Grid container direction="column">
         <Grid item md={12}>
           <Grid container>

@@ -3,6 +3,10 @@
   "subtitle": "Développeur Frontend / ReactJs",
   "cv":"télécharger le CV",
   "lr":"télécharger la lettre de recommandation",
+  "pdf": "au format PDF",
+  "download":"télécharger",
+  "exit": "sortir",
+
 
   "about": "à propos",
   "skills": "compétences",

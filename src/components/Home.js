@@ -26,7 +26,7 @@ const Home = () => {
 
   return (
     <>
-      <section className="container">
+      <section className="container" id="home">
         <Grid container direction="column">
           <Grid container alignItems="center" justify="flex-start" spacing={3}>
             <Grid item>
