@@ -1,10 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
-import "../App.scss";
-import { useForm, Controller } from "react-hook-form";
-import ReCAPTCHA from "react-google-recaptcha";
-import { translate } from "../translations/translate";
-import { useSelector } from "react-redux";
-import { makeStyles } from "@material-ui/core/styles";
+import React, { useState, useEffect } from 'react';
+import '../App.scss';
+import { useForm, Controller } from 'react-hook-form';
+import { translate } from '../translations/translate';
+import { useSelector } from 'react-redux';
+import { makeStyles } from '@material-ui/core/styles';
 import {
   Grid,
   TextField,
@@ -14,99 +13,100 @@ import {
   Button,
   Card,
   CardContent,
-} from "@material-ui/core";
-import CloseIcon from "@material-ui/icons/Close";
-import CallIcon from "@material-ui/icons/Call";
-import AlternateEmailIcon from "@material-ui/icons/AlternateEmail";
-import Button1 from "./Button1";
+} from '@material-ui/core';
+import CloseIcon from '@material-ui/icons/Close';
+import CallIcon from '@material-ui/icons/Call';
+import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
+import Button1 from './Button1';
+import emailjs from 'emailjs-com';
 
 const useStyles = makeStyles(
   (theme) => ({
     form: {
-      width: "100%",
+      width: '100%',
     },
     card: {
-      width: "30rem",
-      margin: "1rem auto",
-      "@media screen and (max-width: 600px)": {
-        width: "100%",
+      width: '30rem',
+      margin: '1rem auto',
+      '@media screen and (max-width: 600px)': {
+        width: '100%',
       },
     },
     icon: {
-      marginRight: "1rem",
+      marginRight: '1rem',
     },
     colorWarning: {
       color: theme.palette.warning.main,
     },
     captcha: {
-      height: "4rem",
+      height: '4rem',
     },
   }),
   { index: 1 }
 );
 
-const Contact = () => {
-  const [buttonStatus, setButtonStatus] = useState("submit");
-  const [messageStatus, setMessageStatus] = useState("");
+const Contact2 = () => {
+  const [buttonStatus, setButtonStatus] = useState('submit');
+  const [messageStatus, setMessageStatus] = useState('');
   const classes = useStyles();
   const lang = useSelector((state) => state.languageReducer.language);
-  const reRef = useRef();
 
   const defaultValues = {
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
   };
   const { handleSubmit, control, reset } = useForm({ defaultValues });
 
   useEffect(() => {
-    if (messageStatus === "success") {
+    if (messageStatus === 'success') {
       reset(defaultValues);
     }
     // eslint-disable-next-line
   }, [messageStatus]);
 
   const onSubmit = async (data) => {
-    setButtonStatus("sending");
+    setButtonStatus('sending');
 
-    const token = await reRef.current.executeAsync();
-    reRef.current.reset();
-
-    let details = {
-      name: data.name,
-      email: data.email,
+    let params = {
+      from_name: data.name,
+      from_email: data.email,
       subject: data.subject,
       message: data.message,
-      token,
     };
 
-    const response = await fetch("/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(details),
-    });
-    setButtonStatus("submit");
-    let result = await response.json();
-    setMessageStatus(result.status);
+    console.log(params);
+
+    setButtonStatus('submit');
+    try {
+      const result = await emailjs.send(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        params,
+        process.env.REACT_APP_USER_ID
+      );
+
+      setMessageStatus(result.text);
+    } catch (error) {
+      setMessageStatus('error');
+    }
   };
 
   const handleClose = (event, reason) => {
-    if (reason === "clickaway") {
+    if (reason === 'clickaway') {
       return;
     }
-    setMessageStatus("");
+    setMessageStatus('');
   };
 
   return (
-    <section className="container contact" id="contact" >
+    <section className="container contact" id="contact">
       <Grid container direction="column">
         <Grid item md={12}>
           <Grid container>
             <Typography variant="h1" component="h1">
-              {translate(lang, "contactMe")}
+              {translate(lang, 'contactMe')}
             </Typography>
           </Grid>
         </Grid>
@@ -122,7 +122,7 @@ const Contact = () => {
                     control={control}
                     variant="outlined"
                     color="secondary"
-                    label={translate(lang, "name")}
+                    label={translate(lang, 'name')}
                     fullWidth
                     required
                   />
@@ -149,9 +149,8 @@ const Contact = () => {
                     control={control}
                     variant="outlined"
                     color="secondary"
-                    label={translate(lang, "subject")}
+                    label={translate(lang, 'subject')}
                     fullWidth
-                    
                   />
                 </Grid>
                 <Grid item xs={12}>
@@ -177,27 +176,27 @@ const Contact = () => {
           </Grid>
           <Snackbar
             anchorOrigin={{
-              vertical: "bottom",
-              horizontal: "center",
+              vertical: 'bottom',
+              horizontal: 'center',
             }}
             open={
-              messageStatus === "error" ||
-              messageStatus === "success" ||
-              messageStatus === "bot"
+              messageStatus === 'error' ||
+              messageStatus === 'OK' ||
+              messageStatus === 'bot'
             }
             autoHideDuration={6000}
             onClose={handleClose}
             message={
-              messageStatus === "error"
-                ? translate(lang, "errorSent")
-                : messageStatus === "bot"
-                ? translate(lang, "bot")
-                : translate(lang, "sent")
+              messageStatus === 'error'
+                ? translate(lang, 'errorSent')
+                : messageStatus === 'bot'
+                ? translate(lang, 'bot')
+                : translate(lang, 'sent')
             }
             action={
               <React.Fragment>
                 <Button color="secondary" size="small" onClick={handleClose}>
-                  {translate(lang, "close")}
+                  {translate(lang, 'close')}
                 </Button>
                 <IconButton
                   size="small"
@@ -218,12 +217,12 @@ const Contact = () => {
                   Eric Juquel
                 </Typography>
                 <Typography color="textSecondary" gutterBottom>
-                  {translate(lang, "subtitle")}
+                  {translate(lang, 'subtitle')}
                 </Typography>
                 <Typography>Paris</Typography>
                 <Typography gutterBottom>France</Typography>
                 <Grid container>
-                  {" "}
+                  {' '}
                   <CallIcon
                     color="primary"
                     className={classes.icon}
@@ -242,7 +241,7 @@ const Contact = () => {
                   </Typography>
                 </Grid>
                 <Grid container>
-                  {" "}
+                  {' '}
                   <AlternateEmailIcon
                     color="secondary"
                     className={classes.icon}
@@ -256,20 +255,8 @@ const Contact = () => {
           </Grid>
         </Grid>
       </Grid>
-      <Grid container justify="center">
-        {buttonStatus === "sending" ? (
-          <ReCAPTCHA
-            className={classes.captcha}
-            sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
-            size="invisible"
-            ref={reRef}
-            theme="dark"
-            // badge="inline"
-          />
-        ) : null}
-      </Grid>
     </section>
   );
 };
 
-export default Contact;
+export default Contact2;

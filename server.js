@@ -44,7 +44,7 @@ const createTransporter = async () => {
   const accessToken = await new Promise((resolve, reject) => {
     oauth2Client.getAccessToken((err, token) => {
       if (err) {
-        // console.log(err);
+        console.log('acces token error',err);
         reject();
       }
       resolve(token);
@@ -67,18 +67,18 @@ const createTransporter = async () => {
 };
 
 // goggle reCAPTCHA
-const validateHuman = async (token) => {
-  const secret = process.env.RECAPTCHA_SECRET_KEY;
-  const response = await fetch(
-    `https://www.google.com/recaptcha/api/siteverify?secret=${secret}&response=${token}`,
-    {
-      method: 'POST',
-    }
-  );
-  const data = await response.json();
+// const validateHuman = async (token) => {
+//   const secret = process.env.RECAPTCHA_SECRET_KEY;
+//   const response = await fetch(
+//     `https://www.google.com/recaptcha/api/siteverify?secret=${secret}&response=${token}`,
+//     {
+//       method: 'POST',
+//     }
+//   );
+//   const data = await response.json();
 
-  return data.success;
-};
+//   return data.success;
+// };
 
 // Post email
 router.post('/contact', (req, res) => {
@@ -86,7 +86,7 @@ router.post('/contact', (req, res) => {
   const email = req.body.email;
   const subject = req.body.subject;
   const message = req.body.message;
-  const token = req.body.token;
+  // const token = req.body.token;
   const mail = {
     from: name,
     to: process.env.EMAIL,
@@ -96,19 +96,20 @@ router.post('/contact', (req, res) => {
              <p>Message: ${message}</p>`,
   };
   const sendEmail = async (emailOptions) => {
-    const human = await validateHuman(token);
-    if (!human) {
-      res.status(400);
-      res.json({ status: 'bot' });
+    // const human = await validateHuman(token);
+    // if (!human) {
+    //   res.status(400);
+    //   res.json({ status: 'bot' });
 
-      return;
-    }
+    //   return;
+    // }
 
     try {
       let emailTransporter = await createTransporter();
       await emailTransporter.sendMail(emailOptions);
       res.json({ status: 'success' });
     } catch (error) {
+      console.log(error)
       res.json({ status: 'error' });
     }
   };

@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^12.1.10",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
+    "emailjs-com": "^2.6.4",
     "express": "^4.17.1",
     "googleapis": "^67.1.1",
     "material-auto-rotating-carousel": "^3.0.2",
