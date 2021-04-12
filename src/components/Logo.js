@@ -128,6 +128,7 @@ const Logo = ({ setIsChecked }) => {
               variant="contained"
               href={documentRef}
               download
+              onClick={closeModalHandler}
             >
               {translate(lang, 'download')}
             </Button>
