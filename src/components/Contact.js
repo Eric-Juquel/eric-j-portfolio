@@ -84,7 +84,7 @@ const Contact2 = () => {
         process.env.REACT_APP_SERVICE_ID,
         process.env.REACT_APP_TEMPLATE_ID,
         params,
-        process.env.REACT_APP_USER_ID
+        "user_MkYWMBpj2u3YpnREL8DXt"
       );
 
       setMessageStatus(result.text);
