@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import '../App.scss';
+import '../../App.scss';
 import { useForm, Controller } from 'react-hook-form';
-import { translate } from '../translations/translate';
+import { translate } from '../../translations/translate';
 import { useSelector } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import {
@@ -11,35 +11,16 @@ import {
   Snackbar,
   IconButton,
   Button,
-  Card,
-  CardContent,
 } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
-import CallIcon from '@material-ui/icons/Call';
-import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
-import Button1 from './Button1';
+import Button1 from '../ui/Button1';
 import emailjs from 'emailjs-com';
+import VisitCard from './VisitCard';
 
 const useStyles = makeStyles(
   (theme) => ({
     form: {
       width: '100%',
-    },
-    card: {
-      width: '30rem',
-      margin: '1rem auto',
-      '@media screen and (max-width: 600px)': {
-        width: '100%',
-      },
-    },
-    icon: {
-      marginRight: '1rem',
-    },
-    colorWarning: {
-      color: theme.palette.warning.main,
-    },
-    captcha: {
-      height: '4rem',
     },
   }),
   { index: 1 }
@@ -84,7 +65,7 @@ const Contact2 = () => {
         process.env.REACT_APP_SERVICE_ID,
         process.env.REACT_APP_TEMPLATE_ID,
         params,
-        "user_MkYWMBpj2u3YpnREL8DXt"
+        'user_MkYWMBpj2u3YpnREL8DXt'
       );
 
       setMessageStatus(result.text);
@@ -211,47 +192,7 @@ const Contact2 = () => {
           />
 
           <Grid item lg={6} xs={12}>
-            <Card className={classes.card} variant="outlined">
-              <CardContent>
-                <Typography variant="h4" component="h2" gutterBottom>
-                  Eric Juquel
-                </Typography>
-                <Typography color="textSecondary" gutterBottom>
-                  {translate(lang, 'subtitle')}
-                </Typography>
-                <Typography>Paris</Typography>
-                <Typography gutterBottom>France</Typography>
-                <Grid container>
-                  {' '}
-                  <CallIcon
-                    color="primary"
-                    className={classes.icon}
-                    classes={{
-                      colorPrimary: classes.colorWarning,
-                    }}
-                  ></CallIcon>
-                  <Typography
-                    variant="subtitle1"
-                    color="primary"
-                    classes={{
-                      colorPrimary: classes.colorWarning,
-                    }}
-                  >
-                    +33 6 28 90 58 89
-                  </Typography>
-                </Grid>
-                <Grid container>
-                  {' '}
-                  <AlternateEmailIcon
-                    color="secondary"
-                    className={classes.icon}
-                  />
-                  <Typography variant="subtitle1" color="secondary">
-                    ejuquel@yahoo.fr
-                  </Typography>
-                </Grid>
-              </CardContent>
-            </Card>
+            <VisitCard />
           </Grid>
         </Grid>
       </Grid>

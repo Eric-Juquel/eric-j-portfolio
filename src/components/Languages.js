@@ -1,6 +1,8 @@
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { ButtonGroup, Button } from "@material-ui/core";
+import React from 'react';
+import { translate } from '../translations/translate';
+import { useDispatch, useSelector } from 'react-redux';
+import { ButtonGroup, Button } from '@material-ui/core';
+import LightTooltip from './ui/LightTooltip';
 
 const Languages = () => {
   const dispatch = useDispatch();
@@ -8,18 +10,28 @@ const Languages = () => {
 
   return (
     <ButtonGroup size="small" color="secondary">
-      <Button
-        variant={lang === "fr" ? "contained" : "outlined"}
-        onClick={() => dispatch({ type: "fr" })}
+      <LightTooltip
+        title={translate(lang, 'FrVersion')}
+        aria-label={translate(lang, 'FrVersion')}
       >
-        FR
-      </Button>
-      <Button
-        variant={lang === "en" ? "contained" : "outlined"}
-        onClick={() => dispatch({ type: "en" })}
+        <Button
+          variant={lang === 'fr' ? 'contained' : 'outlined'}
+          onClick={() => dispatch({ type: 'fr' })}
+        >
+          FR
+        </Button>
+      </LightTooltip>
+      <LightTooltip
+        title={translate(lang, 'EnVersion')}
+        aria-label={translate(lang, 'EnVersion')}
       >
-        EN
-      </Button>
+        <Button
+          variant={lang === 'en' ? 'contained' : 'outlined'}
+          onClick={() => dispatch({ type: 'en' })}
+        >
+          EN
+        </Button>
+      </LightTooltip>
     </ButtonGroup>
   );
 };

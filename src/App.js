@@ -10,7 +10,7 @@ import Home from './components/Home';
 import Skills from './components/Skills';
 import Achievements from './components/Achievements';
 import Career from './components/Career';
-import Contact from './components/Contact';
+import Contact from './components/contact/Contact';
 
 
 import { Container, useMediaQuery } from '@material-ui/core';

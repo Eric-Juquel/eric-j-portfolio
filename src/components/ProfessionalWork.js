@@ -15,6 +15,7 @@ import {
   Divider,
   useMediaQuery,
 } from '@material-ui/core';
+import LightTooltip from './ui/LightTooltip';
 import SvgWoodyTechnologyPinkLogo from './WoodyTechnologyPinkLogo';
 import CarouselModal from './CarouselModal';
 
@@ -52,9 +53,8 @@ const useStyles = makeStyles(
       marginBottom: '3.5rem',
       backgroundColor: theme.palette.text.secondary,
       '@media (max-width:600px)': {
-        width:'97%',
+        width: '97%',
         padding: '1rem 0.3rem',
-
       },
     },
     mediaLicence: {
@@ -157,19 +157,24 @@ const ProfessionalWork = () => {
         <Grid container justify="space-around" alignItems="center">
           <Grid item className={classes.box} xs={12} lg={6}>
             <Grid container justify="center">
-              <ReactPlayer
-                url="https://vimeo.com/481159581"
-                controls
-                light
-                volume={0.3}
-                width="25rem"
-                height="15rem"
-              />
+              <LightTooltip
+                title={translate(lang, 'video')}
+                aria-label={translate(lang, 'video')}
+              >
+                <ReactPlayer
+                  url="https://vimeo.com/481159581"
+                  controls
+                  light
+                  volume={0.3}
+                  width="25rem"
+                  height="15rem"
+                />
+              </LightTooltip>
             </Grid>
           </Grid>
 
           <Grid item className={classes.box} xs={12} lg={6}>
-            <Typography variant="body1" align={matches ? 'center':'left'}>
+            <Typography variant="body1" align={matches ? 'center' : 'left'}>
               {' '}
               {translate(lang, 'coverage')}{' '}
               <span className={classes.textPrimary}>
@@ -183,7 +188,7 @@ const ProfessionalWork = () => {
         </Grid>
         <Grid container justify="space-around" alignItems="center">
           <Grid item className={classes.box} xs={12} lg={6}>
-            <Typography variant="body1" align={matches ? 'center':'left'}>
+            <Typography variant="body1" align={matches ? 'center' : 'left'}>
               <span className={classes.textPrimary}>
                 {translate(lang, 'interface')}
               </span>
@@ -194,17 +199,22 @@ const ProfessionalWork = () => {
             <Grid container justify="center">
               <Card className={classes.card}>
                 <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    className={classes.media}
-                    image="/images/ElectionsUS/Presidentielle.png"
-                    title="UI Elections Us France 24"
-                    onClick={() => {
-                      setMediaWidth('85%');
-                      setImages(electionsUs);
-                      setOpenModal(true);
-                    }}
-                  />
+                  <LightTooltip
+                    title={translate(lang, 'slider')}
+                    aria-label={translate(lang, 'slider')}
+                  >
+                    <CardMedia
+                      component="img"
+                      className={classes.media}
+                      image="/images/ElectionsUS/Presidentielle.png"
+                      alt="UI Elections Us France 24"
+                      onClick={() => {
+                        setMediaWidth('85%');
+                        setImages(electionsUs);
+                        setOpenModal(true);
+                      }}
+                    />
+                  </LightTooltip>
                 </CardActionArea>
               </Card>
             </Grid>
@@ -218,17 +228,23 @@ const ProfessionalWork = () => {
         <Grid container justify="space-around" alignItems="center">
           <Card className={classes.cardLicence}>
             <CardActionArea>
-              <CardMedia
-                component="img"
-                className={classes.mediaLicence}
-                image="/images/licencesrv/licences-blur.png"
-                title="Serveur de licences"
-                onClick={() => {
-                  setMediaWidth('97%');
-                  setImages(licenseServeur);
-                  setOpenModal(true);
-                }}
-              />
+              <LightTooltip
+                title={translate(lang, 'slider')}
+                aria-label={translate(lang, 'slider')}
+                placement="top"
+              >
+                <CardMedia
+                  component="img"
+                  className={classes.mediaLicence}
+                  image="/images/licencesrv/licences-blur.png"
+                  alt="Serveur de licences"
+                  onClick={() => {
+                    setMediaWidth('97%');
+                    setImages(licenseServeur);
+                    setOpenModal(true);
+                  }}
+                />
+              </LightTooltip>
             </CardActionArea>
             <CardContent>
               <Typography

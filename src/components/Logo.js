@@ -2,21 +2,20 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { translate } from '../translations/translate';
 import { useSelector } from 'react-redux';
-import { makeStyles } from '@material-ui/core/styles';
-import {
-  Grid,
-  Card,
-  CardActionArea,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Button,
-  Typography,
-  Backdrop,
-  Fade,
-  Modal,
-  useMediaQuery,
-} from '@material-ui/core';
+import { makeStyles} from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+import Backdrop from '@material-ui/core/Backdrop';
+import Fade from '@material-ui/core/Fade';
+import Modal from '@material-ui/core/Modal';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import LightTooltip from './ui/LightTooltip';
 
 import logo from '../images/Logo1.png';
 
@@ -64,6 +63,7 @@ const useStyles = makeStyles(
   }),
   { index: 1 }
 );
+
 
 const Logo = ({ setIsChecked }) => {
   const matches = useMediaQuery('(max-width:960px)');
@@ -152,63 +152,76 @@ const Logo = ({ setIsChecked }) => {
 
   return (
     <Card className={classes.card}>
-      <Link to="/">
-        <CardActionArea
-          className={matches ? classes.actionAria : ''}
-          onClick={() => {
-            setIsChecked && setIsChecked(false);
-            window.scrollTo({
-              top: 0,
-              behavior: !matches ? 'smooth' : 'auto',
-            });
-          }}
-        >
-          <CardMedia
-            component="img"
-            alt="Eric Juquel"
-            height="auto"
-            image={logo}
-            title="Eric Juquel"
-            className={matches ? classes.imageSmall : classes.image}
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h4" component="h2">
-              Eric
-            </Typography>
-            <Typography variant="h6" component="h3">
-              {translate(lang, 'title')}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-      </Link>
-      <CardActions>
-        <Button
-          className={classes.button}
-          classes={{
-            containedPrimary: classes.colorWarning,
-          }}
-          size="medium"
-          color="secondary"
-          variant="contained"
-          title={translate(lang, 'cv')}
-          onClick={openCVModalHandler}
-        >
-          CV
-        </Button>
+      <LightTooltip
+        title={translate(lang, 'home')}
+        aria-label={translate(lang, 'home')}
+        placement="right"
+      >
+        <Link to="/">
+          <CardActionArea
+            className={matches ? classes.actionAria : ''}
+            onClick={() => {
+              setIsChecked && setIsChecked(false);
+              window.scrollTo({
+                top: 0,
+                behavior: !matches ? 'smooth' : 'auto',
+              });
+            }}
+          >
+            <CardMedia
+              component="img"
+              alt="Eric Juquel"
+              height="auto"
+              image={logo}
+              className={matches ? classes.imageSmall : classes.image}
+            />
 
-        <Button
-          className={classes.button}
-          classes={{
-            containedPrimary: classes.colorWarning,
-          }}
-          size="medium"
-          color="secondary"
-          variant="contained"
-          title={translate(lang, 'lr')}
-          onClick={openLRModalHandler}
+            <CardContent>
+              <Typography gutterBottom variant="h4" component="h2">
+                Eric
+              </Typography>
+              <Typography variant="h6" component="h3">
+                {translate(lang, 'title')}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Link>
+      </LightTooltip>
+      <CardActions>
+        <LightTooltip
+          title={translate(lang, 'cv')}
+          aria-label={translate(lang, 'cv')}
         >
-          LR
-        </Button>
+          <Button
+            className={classes.button}
+            classes={{
+              containedPrimary: classes.colorWarning,
+            }}
+            size="medium"
+            color="secondary"
+            variant="contained"
+            onClick={openCVModalHandler}
+          >
+            CV
+          </Button>
+        </LightTooltip>
+        <LightTooltip
+          title={translate(lang, 'lr')}
+          aria-label={translate(lang, 'lr')}
+        >
+          <Button
+            className={classes.button}
+            classes={{
+              containedPrimary: classes.colorWarning,
+            }}
+            size="medium"
+            color="secondary"
+            variant="contained"
+            onClick={openLRModalHandler}
+          >
+            LR
+          </Button>
+        </LightTooltip>
       </CardActions>
       <Modal
         aria-labelledby="transition-modal-title"

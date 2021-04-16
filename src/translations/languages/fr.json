@@ -1,11 +1,14 @@
 {
+  "FrVersion": "Version française",
+  "EnVersion": "Version Anglaise",
+
   "title": "Développeur web",
   "subtitle": "Développeur Frontend / ReactJs",
-  "cv":"télécharger le CV",
-  "lr":"télécharger la lettre de recommandation",
+  "cv": "Télécharger le CV",
+  "lr": "Télécharger la lettre de recommandation",
   "pdf": "au format PDF",
-  "download":"télécharger",
-  "exit": "sortir",
+  "download": "Télécharger",
+  "exit": "Sortir",
 
   "home": "accueil",
   "about": "à propos",
@@ -22,7 +25,7 @@
   "sent": "Message envoyé avec succés",
   "errorSent": "Erreur! Message non envoyé",
   "bot": "Robot repéré !",
-  "close":"Fermer",
+  "close": "Fermer",
 
   "skills-1": "Ma Formation 'Développeur web & web mobile' m'a permis d'acquérir les bases fondamentales à la création de sites web responsives",
   "skills-2": "J'ai choisi de me concentrer sur le JavaScipt en développant mes compétences dans cet environnement",
@@ -30,30 +33,33 @@
   "skills-4": "Je pratique régulièrement une veille technologique afin d'optimiser mes compétences actuelles et d'en acquérir de nouvelles",
   "languageFramework": "Full-stack",
   "library": "librairies",
-  "test":"Tests automatisés",
+  "test": "Tests automatisés",
 
   "professionals": "professionnelles",
   "training": "Personnelles",
 
-  "coverage":"Pour la couverture des ",
-  "elections":"élections américaines de France 24",
-  "achieve":", j'ai réalisé la partie front end de l'interface utilisateur permettant de consulter les résultats, de les modérer et de les mettre à disposition des outils graphiques.",
-  "interface":"L'interface",
-  "include":" incluait également l'édition de bandeaux d'informations ainsi que la publication des infographies antenne vers les réseaux sociaux du groupe France Médias Monde.",
+  "coverage": "Pour la couverture des ",
+  "elections": "élections américaines de France 24",
+  "achieve": ", j'ai réalisé la partie front end de l'interface utilisateur permettant de consulter les résultats, de les modérer et de les mettre à disposition des outils graphiques.",
+  "interface": "L'interface",
+  "include": " incluait également l'édition de bandeaux d'informations ainsi que la publication des infographies antenne vers les réseaux sociaux du groupe France Médias Monde.",
 
-  "licence":"J'ai eu pour mission la refonte complete de l'interface d'administration du ",
+  "video": "Lire la vidéo",
+  "slider":"Ouvrir le carousel",
+
+  "licence": "J'ai eu pour mission la refonte complete de l'interface d'administration du ",
   "serveur": "serveur de licences ",
-  "licenceSuite":"de l'entreprise vers ReactJs, permettant de visualiser et d'editer des modèles de licences clients, incluants une gamme des produits proposés et de leur caractéristiques.",
+  "licenceSuite": "de l'entreprise vers ReactJs, permettant de visualiser et d'editer des modèles de licences clients, incluants une gamme des produits proposés et de leur caractéristiques.",
 
-  "presidentialTitle":"Presidentielles",
+  "presidentialTitle": "Presidentielles",
   "presidentialSub": "",
   "senatTitle": "Chambre / Senat",
   "senatSub": "",
-  "tickerTitle":"Ticker",
-  "tickerSub":"",
+  "tickerTitle": "Ticker",
+  "tickerSub": "",
 
-  "lineshopDesc":"Site e-commerce de démonstration entièrement réalisé, combinant MongoDB Express React et NodeJs",
-  "visit":"Vister le site",
+  "lineshopDesc": "Site e-commerce de démonstration entièrement réalisé, combinant MongoDB Express React et NodeJs",
+  "visit": "Vister le site",
 
   "smTitle": "Île Sainte Marie",
   "smSub": "Projet de site autour de l'île Sainte Marie de Madagascar, entièrement responsive",
@@ -62,8 +68,5 @@
   "ltdSub": "Refonte du site web d'un prestataire de vehicules de luxe avec chauffeur sur Paris",
 
   "lbeTitle": "Le Bon Endroit",
-  "lbeSub":"Démo de site hôtelier réalisé avec Wordpress - Elémentor - Woocommerce"
-
-
-  
+  "lbeSub": "Démo de site hôtelier réalisé avec Wordpress - Elémentor - Woocommerce"
 }

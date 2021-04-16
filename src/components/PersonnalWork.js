@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import "../App.scss";
-import { makeStyles } from "@material-ui/core/styles";
-import { translate } from "../translations/translate";
-import { useSelector } from "react-redux";
+import React, { useState, useEffect } from 'react';
+import '../App.scss';
+import { makeStyles } from '@material-ui/core/styles';
+import { translate } from '../translations/translate';
+import { useSelector } from 'react-redux';
 import {
   Grid,
   Typography,
@@ -14,58 +14,59 @@ import {
   Button,
   Divider,
   useMediaQuery,
-} from "@material-ui/core";
-import CarouselModal from "./CarouselModal";
+} from '@material-ui/core';
+import CarouselModal from './CarouselModal';
+import LightTooltip from './ui/LightTooltip'
 
 const useStyles = makeStyles(
   (theme) => ({
     grid: {
-      marginBottom: "3rem",
+      marginBottom: '3rem',
     },
     card1: {
-      width: "80%",
-      "@media (max-width:600px)": {
-        width:'100%',
-        padding:'0 0.2rem',
+      width: '80%',
+      '@media (max-width:600px)': {
+        width: '100%',
+        padding: '0 0.2rem',
       },
     },
     media: {
-      maxWidth: "100%",
-      height: "33rem",
-      margin: "auto",
-      border: "none",
-      "@media screen and (max-width:1400px)": {
-        height: "20rem",
+      maxWidth: '100%',
+      height: '33rem',
+      margin: 'auto',
+      border: 'none',
+      '@media screen and (max-width:1400px)': {
+        height: '20rem',
       },
-      "@media (max-width:600px)": {
-        height: "10rem",
+      '@media (max-width:600px)': {
+        height: '10rem',
       },
-      backgroundImage: "/images/lineShop/home.png",
-      backgroundSize: "5%",
+      backgroundImage: '/images/lineShop/home.png',
+      backgroundSize: '5%',
     },
     media1: {
-      maxWidth: "100%",
-      height: "33rem",
-      margin: "auto",
-      border: "none",
-      "@media screen and (max-width:1400px)": {
-        height: "20rem",
+      maxWidth: '100%',
+      height: '33rem',
+      margin: 'auto',
+      border: 'none',
+      '@media screen and (max-width:1400px)': {
+        height: '20rem',
       },
-      "@media (max-width:600px)": {
-        height: "10rem",
+      '@media (max-width:600px)': {
+        height: '10rem',
       },
     },
     box: {
-      width: "50%",
-      minHeight: "5rem",
-      padding: "3rem",
-      margin: "auto",
+      width: '50%',
+      minHeight: '5rem',
+      padding: '3rem',
+      margin: 'auto',
     },
     media2: {
-      height: "auto",
-      width: "100%",
-      "@media (max-width:600px)": {
-        padding:'0 0.2rem',
+      height: 'auto',
+      width: '100%',
+      '@media (max-width:600px)': {
+        padding: '0 0.2rem',
       },
     },
   }),
@@ -74,26 +75,26 @@ const useStyles = makeStyles(
 
 const PersonnalWork = () => {
   const [loading, setLoading] = useState(true);
-  const lineShopScreen = useMediaQuery("(max-width:1400px");
+  const lineShopScreen = useMediaQuery('(max-width:1400px');
   const classes = useStyles();
   const lang = useSelector((state) => state.languageReducer.language);
 
   useEffect(() => {
     if (lineShopScreen) {
-      setLoading(false)
+      setLoading(false);
     }
-  },[lineShopScreen])
+  }, [lineShopScreen]);
 
   // CAROUSEL SETTINGS
-  const matches = useMediaQuery("(max-width:600px)");
+  const matches = useMediaQuery('(max-width:600px)');
   const [openModal, setOpenModal] = useState(false);
   const [images, setImages] = useState([
     {
       id: 1,
-      url: "",
-      title: "Title",
-      subtitle: "subtitle",
-      alt: "",
+      url: '',
+      title: 'Title',
+      subtitle: 'subtitle',
+      alt: '',
     },
   ]);
 
@@ -101,109 +102,109 @@ const PersonnalWork = () => {
   const sites = [
     {
       id: 1,
-      title: translate(lang, "smTitle"),
-      image: "/images/ileSainteMarie/desktop.png",
-      subtitle: translate(lang, "smSub"),
+      title: translate(lang, 'smTitle'),
+      image: '/images/ileSainteMarie/desktop.png',
+      subtitle: translate(lang, 'smSub'),
       carousel: [
         {
           id: 1,
-          url: "/images/ileSainteMarie/desktop.png",
-          title: "",
-          subtitle: "",
-          alt: "",
+          url: '/images/ileSainteMarie/desktop.png',
+          title: '',
+          subtitle: '',
+          alt: '',
         },
         {
           id: 2,
-          url: "/images/ileSainteMarie/sm_tablet.png",
-          title: "",
-          subtitle: "",
-          alt: "",
+          url: '/images/ileSainteMarie/sm_tablet.png',
+          title: '',
+          subtitle: '',
+          alt: '',
         },
         {
           id: 3,
-          url: "/images/ileSainteMarie/sm_mobile.png",
-          title: "",
-          subtitle: "",
-          alt: "Mobile",
+          url: '/images/ileSainteMarie/sm_mobile.png',
+          title: '',
+          subtitle: '',
+          alt: 'Mobile',
         },
       ],
     },
     {
       id: 2,
-      title: translate(lang, "ltdTitle"),
-      image: "/images/ltd/desktop.png",
-      subtitle: translate(lang, "ltdSub"),
+      title: translate(lang, 'ltdTitle'),
+      image: '/images/ltd/desktop.png',
+      subtitle: translate(lang, 'ltdSub'),
       carousel: [
         {
           id: 1,
-          url: "/images/ltd/desktop.png",
-          title: "",
-          subtitle: "",
-          alt: "Desktop",
+          url: '/images/ltd/desktop.png',
+          title: '',
+          subtitle: '',
+          alt: 'Desktop',
         },
         {
           id: 2,
-          url: "/images/ltd/desktop2.png",
-          title: "",
-          subtitle: "",
-          alt: "Desktop",
+          url: '/images/ltd/desktop2.png',
+          title: '',
+          subtitle: '',
+          alt: 'Desktop',
         },
         {
           id: 3,
-          url: "/images/ltd/ltd_tablet.png",
-          title: "",
-          subtitle: "",
-          alt: "Tablet",
+          url: '/images/ltd/ltd_tablet.png',
+          title: '',
+          subtitle: '',
+          alt: 'Tablet',
         },
         {
           id: 4,
-          url: "/images/ltd/ltd_mobile.png",
-          title: "",
-          subtitle: "",
-          alt: "Mobile",
+          url: '/images/ltd/ltd_mobile.png',
+          title: '',
+          subtitle: '',
+          alt: 'Mobile',
         },
       ],
     },
     {
       id: 3,
-      title: translate(lang, "lbeTitle"),
-      image: "/images/leBonEndroit/accueuil.png",
-      subtitle: translate(lang, "lbeSub"),
+      title: translate(lang, 'lbeTitle'),
+      image: '/images/leBonEndroit/accueuil.png',
+      subtitle: translate(lang, 'lbeSub'),
       carousel: [
         {
           id: 1,
-          url: "/images/leBonEndroit/accueuil.png",
-          title: "",
-          subtitle: "",
-          alt: "Home",
+          url: '/images/leBonEndroit/accueuil.png',
+          title: '',
+          subtitle: '',
+          alt: 'Home',
         },
         {
           id: 2,
-          url: "/images/leBonEndroit/restaurant.png",
-          title: "",
-          subtitle: "",
-          alt: "Restaurant",
+          url: '/images/leBonEndroit/restaurant.png',
+          title: '',
+          subtitle: '',
+          alt: 'Restaurant',
         },
         {
           id: 3,
-          url: "/images/leBonEndroit/bungalow.png",
-          title: "",
-          subtitle: "",
-          alt: "Restaurant",
+          url: '/images/leBonEndroit/bungalow.png',
+          title: '',
+          subtitle: '',
+          alt: 'Restaurant',
         },
         {
           id: 4,
-          url: "/images/leBonEndroit/Loisir.png",
-          title: "",
-          subtitle: "",
-          alt: "Leisure Activity",
+          url: '/images/leBonEndroit/Loisir.png',
+          title: '',
+          subtitle: '',
+          alt: 'Leisure Activity',
         },
         {
           id: 5,
-          url: "/images/leBonEndroit/boutique.png",
-          title: "",
-          subtitle: "",
-          alt: "Shop",
+          url: '/images/leBonEndroit/boutique.png',
+          title: '',
+          subtitle: '',
+          alt: 'Shop',
         },
       ],
     },
@@ -211,15 +212,15 @@ const PersonnalWork = () => {
 
   return (
     <>
-      <Grid container justify="space-evenly" >
+      <Grid container justify="space-evenly">
         <Card className={classes.card1}>
           <CardMedia
             className={loading ? classes.media : classes.media1}
-            component={!lineShopScreen ? "iframe" : "img"}
+            component={!lineShopScreen ? 'iframe' : 'img'}
             image={
               !lineShopScreen
-                ? "https://lineshopgaming.herokuapp.com"
-                : "/images/lineShop/home.png"
+                ? 'https://lineshopgaming.herokuapp.com'
+                : '/images/lineShop/home.png'
             }
             loading="lazy"
             title="LineShop Gaming"
@@ -231,7 +232,7 @@ const PersonnalWork = () => {
               LineShop Gaming - MERN stack
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-              {translate(lang, "lineshopDesc")}
+              {translate(lang, 'lineshopDesc')}
             </Typography>
           </CardContent>
           <CardActions>
@@ -240,7 +241,7 @@ const PersonnalWork = () => {
               color="primary"
               href="https://lineshopgaming.herokuapp.com"
             >
-              {translate(lang, "visit")}
+              {translate(lang, 'visit')}
             </Button>
           </CardActions>
         </Card>
@@ -266,13 +267,18 @@ const PersonnalWork = () => {
                       setOpenModal(true);
                     }}
                   >
-                    <CardMedia
-                      className={classes.media2}
-                      component="img"
-                      image={site.image}
-                      title={site.title}
-                      alt={site.title}
-                    />
+                    <LightTooltip
+                      title={translate(lang, 'slider')}
+                      aria-label={translate(lang, 'slider')}
+                      placement="top"
+                    >
+                      <CardMedia
+                        className={classes.media2}
+                        component="img"
+                        image={site.image}
+                        alt={site.title}
+                      />
+                    </LightTooltip>
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="h2">
                         {site.title}
