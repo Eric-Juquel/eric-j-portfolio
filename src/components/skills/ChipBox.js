@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { translate } from "../translations/translate";
+import { translate } from "../../translations/translate";
 import { useSelector } from "react-redux";
 import { Grid, Paper, Typography, Chip } from "@material-ui/core";
 

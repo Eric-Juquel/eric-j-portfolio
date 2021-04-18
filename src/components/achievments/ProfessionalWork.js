@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import '../App.scss';
+import '../../App.scss';
 import ReactPlayer from 'react-player';
 import { makeStyles } from '@material-ui/core/styles';
-import { translate } from '../translations/translate';
+import { translate } from '../../translations/translate';
 import { useSelector } from 'react-redux';
 import {
   Grid,
@@ -15,9 +15,9 @@ import {
   Divider,
   useMediaQuery,
 } from '@material-ui/core';
-import LightTooltip from './ui/LightTooltip';
+import LightTooltip from '../ui/LightTooltip';
 import SvgWoodyTechnologyPinkLogo from './WoodyTechnologyPinkLogo';
-import CarouselModal from './CarouselModal';
+import CarouselModal from '../CarouselModal';
 
 const useStyles = makeStyles(
   (theme) => ({

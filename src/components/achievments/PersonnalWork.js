@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import '../App.scss';
+import '../../App.scss';
 import { makeStyles } from '@material-ui/core/styles';
-import { translate } from '../translations/translate';
+import { translate } from '../../translations/translate';
 import { useSelector } from 'react-redux';
 import {
   Grid,
@@ -15,8 +15,8 @@ import {
   Divider,
   useMediaQuery,
 } from '@material-ui/core';
-import CarouselModal from './CarouselModal';
-import LightTooltip from './ui/LightTooltip'
+import CarouselModal from '../CarouselModal';
+import LightTooltip from '../ui/LightTooltip'
 
 const useStyles = makeStyles(
   (theme) => ({

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { translate } from '../translations/translate';
+import { translate } from '../../translations/translate';
 import { useSelector } from 'react-redux';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import { Link } from '@material-ui/core';

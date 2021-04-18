@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.scss';
-import Burger from './components/Burger';
+import Burger from './components/navigation/Burger';
 import Languages from './components/Languages';
-import Logo from './components/Logo';
-import Navigation from './components/Navigation';
-import SocialNetworks from './components/SocialNetworks';
+import Logo from './components/navigation/Logo';
+import Navigation from './components/navigation/Navigation';
+import SocialNetworks from './components/navigation/SocialNetworks';
 import Home from './components/Home';
-import Skills from './components/Skills';
-import Achievements from './components/Achievements';
+import Skills from './components/skills/Skills';
+import Achievements from './components/achievments/Achievements';
 import Career from './components/Career';
 import Contact from './components/contact/Contact';
 

@@ -5,10 +5,10 @@ import { useSelector } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Typography } from "@material-ui/core";
 import Button2 from "./ui/Button2";
-import Achievements from "./Achievements";
+import Achievements from "./achievments/Achievements";
 // import Career from "./Career";
 import Contact from "./contact/Contact";
-import Skills from "./Skills";
+import Skills from "./skills/Skills";
 
 const useStyles = makeStyles(
   {

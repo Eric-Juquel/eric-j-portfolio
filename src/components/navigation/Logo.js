@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { translate } from '../translations/translate';
+import { translate } from '../../translations/translate';
 import { useSelector } from 'react-redux';
 import { makeStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -15,9 +15,9 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import Modal from '@material-ui/core/Modal';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import LightTooltip from './ui/LightTooltip';
+import LightTooltip from '../ui/LightTooltip';
 
-import logo from '../images/Logo1.png';
+import logo from '../../images/Logo1.png';
 
 const useStyles = makeStyles(
   (theme) => ({

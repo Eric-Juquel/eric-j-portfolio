@@ -1,7 +1,7 @@
 import React from 'react';
-import '../App.scss';
+import '../../App.scss';
 import { makeStyles } from '@material-ui/core/styles';
-import { translate } from '../translations/translate';
+import { translate } from '../../translations/translate';
 import { useSelector } from 'react-redux';
 import { Grid, Typography, useMediaQuery } from '@material-ui/core';
 import ProgressBox from './ProgressBox';
