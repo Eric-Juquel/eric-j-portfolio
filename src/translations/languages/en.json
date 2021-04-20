@@ -1,7 +1,4 @@
 {
-  "FrVersion": "French version",
-  "EnVersion": "English version",
-
   "title": "Web developer",
   "subtitle": "FrontEnd Developer / ReactJs",
   "cv": "Download CV",
@@ -45,7 +42,7 @@
   "include": " also included the edition of information banners as well as the publication of antenna infographics to the social networks of the France Médias Monde group.",
 
   "video": "Play video",
-  "ui": "Open Slider",
+  "slider": "Open Slider",
 
   "licence": "My mission was to completely redesign the administration interface of the company's ",
   "serveur": "license server ",

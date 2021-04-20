@@ -10,10 +10,7 @@ const Languages = () => {
 
   return (
     <ButtonGroup size="small" color="secondary">
-      <LightTooltip
-        title={translate(lang, 'FrVersion')}
-        aria-label={translate(lang, 'FrVersion')}
-      >
+      <LightTooltip title="Version française" aria-label="Version française">
         <Button
           variant={lang === 'fr' ? 'contained' : 'outlined'}
           onClick={() => dispatch({ type: 'fr' })}
@@ -21,10 +18,7 @@ const Languages = () => {
           FR
         </Button>
       </LightTooltip>
-      <LightTooltip
-        title={translate(lang, 'EnVersion')}
-        aria-label={translate(lang, 'EnVersion')}
-      >
+      <LightTooltip title="English version" aria-label="English version">
         <Button
           variant={lang === 'en' ? 'contained' : 'outlined'}
           onClick={() => dispatch({ type: 'en' })}
