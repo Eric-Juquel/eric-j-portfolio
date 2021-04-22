@@ -1,5 +1,4 @@
 import React from 'react';
-import { translate } from '../translations/translate';
 import { useDispatch, useSelector } from 'react-redux';
 import { ButtonGroup, Button } from '@material-ui/core';
 import LightTooltip from './ui/LightTooltip';

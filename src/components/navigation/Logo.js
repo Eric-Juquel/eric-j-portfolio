@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { translate } from '../../translations/translate';
 import { useSelector } from 'react-redux';
-import { makeStyles} from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -63,7 +63,6 @@ const useStyles = makeStyles(
   }),
   { index: 1 }
 );
-
 
 const Logo = ({ setIsChecked }) => {
   const matches = useMediaQuery('(max-width:960px)');
@@ -155,7 +154,6 @@ const Logo = ({ setIsChecked }) => {
       <LightTooltip
         title={translate(lang, 'home')}
         aria-label={translate(lang, 'home')}
-        placement="right"
       >
         <Link to="/">
           <CardActionArea

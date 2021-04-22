@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.scss';
 import Burger from './components/navigation/Burger';
@@ -11,7 +10,6 @@ import Skills from './components/skills/Skills';
 import Achievements from './components/achievments/Achievements';
 import Career from './components/Career';
 import Contact from './components/contact/Contact';
-
 
 import { Container, useMediaQuery } from '@material-ui/core';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
@@ -93,6 +91,9 @@ const theme = createMuiTheme({
       '@media (max-width:600px)': {
         fontSize: 18,
       },
+    },
+    caption: {
+      fontWeight: 400,
     },
   },
 });
