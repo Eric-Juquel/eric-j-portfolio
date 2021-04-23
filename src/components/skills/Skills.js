@@ -87,7 +87,7 @@ const Skills = () => {
   const matches = useMediaQuery('(max-width:600px)');
 
   const list_1 = ['HTML5', 'CSS3', 'JavaScript', 'PHP', 'MySQL', 'WordPress'];
-  const list_2 = ['ReactJs', 'NodeJs', 'Express', 'MongoDB', 'ArangoDB'];
+  const list_2 = ['ReactJs', 'NodeJs', 'Express', 'MongoDB', 'ArangoDB','TypeScript','NextJs'];
   const list_3 = ['Git', 'GitHub', 'GitLab'];
   const list_4 = [
     'Material-UI',
