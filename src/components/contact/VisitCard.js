@@ -1,9 +1,14 @@
-import { Card, CardContent, Grid, Typography } from '@material-ui/core';
+import Link from '@material-ui/core/Link';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 import { translate } from '../../translations/translate';
 import { useSelector } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import CallIcon from '@material-ui/icons/Call';
 import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
+import LightTooltip from '../ui/LightTooltip';
 
 const useStyles = makeStyles(
   (theme) => ({
@@ -61,9 +66,19 @@ const VisitCard = () => {
         <Grid container>
           {' '}
           <AlternateEmailIcon color="secondary" className={classes.icon} />
-          <Typography variant="subtitle1" color="secondary">
-            ejuquel@yahoo.fr
-          </Typography>
+          <LightTooltip
+            title={translate(lang, 'email')}
+            aria-label={translate(lang, 'email')}
+          >
+            <Link
+              variant="subtitle1"
+              color="secondary"
+              component="a"
+              href="mailto:ejuquel@yahoo.fr"
+            >
+              ejuquel@yahoo.fr
+            </Link>
+          </LightTooltip>
         </Grid>
       </CardContent>
     </Card>

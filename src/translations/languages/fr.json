@@ -26,7 +26,8 @@
 
   "required":"Ces champs doivent etre renseignés",
   "site": "Le site ",
-  "datas": " ne conserve aucune données personnelles, ces dernières sont jointes à un email envoyé a Mr Eric Juquel, auteur et propriétaire du site",
+  "datas": " ne conserve aucunes données personnelles, ces dernières sont jointes à un email envoyé a Mr Eric Juquel, auteur et propriétaire du site",
+  "email": "envoyer un mail ",
 
   "skills-1": "Ma Formation 'Développeur web & web mobile' m'a permis d'acquérir les bases fondamentales à la création de sites web responsives",
   "skills-2": "J'ai choisi de me concentrer sur le JavaScipt en développant mes compétences dans cet environnement",
