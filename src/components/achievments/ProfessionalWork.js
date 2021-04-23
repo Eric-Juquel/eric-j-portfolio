@@ -4,17 +4,16 @@ import ReactPlayer from 'react-player';
 import { makeStyles } from '@material-ui/core/styles';
 import { translate } from '../../translations/translate';
 import { useSelector } from 'react-redux';
-import {
-  Grid,
-  Typography,
-  Link,
-  Card,
-  CardActionArea,
-  CardMedia,
-  CardContent,
-  Divider,
-  useMediaQuery,
-} from '@material-ui/core';
+
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardMedia from '@material-ui/core/CardMedia';
+import CardContent from '@material-ui/core/CardContent';
+import Divider from '@material-ui/core/Divider';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import LightTooltip from '../ui/LightTooltip';
 import SvgWoodyTechnologyPinkLogo from './WoodyTechnologyPinkLogo';
 import CarouselModal from '../CarouselModal';
@@ -149,9 +148,14 @@ const ProfessionalWork = () => {
   return (
     <>
       <Grid container justify="center">
-        <Link href="https://woody-technologies.com/">
-          <SvgWoodyTechnologyPinkLogo className={classes.woody} />
-        </Link>
+        <LightTooltip
+          title={`${translate(lang, 'linkTo')} woody-technologies.com`}
+          aria-label={`${translate(lang, 'linkTo')} woody-technologies.com`}
+        >
+          <Link href="https://woody-technologies.com/">
+            <SvgWoodyTechnologyPinkLogo className={classes.woody} />
+          </Link>
+        </LightTooltip>
       </Grid>
       <Grid container direction="column" wrap="nowrap" alignItems="center">
         <Grid container justify="space-around" alignItems="center">
@@ -178,9 +182,14 @@ const ProfessionalWork = () => {
               {' '}
               {translate(lang, 'coverage')}{' '}
               <span className={classes.textPrimary}>
-                <Link href="https://lnkd.in/dqvUutT">
-                  {translate(lang, 'elections')}
-                </Link>
+                <LightTooltip
+                  title={translate(lang, 'complete')}
+                  aria-label={translate(lang, 'complete')}
+                >
+                  <Link href="https://lnkd.in/dqvUutT">
+                    {translate(lang, 'elections')}
+                  </Link>
+                </LightTooltip>
               </span>{' '}
               {translate(lang, 'achieve')}
             </Typography>

@@ -151,40 +151,34 @@ const Logo = ({ setIsChecked }) => {
 
   return (
     <Card className={classes.card}>
-      <LightTooltip
-        title={translate(lang, 'home')}
-        aria-label={translate(lang, 'home')}
-      >
-        <Link to="/">
-          <CardActionArea
-            className={matches ? classes.actionAria : ''}
-            onClick={() => {
-              setIsChecked && setIsChecked(false);
-              window.scrollTo({
-                top: 0,
-                behavior: !matches ? 'smooth' : 'auto',
-              });
-            }}
-          >
-            <CardMedia
-              component="img"
-              alt="Eric Juquel"
-              height="auto"
-              image={logo}
-              className={matches ? classes.imageSmall : classes.image}
-            />
-
-            <CardContent>
-              <Typography gutterBottom variant="h4" component="h2">
-                Eric
-              </Typography>
-              <Typography variant="h6" component="h3">
-                {translate(lang, 'title')}
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Link>
-      </LightTooltip>
+      <Link to="/">
+        <CardActionArea
+          className={matches ? classes.actionAria : ''}
+          onClick={() => {
+            setIsChecked && setIsChecked(false);
+            window.scrollTo({
+              top: 0,
+              behavior: !matches ? 'smooth' : 'auto',
+            });
+          }}
+        >
+          <CardMedia
+            component="img"
+            alt="Eric Juquel"
+            height="auto"
+            image={logo}
+            className={matches ? classes.imageSmall : classes.image}
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h4" component="h2">
+              Eric
+            </Typography>
+            <Typography variant="h6" component="h3">
+              {translate(lang, 'title')}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Link>
       <CardActions>
         <LightTooltip
           title={translate(lang, 'cv')}

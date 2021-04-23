@@ -16,7 +16,7 @@ import {
   useMediaQuery,
 } from '@material-ui/core';
 import CarouselModal from '../CarouselModal';
-import LightTooltip from '../ui/LightTooltip'
+import LightTooltip from '../ui/LightTooltip';
 
 const useStyles = makeStyles(
   (theme) => ({
@@ -236,13 +236,24 @@ const PersonnalWork = () => {
             </Typography>
           </CardContent>
           <CardActions>
-            <Button
-              size="small"
-              color="primary"
-              href="https://lineshopgaming.herokuapp.com"
+            <LightTooltip
+              title={`${translate(
+                lang,
+                'linkTo'
+              )} lineshopgaming.herokuapp.com`}
+              aria-label={`${translate(
+                lang,
+                'linkTo'
+              )} lineshopgaming.herokuapp.com`}
             >
-              {translate(lang, 'visit')}
-            </Button>
+              <Button
+                size="small"
+                color="primary"
+                href="https://lineshopgaming.herokuapp.com"
+              >
+                {translate(lang, 'visit')}
+              </Button>
+            </LightTooltip>
           </CardActions>
         </Card>
       </Grid>
