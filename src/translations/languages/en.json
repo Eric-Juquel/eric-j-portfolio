@@ -24,11 +24,6 @@
   "bot": " You're not fooling us, bot",
   "close": "Close",
 
-  "required": "These fields must be completed",
-  "site": "The site ",
-  "datas": " does not store any personal data, these are attached to an email sent to Mr Eric Juquel, author and owner of the site",
-  "email": "send an email",
-
   "skills-1": "My 'Web & mobile web developer' training provided me with the fundamental bases for creating responsive websites",
   "skills-2": "I choose to focus on JavaScipt by developing my skills in this workflow",
   "skills-3": "My professional experience in a company allowed me to carry out the Front-End parts of web applications in ReactJs and to master the essential tools for teamwork",
@@ -72,5 +67,10 @@
   "ltdSub": "Redesign of the website of a luxury vehicle provider with driver in Paris",
 
   "lbeTitle": "Le Bon Endroit",
-  "lbeSub": "Hotel website demo made with Wordpress - Elementor - Woocommerce"
+  "lbeSub": "Hotel website demo made with Wordpress - Elementor - Woocommerce",
+
+  "required": "These fields must be completed",
+  "site": "The site ",
+  "datas": " does not store any personal data, these are attached to an email sent to Mr Eric Juquel, author and owner of the site",
+  "email": "Send an email"
 }
