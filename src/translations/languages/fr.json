@@ -34,8 +34,8 @@
 
   "professionals": "professionnelles",
   "training": "Personnelles",
-  "linkTo":"Visiter: ",
-  "complete":"Description complète sur Linkedin",
+  "linkTo": "Visiter: ",
+  "complete": "Description complète sur Linkedin",
 
   "coverage": "Pour la couverture des ",
   "elections": "élections américaines de France 24",
@@ -44,7 +44,7 @@
   "include": " incluait également l'édition de bandeaux d'informations ainsi que la publication des infographies antenne vers les réseaux sociaux du groupe France Médias Monde.",
 
   "video": "Lire la vidéo",
-  "slider":"Ouvrir le carousel",
+  "slider": "Ouvrir le carousel",
 
   "licence": "J'ai eu pour mission la refonte complète de l'interface d'administration du ",
   "serveur": "serveur de licences ",
@@ -69,8 +69,9 @@
   "lbeTitle": "Le Bon Endroit",
   "lbeSub": "Démo de site hôtelier réalisé avec Wordpress - Elémentor - Woocommerce",
 
-  "required":"Ces champs doivent etre renseignés",
+  "required": "Ces champs doivent etre renseignés",
   "site": "Le site ",
   "datas": " ne conserve aucunes données personnelles, ces dernières sont jointes à un email envoyé a Mr Eric Juquel, auteur et propriétaire du site",
-  "email": "Envoyer un mail "
+  "email": "Envoyer un mail ",
+  "tel": "Appeler "
 }
