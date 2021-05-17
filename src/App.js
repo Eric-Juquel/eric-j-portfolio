@@ -38,8 +38,8 @@ const theme = createMuiTheme({
       light: 'rgb(255, 64, 159);',
     },
     text: {
-      primary: 'rgba(255, 255, 255,0.87)',
-      secondary: 'rgba(255, 255, 255, 0.6)',
+      primary: 'rgba(255, 255, 255,0.90)',
+      secondary: 'rgba(255, 255, 255, 0.70)',
       disabled: 'rgba(255, 255, 255,0.38)',
       hint: '#1c2430',
     },
@@ -63,6 +63,7 @@ const theme = createMuiTheme({
     },
     h4: {
       fontFamily: `"Montserrat","Roboto","Helvetica"`,
+      fontWeight: 600,
       textTransform: 'capitalize',
     },
     h5: {
@@ -81,7 +82,7 @@ const theme = createMuiTheme({
       '@media (max-width:600px)': {
         fontSize: 20,
       },
-      fontWeight: '100',
+      fontWeight: '300',
       color: 'rgba(255, 255, 255, 0.6)',
     },
 

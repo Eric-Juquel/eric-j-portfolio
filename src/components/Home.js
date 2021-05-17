@@ -13,7 +13,7 @@ import Skills from "./skills/Skills";
 const useStyles = makeStyles(
   {
     subtitle: {
-      fontWeight: "100",
+      fontWeight: "300",
       color: "rgba(255, 255, 255, 0.6)",
     },
   },
