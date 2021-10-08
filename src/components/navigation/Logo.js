@@ -79,7 +79,7 @@ const Logo = ({ setIsChecked }) => {
     setModalDescription(
       translate(lang, "cv") + " " + translate(lang, "pdf") + "(223 Ko) ?"
     );
-    setDocumentRef("/files/CV_2021-06-01_Eric_JUQUEL.pdf");
+    setDocumentRef("/files/CV_2021-10-08_Eric_JUQUEL.pdf");
     setOpen(true);
   };
   const openLRModalHandler = () => {
