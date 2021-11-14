@@ -84,7 +84,7 @@ const ChipBox = () => {
           </Grid>
           <Grid item>
             <Chip
-              label="React-Select"
+              label="Webpack 5"
               variant="outlined"
               className={`${classes.chip} ${classes.chip1}`}
             />

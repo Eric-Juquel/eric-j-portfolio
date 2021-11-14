@@ -45,10 +45,10 @@ const ProgressBox = () => {
 
 useEffect(() => {
   setProgress1(90)
-  setProgress2(70)
+  setProgress2(90)
   setProgress3(90)
-  setProgress4(50)
-  setProgress5(60)
+  setProgress4(70)
+  setProgress5(70)
 },[])
 
   return (

@@ -79,7 +79,7 @@ const Logo = ({ setIsChecked }) => {
     setModalDescription(
       translate(lang, "cv") + " " + translate(lang, "pdf") + "(223 Ko) ?"
     );
-    setDocumentRef("/files/CV_2021-10-08_Eric_JUQUEL.pdf");
+    setDocumentRef("/files/CV_DéveloppeurReact_2021-11-02_Eric_JUQUEL.pdf");
     setOpen(true);
   };
   const openLRModalHandler = () => {
@@ -88,7 +88,7 @@ const Logo = ({ setIsChecked }) => {
       translate(lang, "lr") + " " + translate(lang, "pdf") + "(299 Ko ) ?"
     );
     setDocumentRef(
-      "/files/	Lettre de recommandation Woody Technologies pour Eric Juquel.pdf"
+      "/files/Lettre de recommandation Woody Technologies pour Eric Juquel.pdf"
     );
     setOpen(true);
   };
