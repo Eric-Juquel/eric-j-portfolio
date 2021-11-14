@@ -46,7 +46,7 @@ const useStyles = makeStyles(
     },
     media1: {
       maxWidth: '100%',
-      height: 'auto',
+      height: '33rem',
       margin: 'auto',
       border: 'none',
       '@media screen and (max-width:1400px)': {
@@ -222,8 +222,8 @@ const PersonnalWork = () => {
                 ? "https://lineshop-gaming-next-js.vercel.app"
                 : "/images/lineShop/lineshop-home.png"
             }
-            component={'img'}
-            image={'/images/lineShop/lineshop-home.png'}
+            // component={'img'}
+            // image={'/images/lineShop/lineshop-home.png'}
             loading="lazy"
             title="LineShop Gaming"
             sandbox="allow-scripts allow-same-origin "
