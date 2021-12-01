@@ -57,7 +57,7 @@
   "tickerTitle": "Ticker",
   "tickerSub": "",
 
-  "lineshopDesc": "Site e-commerce de démonstration entièrement réalisé, combinant MongoDB Express React et NodeJs",
+  "lineshopDesc": "Site e-commerce de démonstration entièrement réalisé, combinant MongoDB Express React et NodeJs (aperçu en mode sandbox - formulaires désactivés)",
   "visit": "Vister le site",
 
   "smTitle": "Île Sainte Marie",
