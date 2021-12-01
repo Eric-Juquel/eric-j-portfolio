@@ -168,7 +168,7 @@ const Logo = ({ setIsChecked }) => {
             component="img"
             alt="Eric Juquel"
             height="auto"
-            image={logo}
+            image="https://res.cloudinary.com/ericjuquel94/image/upload/v1638351699/portfolio/Logo1_adljkk.png"
             className={matches ? classes.imageSmall : classes.image}
           />
           <CardContent>

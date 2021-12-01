@@ -103,26 +103,26 @@ const PersonnalWork = () => {
     {
       id: 1,
       title: translate(lang, 'smTitle'),
-      image: '/images/ileSainteMarie/desktop.png',
+      image: 'https://res.cloudinary.com/ericjuquel94/image/upload/v1638351776/portfolio/sainte-marie/desktop_mhhwzu.png',
       subtitle: translate(lang, 'smSub'),
       carousel: [
         {
           id: 1,
-          url: '/images/ileSainteMarie/desktop.png',
+          url: 'https://res.cloudinary.com/ericjuquel94/image/upload/v1638351776/portfolio/sainte-marie/desktop_mhhwzu.png',
           title: '',
           subtitle: '',
           alt: '',
         },
         {
           id: 2,
-          url: '/images/ileSainteMarie/sm_tablet.png',
+          url: 'https://res.cloudinary.com/ericjuquel94/image/upload/v1638351781/portfolio/sainte-marie/sm_tablet_wmabsc.png',
           title: '',
           subtitle: '',
           alt: '',
         },
         {
           id: 3,
-          url: '/images/ileSainteMarie/sm_mobile.png',
+          url: 'https://res.cloudinary.com/ericjuquel94/image/upload/v1638351778/portfolio/sainte-marie/sm_mobile_tdcoqo.png',
           title: '',
           subtitle: '',
           alt: 'Mobile',
@@ -132,33 +132,33 @@ const PersonnalWork = () => {
     {
       id: 2,
       title: translate(lang, 'ltdTitle'),
-      image: '/images/ltd/desktop.png',
+      image: 'https://res.cloudinary.com/ericjuquel94/image/upload/v1638351870/portfolio/ltd/desktop_df1w7c.png',
       subtitle: translate(lang, 'ltdSub'),
       carousel: [
         {
           id: 1,
-          url: '/images/ltd/desktop.png',
+          url: 'https://res.cloudinary.com/ericjuquel94/image/upload/v1638351870/portfolio/ltd/desktop_df1w7c.png',
           title: '',
           subtitle: '',
           alt: 'Desktop',
         },
         {
           id: 2,
-          url: '/images/ltd/desktop2.png',
+          url: 'https://res.cloudinary.com/ericjuquel94/image/upload/v1638351873/portfolio/ltd/desktop2_blkuu8.png',
           title: '',
           subtitle: '',
           alt: 'Desktop',
         },
         {
           id: 3,
-          url: '/images/ltd/ltd_tablet.png',
+          url: 'https://res.cloudinary.com/ericjuquel94/image/upload/v1638351875/portfolio/ltd/ltd_tablet_vbtuox.png',
           title: '',
           subtitle: '',
           alt: 'Tablet',
         },
         {
           id: 4,
-          url: '/images/ltd/ltd_mobile.png',
+          url: 'https://res.cloudinary.com/ericjuquel94/image/upload/v1638351876/portfolio/ltd/ltd_mobile_jblji3.png',
           title: '',
           subtitle: '',
           alt: 'Mobile',
@@ -168,40 +168,40 @@ const PersonnalWork = () => {
     {
       id: 3,
       title: translate(lang, 'lbeTitle'),
-      image: '/images/leBonEndroit/accueuil.png',
+      image: 'https://res.cloudinary.com/ericjuquel94/image/upload/v1638351814/portfolio/bon-endroit/accueuil_d3chw0.png',
       subtitle: translate(lang, 'lbeSub'),
       carousel: [
         {
           id: 1,
-          url: '/images/leBonEndroit/accueuil.png',
+          url: 'https://res.cloudinary.com/ericjuquel94/image/upload/v1638351814/portfolio/bon-endroit/accueuil_d3chw0.png',
           title: '',
           subtitle: '',
           alt: 'Home',
         },
         {
           id: 2,
-          url: '/images/leBonEndroit/restaurant.png',
+          url: 'https://res.cloudinary.com/ericjuquel94/image/upload/v1638351838/portfolio/bon-endroit/restaurant_kqmail.png',
           title: '',
           subtitle: '',
           alt: 'Restaurant',
         },
         {
           id: 3,
-          url: '/images/leBonEndroit/bungalow.png',
+          url: 'https://res.cloudinary.com/ericjuquel94/image/upload/v1638351822/portfolio/bon-endroit/bungalow_qnrxfb.png',
           title: '',
           subtitle: '',
           alt: 'Restaurant',
         },
         {
           id: 4,
-          url: '/images/leBonEndroit/Loisir.png',
+          url: 'https://res.cloudinary.com/ericjuquel94/image/upload/v1638351833/portfolio/bon-endroit/Loisir_nhe2ua.png',
           title: '',
           subtitle: '',
           alt: 'Leisure Activity',
         },
         {
           id: 5,
-          url: '/images/leBonEndroit/boutique.png',
+          url: 'https://res.cloudinary.com/ericjuquel94/image/upload/v1638351818/portfolio/bon-endroit/boutique_xhcvc5.png',
           title: '',
           subtitle: '',
           alt: 'Shop',
@@ -220,10 +220,10 @@ const PersonnalWork = () => {
             image={
               !lineShopScreen
                 ? "https://lineshop-gaming-next-js.vercel.app"
-                : "/images/lineShop/lineshop-home.png"
+                : "https://res.cloudinary.com/ericjuquel94/image/upload/v1638351851/portfolio/lineshop/lineshop-home_nssvt5.png"
             }
             // component={'img'}
-            // image={'/images/lineShop/lineshop-home.png'}
+            // image={'https://res.cloudinary.com/ericjuquel94/image/upload/v1638351851/portfolio/lineshop/lineshop-home_nssvt5.png'}
             loading="lazy"
             title="LineShop Gaming"
             sandbox="allow-scripts allow-same-origin "
