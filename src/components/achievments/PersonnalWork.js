@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../../App.scss';
 import { makeStyles } from '@material-ui/core/styles';
 import { translate } from '../../translations/translate';
@@ -60,16 +60,9 @@ const useStyles = makeStyles(
 );
 
 const PersonnalWork = () => {
-  const [loading, setLoading] = useState(true);
   const lineShopScreen = useMediaQuery('(max-width:1400px');
   const classes = useStyles();
   const lang = useSelector((state) => state.languageReducer.language);
-
-  useEffect(() => {
-    if (lineShopScreen) {
-      setLoading(false);
-    }
-  }, [lineShopScreen]);
 
   // CAROUSEL SETTINGS
   const matches = useMediaQuery('(max-width:600px)');
@@ -228,7 +221,6 @@ const PersonnalWork = () => {
             loading="lazy"
             title="LineShop Gaming"
             sandbox="allow-scripts allow-same-origin "
-            onLoad={() => setLoading(false)}
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
