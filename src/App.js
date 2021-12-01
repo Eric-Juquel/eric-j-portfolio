@@ -100,7 +100,7 @@ const theme = createMuiTheme({
 });
 
 const App = () => {
-  const matches = useMediaQuery('(max-width:960px)');
+  const matches = useMediaQuery('(max-width:961px)');
 
   return (
     <Router>
