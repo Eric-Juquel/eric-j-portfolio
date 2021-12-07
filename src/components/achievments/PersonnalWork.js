@@ -213,7 +213,7 @@ const PersonnalWork = () => {
             component={!lineShopScreen ? 'iframe' : 'img'}
             image={
               !lineShopScreen
-                ? 'https://lineshop-gaming-next-js.vercel.app'
+                ? 'https://lineshopgaming.vercel.app/'
                 : 'https://res.cloudinary.com/ericjuquel94/image/upload/v1638363590/portfolio/lineshop/lineshop-home_nssvt5_ahznme.webp'
             }
             // component={'img'}
@@ -241,7 +241,7 @@ const PersonnalWork = () => {
               <Button
                 size="small"
                 color="primary"
-                href="https://lineshop-gaming-next-js.vercel.app/"
+                href="hhttps://lineshopgaming.vercel.app/"
               >
                 {translate(lang, 'visit')}
               </Button>
