@@ -241,7 +241,7 @@ const PersonnalWork = () => {
               <Button
                 size="small"
                 color="primary"
-                href="hhttps://lineshopgaming.vercel.app/"
+                href="https://lineshopgaming.vercel.app/"
               >
                 {translate(lang, 'visit')}
               </Button>
