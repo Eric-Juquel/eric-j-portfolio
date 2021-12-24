@@ -232,11 +232,11 @@ const PersonnalWork = () => {
           </CardContent>
           <CardActions>
             <LightTooltip
-              title={`${translate(lang, 'linkTo')} lineshop-gaming-next-js.com`}
+              title={`${translate(lang, 'linkTo')} https://lineshopgaming.vercel.app`}
               aria-label={`${translate(
                 lang,
                 'linkTo'
-              )} lineshop-gaming-next-js.com`}
+              )} https://lineshopgaming.vercel.app`}
             >
               <Button
                 size="small"
