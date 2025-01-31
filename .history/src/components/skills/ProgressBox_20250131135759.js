@@ -40,11 +40,15 @@ const ProgressBox = () => {
   const [progress1, setProgress1] = useState(0);
   const [progress2, setProgress2] = useState(0);
   const [progress3, setProgress3] = useState(0);
+  const [progress4, setProgress4] = useState(0);
+  const [progress5, setProgress5] = useState(0);
 
   useEffect(() => {
-    setProgress1(100);
+    setProgress1(90);
     setProgress2(90);
-    setProgress3(70);
+    setProgress3(90);
+    setProgress4(70);
+    setProgress5(70);
   }, []);
 
   return (
@@ -55,45 +59,22 @@ const ProgressBox = () => {
       <Grid
         container
         direction="column"
-        justifyContent="space-evenly"
+        justify="space-evenly"
         className={classes.container1}
       >
         <Grid item>
           <Typography variant="h5" gutterBottom>
-            ReactJs 19
+            CSS (Sass, Flexbox, Grid)
           </Typography>
           <LinearProgress
             variant="determinate"
             value={progress1}
-            classes={{
-              colorPrimary: classes.colorWarning,
-              barColorPrimary: classes.barColorWarning,
-            }}
-          />
-        </Grid>
-        <Grid item>
-          <Typography variant="h5" gutterBottom>
-            NodeJs 22
-          </Typography>
-          <LinearProgress
-            variant="determinate"
-            value={progress2}
             color="secondary"
           />
         </Grid>
         <Grid item>
           <Typography variant="h5" gutterBottom>
-            Nest - Express - Fastify
-          </Typography>
-          <LinearProgress
-            variant="determinate"
-            value={progress2}
-            color="primary"
-          />
-        </Grid>
-        <Grid item>
-          <Typography variant="h5" gutterBottom>
-            PostgresSQL - MongoDB
+            JavaScript
           </Typography>
           <LinearProgress
             variant="determinate"
@@ -103,12 +84,35 @@ const ProgressBox = () => {
         </Grid>
         <Grid item>
           <Typography variant="h5" gutterBottom>
-            CSS (Sass, Flexbox, Grid)
+            ReactJs (Hooks - Redux)
           </Typography>
           <LinearProgress
             variant="determinate"
-            value={progress1}
+            value={progress3}
+            classes={{
+              colorPrimary: classes.colorWarning,
+              barColorPrimary: classes.barColorWarning,
+            }}
+          />
+        </Grid>
+        <Grid item>
+          <Typography variant="h5" gutterBottom>
+            NodeJs
+          </Typography>
+          <LinearProgress
+            variant="determinate"
+            value={progress4}
             color="secondary"
+          />
+        </Grid>
+        <Grid item>
+          <Typography variant="h5" gutterBottom>
+            Express
+          </Typography>
+          <LinearProgress
+            variant="determinate"
+            value={progress5}
+            color="primary"
           />
         </Grid>
       </Grid>

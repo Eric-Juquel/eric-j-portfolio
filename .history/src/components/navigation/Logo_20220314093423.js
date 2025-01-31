@@ -1,57 +1,57 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { translate } from "../../translations/translate";
-import { useSelector } from "react-redux";
-import { makeStyles } from "@material-ui/core/styles";
-import Grid from "@material-ui/core/Grid";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
-import Backdrop from "@material-ui/core/Backdrop";
-import Fade from "@material-ui/core/Fade";
-import Modal from "@material-ui/core/Modal";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
-import LightTooltip from "../ui/LightTooltip";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { translate } from '../../translations/translate';
+import { useSelector } from 'react-redux';
+import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+import Backdrop from '@material-ui/core/Backdrop';
+import Fade from '@material-ui/core/Fade';
+import Modal from '@material-ui/core/Modal';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import LightTooltip from '../ui/LightTooltip';
 
 const useStyles = makeStyles(
   (theme) => ({
     card: {
-      maxWidth: "90%",
-      background: "transparent",
-      color: "rgb(249, 247, 246)",
-      "@media screen and (max-width:600px)": {
-        marginTop: "1rem",
+      maxWidth: '90%',
+      background: 'transparent',
+      color: 'rgb(249, 247, 246)',
+      '@media screen and (max-width:600px)': {
+        marginTop: '1rem',
       },
     },
     button: {
-      margin: "auto",
+      margin: 'auto',
       containedPrimary: theme.palette.warning.main,
     },
     colorWarning: {
       backgroundColor: theme.palette.warning.main,
-      "&:hover": {
+      '&:hover': {
         backgroundColor: theme.palette.warning.light,
       },
     },
     actionAria: {
-      display: "flex",
-      padding: "1rem",
-      marginBottom: "1rem",
+      display: 'flex',
+      padding: '1rem',
+      marginBottom: '1rem',
     },
     image: {
-      padding: "2rem",
+      padding: '2rem',
     },
     imageSmall: {
-      width: "10rem",
+      width: '10rem',
     },
     modal: {
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
     },
     paper: {
       backgroundColor: theme.palette.background.paper,
@@ -63,30 +63,30 @@ const useStyles = makeStyles(
 );
 
 const Logo = ({ setIsChecked }) => {
-  const matches = useMediaQuery("(max-width:960px)");
+  const matches = useMediaQuery('(max-width:960px)');
   const classes = useStyles();
   const lang = useSelector((state) => state.languageReducer.language);
   const [open, setOpen] = useState(false);
-  const [modalTitle, setModalTitle] = useState("");
-  const [modalDescription, setModalDescription] = useState("");
-  const [documentRef, setDocumentRef] = useState("");
+  const [modalTitle, setModalTitle] = useState('');
+  const [modalDescription, setModalDescription] = useState('');
+  const [documentRef, setDocumentRef] = useState('');
 
   // Modal //
   const openCVModalHandler = () => {
-    setModalTitle("CV");
+    setModalTitle('CV');
     setModalDescription(
-      translate(lang, "cv") + " " + translate(lang, "pdf") + "(223 Ko) ?"
+      translate(lang, 'cv') + ' ' + translate(lang, 'pdf') + '(223 Ko) ?'
     );
-    setDocumentRef("/files/CV_2024-10-29_Eric_JUQUEL.pdf");
+    setDocumentRef('/files/CV_DéveloppeurReact_2021-11-02_Eric_JUQUEL.pdf');
     setOpen(true);
   };
   const openLRModalHandler = () => {
-    setModalTitle("LR");
+    setModalTitle('LR');
     setModalDescription(
-      translate(lang, "lr") + " " + translate(lang, "pdf") + "(299 Ko ) ?"
+      translate(lang, 'lr') + ' ' + translate(lang, 'pdf') + '(299 Ko ) ?'
     );
     setDocumentRef(
-      "/files/Lettre de recommandation Woody Technologies pour Eric Juquel.pdf"
+      '/files/Lettre de recommandation Woody Technologies pour Eric Juquel.pdf'
     );
     setOpen(true);
   };
@@ -129,7 +129,7 @@ const Logo = ({ setIsChecked }) => {
               download
               onClick={closeModalHandler}
             >
-              {translate(lang, "download")}
+              {translate(lang, 'download')}
             </Button>
             <Button
               className={classes.button}
@@ -141,7 +141,7 @@ const Logo = ({ setIsChecked }) => {
               variant="contained"
               onClick={closeModalHandler}
             >
-              {translate(lang, "exit")}
+              {translate(lang, 'exit')}
             </Button>
           </Grid>
         </div>
@@ -153,12 +153,12 @@ const Logo = ({ setIsChecked }) => {
     <Card className={classes.card}>
       <Link to="/">
         <CardActionArea
-          className={matches ? classes.actionAria : ""}
+          className={matches ? classes.actionAria : ''}
           onClick={() => {
             setIsChecked && setIsChecked(false);
             window.scrollTo({
               top: 0,
-              behavior: !matches ? "smooth" : "auto",
+              behavior: !matches ? 'smooth' : 'auto',
             });
           }}
         >
@@ -174,15 +174,15 @@ const Logo = ({ setIsChecked }) => {
               Eric
             </Typography>
             <Typography variant="h6" component="h3">
-              {translate(lang, "title")}
+              {translate(lang, 'title')}
             </Typography>
           </CardContent>
         </CardActionArea>
       </Link>
       <CardActions>
         <LightTooltip
-          title={translate(lang, "cv")}
-          aria-label={translate(lang, "cv")}
+          title={translate(lang, 'cv')}
+          aria-label={translate(lang, 'cv')}
         >
           <Button
             className={classes.button}
@@ -198,8 +198,8 @@ const Logo = ({ setIsChecked }) => {
           </Button>
         </LightTooltip>
         <LightTooltip
-          title={translate(lang, "lr")}
-          aria-label={translate(lang, "lr")}
+          title={translate(lang, 'lr')}
+          aria-label={translate(lang, 'lr')}
         >
           <Button
             className={classes.button}

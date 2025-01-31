@@ -60,7 +60,7 @@ const ProgressBox = () => {
       >
         <Grid item>
           <Typography variant="h5" gutterBottom>
-            ReactJs 19
+            React 19
           </Typography>
           <LinearProgress
             variant="determinate"
@@ -73,7 +73,7 @@ const ProgressBox = () => {
         </Grid>
         <Grid item>
           <Typography variant="h5" gutterBottom>
-            NodeJs 22
+            NodeJs
           </Typography>
           <LinearProgress
             variant="determinate"
@@ -83,21 +83,11 @@ const ProgressBox = () => {
         </Grid>
         <Grid item>
           <Typography variant="h5" gutterBottom>
-            Nest - Express - Fastify
+            Express - Fastify
           </Typography>
           <LinearProgress
             variant="determinate"
             value={progress2}
-            color="primary"
-          />
-        </Grid>
-        <Grid item>
-          <Typography variant="h5" gutterBottom>
-            PostgresSQL - MongoDB
-          </Typography>
-          <LinearProgress
-            variant="determinate"
-            value={progress3}
             color="primary"
           />
         </Grid>

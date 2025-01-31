@@ -53,7 +53,7 @@ const ChipBox = () => {
   return (
     <Paper className={classes.paper} variant="outlined">
       <Typography
-        justifyContent="center"
+        justify="center"
         variant="h4"
         color="primary"
         align="center"
@@ -64,10 +64,10 @@ const ChipBox = () => {
       <Grid
         container
         direction="column"
-        justifyContent="space-evenly"
+        justify="space-evenly"
         className={classes.container2}
       >
-        <Grid container justifyContent="space-evenly">
+        <Grid container justify="space-evenly">
           <Grid item>
             <Chip
               label="Material-UI"
@@ -84,13 +84,13 @@ const ChipBox = () => {
           </Grid>
           <Grid item>
             <Chip
-              label="React Query"
+              label="Webpack 5"
               variant="outlined"
               className={`${classes.chip} ${classes.chip1}`}
             />
           </Grid>
         </Grid>
-        <Grid container justifyContent="space-evenly">
+        <Grid container justify="space-evenly">
           <Grid item>
             <Chip
               label="React-Hook-Form"
@@ -100,7 +100,7 @@ const ChipBox = () => {
           </Grid>
           <Grid item>
             <Chip
-              label="Vitest - Cypress"
+              label="Cypress"
               variant="outlined"
               className={`${classes.chip} ${classes.chip2}`}
             />

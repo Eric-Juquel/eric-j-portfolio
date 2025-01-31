@@ -93,16 +93,6 @@ const ProgressBox = () => {
         </Grid>
         <Grid item>
           <Typography variant="h5" gutterBottom>
-            PostgresSQL - MongoDB
-          </Typography>
-          <LinearProgress
-            variant="determinate"
-            value={progress3}
-            color="primary"
-          />
-        </Grid>
-        <Grid item>
-          <Typography variant="h5" gutterBottom>
             CSS (Sass, Flexbox, Grid)
           </Typography>
           <LinearProgress

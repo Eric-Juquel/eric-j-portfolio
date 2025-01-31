@@ -101,10 +101,9 @@ const Skills = () => {
   const list_4 = [
     "Material-UI",
     "React-Hook-Form",
-    "React-Query",
+    "React-Select",
     "Cypress",
-    "Docker",
-    "PostgresSQL",
+    "Webpack",
   ];
 
   return (
