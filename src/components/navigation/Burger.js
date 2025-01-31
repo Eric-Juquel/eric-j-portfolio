@@ -41,7 +41,7 @@ const Burger = () => {
         <Grid
           container
           direction="column"
-          justify="space-around"
+          justifyContent="space-around"
           alignItems="center"
           className={styles.container}
           spacing={2}

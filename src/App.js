@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.scss";
 import Burger from "./components/navigation/Burger";
 import Languages from "./components/Languages";
@@ -119,13 +119,13 @@ const App = () => {
             <Burger />
           )}
           <Container maxWidth={false} component="main">
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/skills" component={Skills} />
-              <Route exact path="/achievements" component={Achievements} />
-              <Route exact path="/career" component={Career} />
-              <Route exact path="/contact" component={Contact} />
-            </Switch>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/skills" element={<Skills />} />
+              <Route path="/achievements" element={<Achievements />} />
+              <Route path="/career" element={<Career />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
           </Container>
         </div>
       </ThemeProvider>

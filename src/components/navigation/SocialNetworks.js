@@ -1,20 +1,20 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Grid } from '@material-ui/core';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import GitHubIcon from '@material-ui/icons/GitHub';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { Grid } from "@material-ui/core";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import GitHubIcon from "@material-ui/icons/GitHub";
 
 const useStyles = makeStyles(
   (theme) => ({
     icon: {
-      cursor: 'pointer',
-      '&:hover': {
+      cursor: "pointer",
+      "&:hover": {
         fill: theme.palette.secondary.main,
       },
     },
     anchor: {
-      outline: 'none',
-      textDecoration: 'none',
+      outline: "none",
+      textDecoration: "none",
     },
   }),
   { index: 1 }
@@ -24,7 +24,7 @@ const SocialNetworks = () => {
   const classes = useStyles();
 
   return (
-    <Grid container justify="center" spacing={2}>
+    <Grid container justifyContent="center" spacing={2}>
       <Grid item>
         <a
           // target="popup"

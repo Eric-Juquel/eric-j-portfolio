@@ -1,11 +1,11 @@
-import '../../App.scss';
+import "../../App.scss";
 
-import { translate } from '../../translations/translate';
-import { useSelector } from 'react-redux';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import VisitCard from './VisitCard';
-import ContactForm from './ContactForm';
+import { translate } from "../../translations/translate";
+import { useSelector } from "react-redux";
+import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
+import VisitCard from "./VisitCard";
+import ContactForm from "./ContactForm";
 
 const Contact = () => {
   const lang = useSelector((state) => state.languageReducer.language);
@@ -16,18 +16,18 @@ const Contact = () => {
         <Grid item md={12}>
           <Grid container>
             <Typography variant="h1" component="h1">
-              {translate(lang, 'contactMe')}
+              {translate(lang, "contactMe")}
             </Typography>
             <Typography variant="caption">**</Typography>
           </Grid>
         </Grid>
-        <Grid container spacing={5} justify="center">
+        <Grid container spacing={5} justifyContent="center">
           <Grid item lg={6}>
             <ContactForm />
             <Typography variant="caption" component="p">
-              ** {translate(lang, 'site')}{' '}
+              ** {translate(lang, "site")}{" "}
               <i>https://ericjportfolio.herokuapp.com</i>
-              {translate(lang, 'datas')}
+              {translate(lang, "datas")}
             </Typography>
           </Grid>
 

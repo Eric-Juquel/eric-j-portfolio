@@ -28,7 +28,12 @@ const Home = () => {
     <>
       <section className="container" id="home">
         <Grid container direction="column">
-          <Grid container alignItems="center" justify="flex-start" spacing={3}>
+          <Grid
+            container
+            alignItems="center"
+            justifyContent="flex-start"
+            spacing={3}
+          >
             <Grid item>
               <div className="myName">
                 <div className="myName__main myName__main--first">E</div>
