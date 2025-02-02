@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../../../App.scss";
 
 import { makeStyles } from "@material-ui/core/styles";
@@ -6,19 +6,12 @@ import { translate } from "../../../translations/translate";
 import { useSelector } from "react-redux";
 
 import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-
-import CardContent from "@material-ui/core/CardContent";
-import Divider from "@material-ui/core/Divider";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import LightTooltip from "../../ui/LightTooltip";
 
-import CarouselModal from "../../CarouselModal";
 import FrogSVG from "./FrogSvg";
-import { Image } from "@material-ui/icons";
+import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles(
   (theme) => ({
@@ -29,8 +22,10 @@ const useStyles = makeStyles(
         padding: "1rem 0.3rem",
       },
     },
-    woody: {
-      width: "15rem",
+    frog: {
+      display: "flex",
+      width: "25rem",
+      gap: "1rem",
       padding: "1.5rem",
     },
     textPrimary: {
@@ -76,19 +71,7 @@ const Frog = () => {
   const classes = useStyles();
   const lang = useSelector((state) => state.languageReducer.language);
 
-  // CAROUSEL SETTINGS
   const matches = useMediaQuery("(max-width:600px)");
-  const [openModal, setOpenModal] = useState(false);
-  const [mediaWidth, setMediaWidth] = useState("");
-  const [images, setImages] = useState([
-    {
-      id: 1,
-      url: "",
-      title: "Title",
-      subtitle: "subtitle",
-      alt: "",
-    },
-  ]);
 
   return (
     <Grid container>
@@ -97,11 +80,53 @@ const Frog = () => {
           title={`${translate(lang, "linkTo")} www.frog.co`}
           aria-label={`${translate(lang, "linkTo")} www.frog.co`}
         >
-          <Link href="https://www.frog.co/fr-fr/" target="blank">
-            <img src="/images/frogdesign_logo.jpeg" height="100px" />
+          <Link
+            href="https://www.frog.co/fr-fr/"
+            target="blank"
+            className={classes.frog}
+          >
+            <img
+              src="/images/frogdesign_logo.jpeg"
+              height="100px"
+              alt="grog icon"
+            />
             <FrogSVG className={classes.woody} />
           </Link>
         </LightTooltip>
+      </Grid>
+      <Grid container direction="column" wrap="nowrap" alignItems="center">
+        <Grid container justifyContent="space-around" alignItems="center">
+          <Grid item className={classes.box} xs={12} lg={6}>
+            <Typography variant="body1" align={matches ? "center" : "left"}>
+              {translate(lang, "digitalFactory")}
+            </Typography>
+          </Grid>
+          <Grid item className={classes.box} xs={12} lg={6}>
+            <Grid container justifyContent="center">
+              <img
+                src="https://res.cloudinary.com/ericjuquel94/image/upload/v1738349005/fabrique-digitale.png"
+                height="250px"
+                alt="fabrique digitale ratp"
+              />
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid container justifyContent="space-around" alignItems="center">
+          <Grid item className={classes.box} xs={12} lg={6}>
+            <Grid container justifyContent="center">
+              <img
+                src="https://res.cloudinary.com/ericjuquel94/image/upload/v1738495242/stack-clean-archi_oamiqt.png"
+                height="350px"
+                alt="stack clean archi"
+              />
+            </Grid>
+          </Grid>
+          <Grid item className={classes.box} xs={12} lg={6}>
+            <Typography variant="body1" align={matches ? "center" : "left"}>
+              {translate(lang, "bootstrap")}
+            </Typography>
+          </Grid>
+        </Grid>
       </Grid>
     </Grid>
   );

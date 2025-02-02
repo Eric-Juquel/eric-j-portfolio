@@ -123,8 +123,7 @@ const Woody = () => {
 
           <Grid item className={classes.box} xs={12} lg={6}>
             <Typography variant="body1" align={matches ? "center" : "left"}>
-              {" "}
-              {translate(lang, "coverage")}{" "}
+              {translate(lang, "coverage")}
               <span className={classes.textPrimary}>
                 <LightTooltip
                   title={translate(lang, "complete")}
@@ -134,7 +133,7 @@ const Woody = () => {
                     {translate(lang, "elections")}
                   </Link>
                 </LightTooltip>
-              </span>{" "}
+              </span>
               {translate(lang, "achieve")}
             </Typography>
           </Grid>

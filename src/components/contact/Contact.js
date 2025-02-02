@@ -26,7 +26,7 @@ const Contact = () => {
             <ContactForm />
             <Typography variant="caption" component="p">
               ** {translate(lang, "site")}{" "}
-              <i>https://ericjportfolio.herokuapp.com</i>
+              <i>https://eric-j-portfolio.vercel.app/</i>
               {translate(lang, "datas")}
             </Typography>
           </Grid>
