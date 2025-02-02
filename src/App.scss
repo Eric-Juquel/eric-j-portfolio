@@ -1,7 +1,7 @@
-@import './sass/variables';
-@import './sass/base';
-@import './sass/typography';
-@import './sass/mixins';
+@import "./sass/variables";
+@import "./sass/base";
+@import "./sass/typography";
+@import "./sass/mixins";
 
 .App {
   width: 100%;
@@ -63,16 +63,15 @@
   }
 
   @media screen and (max-width: 600px) {
-    width:100%;
+    width: 100%;
     margin: 3rem 0;
   }
-
 }
 
 .container.contact {
   @media screen and (min-width: 1280px) {
-    min-height:80vh;
-    max-height:100vh;
+    min-height: 80vh;
+    max-height: 100vh;
   }
 }
 
@@ -85,7 +84,7 @@
 .title {
   width: 120%;
   display: flex;
-  font-family: 'Montserrat', 'Roboto';
+  font-family: "Montserrat", "Roboto";
 
   & p {
     font-size: 2rem;
@@ -99,7 +98,7 @@
   display: grid;
   grid-template-columns: repeat(5, 3rem);
   grid-template-rows: repeat(5, 3rem);
-  font-family: 'Capriola', 'Roboto';
+  font-family: "Capriola", "Roboto";
   font-size: 3rem;
 
   & > div {

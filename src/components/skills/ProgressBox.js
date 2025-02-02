@@ -103,7 +103,7 @@ const ProgressBox = () => {
         </Grid>
         <Grid item>
           <Typography variant="h5" gutterBottom>
-            CSS (Sass, Flexbox, Grid)
+            CSS (Sass, Tailwind)
           </Typography>
           <LinearProgress
             variant="determinate"

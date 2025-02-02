@@ -62,12 +62,13 @@ const ContactForm = () => {
         process.env.REACT_APP_SERVICE_ID,
         process.env.REACT_APP_TEMPLATE_ID,
         params,
-        "user_MkYWMBpj2u3YpnREL8DXt"
+        "p5M_hw7DWlZMbv8I6"
       );
 
       setMessageStatus(result.text);
       setButtonStatus("submit");
     } catch (error) {
+      console.log("FAILED...", error.text);
       setMessageStatus("error");
       setButtonStatus("submit");
     }

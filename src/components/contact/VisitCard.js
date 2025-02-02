@@ -96,9 +96,9 @@ const VisitCard = () => {
               variant="subtitle1"
               color="secondary"
               component="a"
-              href="mailto:ejuquel@yahoo.fr"
+              href="mailto:ericjuquel94@gmail.com"
             >
-              ejuquel@yahoo.fr
+              ericjuquel94@gmail.com
             </Link>
           </LightTooltip>
         </Grid>
